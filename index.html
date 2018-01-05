@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+	</head>
+	<body>
+		<input type="button"  style="width: 300px;height: 100px;" value="登陆"/>
+	</body>
+	
+	<script type="application/javascript">
+        $(function(){
+            is_weixn();
+        });
+        function is_weixn(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                console.log("微信");
+                $wy.wx.getUserInfo();
+            } else {
+                console.log("非微信");
+                return false;
+            }
+        }
+
+	</script>
+
+</html>
