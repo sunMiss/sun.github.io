@@ -1,0 +1,79 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/category.css")>
+}
+<!--搜索-->
+<header class="search-head add-border-bottom" id="cateHeight">
+    <div class="index-top">
+        <span class="search-box">
+            <i>
+                <img src="/Content/dxpImages/index/ico_nav_src.png" alt="">
+            </i>
+            <a href="/Goods/GoodsSearch">春季女装</a>
+        </span>
+    </div>
+</header>
+<!--页面主体-->
+<section class="wrap-goods" id="wrap-height">
+    <!--左侧导航-->
+    <div class="left-navbar">
+        <ul id="left-navbar">
+            <!--<li>
+                <span></span>
+                <a>热门品牌</a>
+            </li>-->
+        </ul>
+    </div>
+    <!--右侧商品-->
+    <div class="right-category">
+        <!--<div class="right-banner">
+            <img src="/Content/dxpImages/category/img_class_banner.png" alt="" class="img-responsive">
+        </div>-->
+        <div class="right-item">
+            <h3 class="home-title">
+                <em class="home-title-name">推荐分类</em>
+            </h3>
+        </div>
+        <div class="goods-category">
+            <ul class="goods-category-list" id="goods-category-list">
+               <!-- <li>
+                    <a href="#">
+                        <img src="/Content/dxpImages/category/img_recommend1.png" alt="" class="img-responsive">
+                        <p>今日上新</p>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--底部导航-->
+@Html.Partial("../Shared/navbar")
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/tools/exsoft-form.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/category.js")></script>
+<script type="text/javascript">
+    /**
+     * 左侧导航点击效果
+     */
+    $(document).on("click",'#left-navbar li',function () {
+        $(this).css("color","#a78c66");
+        $(this).children("span").addClass("left-nav-style");
+        $(this).siblings().children("span").removeClass("left-nav-style");
+        $(this).siblings().css("color","#333333");
+    });
+
+
+    /**
+    动态设置分类的高度
+    **/
+    $(function () {
+        var dHeight = $(window).height();
+        var cateHeight = $('#cateHeight').height();
+        var bHeight = $('#navFooter').height();
+        var heightAll = cateHeight + bHeight+5;
+        $('#wrap-height').css('height', dHeight - heightAll + 'px');
+    })
+
+</script>

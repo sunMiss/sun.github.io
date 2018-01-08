@@ -1,0 +1,1036 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Galaxy.WeChat</name>
+    </assembly>
+    <members>
+        <member name="T:Galaxy.WeChat.PayType">
+            <summary>
+            交易类型
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.PayType.JSAPI">
+            <summary>
+            公众号支付
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.PayType.NATIVE">
+            <summary>
+            原生扫码支付
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.PayType.APP">
+            <summary>
+            App支付
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.AccessTokenRequest">
+            <summary>
+            微信访问令牌请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.AccessTokenRequest.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenRequest.APPId">
+            <summary>
+            APPId
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenRequest.AppSecret">
+            <summary>
+            AppSecret
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenRequest.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenRequest.GrantType">
+            <summary>
+            GrantType
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.AsyncReturnRequest">
+            <summary>
+            异步回调请求参数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AsyncReturnRequest.TransactionId">
+            <summary>
+            微信支付订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AsyncReturnRequest.OutTradeNo">
+            <summary>
+            商户订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AsyncReturnRequest.OpenId">
+            <summary>
+            用户标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AsyncReturnRequest.TotalFee">
+            <summary>
+            交易金额（单位元）
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.GlobalTokenRequest">
+            <summary>
+            全局Token请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.GlobalTokenRequest.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.GlobalTokenRequest.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="appId">应用ID</param>
+            <param name="appSecret">应用秘钥</param>
+        </member>
+        <member name="P:Galaxy.WeChat.GlobalTokenRequest.APPId">
+            <summary>
+            APPId
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.GlobalTokenRequest.AppSecret">
+            <summary>
+            AppSecret
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.GlobalTokenRequest.GrantType">
+            <summary>
+            GrantType
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.Request.MessagePushRequest">
+            <summary>
+            消息推送请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.Request.MessagePushRequest.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="accessToken">访问令牌</param>
+        </member>
+        <member name="P:Galaxy.WeChat.Request.MessagePushRequest.ToUser">
+            <summary>
+            普通用户openid
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.Request.MessagePushRequest.MsgType">
+            <summary>
+            消息类型，文本为text，图片为image，语音为voice，视频消息为video，音乐消息为music，图文消息（点击跳转到外链）为news，图文消息（点击跳转到图文消息页面）为mpnews，卡券为wxcard
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.Request.MessagePushRequest.Text">
+            <summary>
+            文本消息内容
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.Request.TextContent">
+            <summary>
+            文本消息内容
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.Request.TextContent.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.Request.TextContent.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="content">文本消息</param>
+        </member>
+        <member name="P:Galaxy.WeChat.Request.TextContent.Content">
+            <summary>
+            文本消息内容
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.OrderRefundRequest">
+            <summary>
+            微信申请退款请求参数
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.OrderRequest">
+            <summary>
+            统一下单请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.OrderRequest.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.PayRequest">
+            <summary>
+            微信支付请求参数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.OrderNumber">
+            <summary>
+            商户订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.Body">
+            <summary>
+            商品描述(商品或支付单简要描),trade_type=JSAPI时（即公众号支付），此参数必传。
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.TotalFee">
+            <summary>
+            交易金额(单位分)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.PayType">
+            <summary>
+            交易类型
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.CreateIP">
+            <summary>
+            终端IP(APP和网页支付提交用户端IP，Native支付填调用微信支付API的机器IP。)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.DeviceInfo">
+            <summary>
+            设备号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.ProductId">
+            <summary>
+            商品ID（Trade_type=NATIVE时（即扫码支付），此参数必传。此参数为二维码中包含的商品ID，商户自行定义。)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.ProductTag">
+            <summary>
+            商品标记，使用代金券或立减优惠功能时需要的参数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.TimeStart">
+            <summary>
+            交易起始时间（订单生成时间，格式为yyyyMMddHHmmss，如2009年12月25日9点10分10秒表示为20091225091010。）
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.TimeExpire">
+            <summary>
+            交易结束时间（订单失效时间，格式为yyyyMMddHHmmss，如2009年12月27日9点10分10秒表示为20091227091010。）
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.Attach">
+            <summary>
+            附加数据，在查询API和支付通知中原样返回，可作为自定义参数使用。
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.PayRequest.OpenId">
+            <summary>
+            用户标识，trade_type=JSAPI时（即公众号支付），此参数必传，此参数为微信用户在商户对应appid下的唯一标识。
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.TickectRequest">
+            <summary>
+            Tickect请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.TickectRequest.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.TickectRequest.AccessToken">
+            <summary>
+            访问令牌
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.TickectRequest.Type">
+            <summary>
+            票据类型
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.UnionIDUserInfoRequest">
+            <summary>
+            通过UnionID机制获取用户信息请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.UnionIDUserInfoRequest.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoRequest.AccessToken">
+            <summary>
+            访问令牌(全局Token)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoRequest.OpenId">
+            <summary>
+            用户唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoRequest.Lang">
+            <summary>
+            国家地区语言版本,zh_CN 简体，zh_TW 繁体，en 英语
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.UserInfoRequest">
+            <summary>
+            获取用户请求参数
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.UserInfoRequest.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoRequest.AccessToken">
+            <summary>
+            访问令牌(网页授权Token)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoRequest.OpenId">
+            <summary>
+            用户唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoRequest.Lang">
+            <summary>
+            国家地区语言版本,zh_CN 简体，zh_TW 繁体，en 英语
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.WeChatRefundRequest">
+            <summary>
+            微信支付退款请求参数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundRequest.TransactionId">
+            <summary>
+            微信订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundRequest.OutTradeNo">
+            <summary>
+            商户订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundRequest.OutRefundNo">
+            <summary>
+            商户系统内部的退款单号，商户系统内部唯一，同一退款单号多次请求只退一笔。
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundRequest.TotalFee">
+            <summary>
+            订单总金额，单位为分，只能为整数。
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundRequest.RefundFee">
+             <summary>
+            退款总金额，订单总金额，单位为分，只能为整数。
+             </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.AccessTokenResponse">
+            <summary>
+            微信访问令牌响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenResponse.AccessToken">
+            <summary>
+            访问令牌
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenResponse.ExpiresIn">
+            <summary>
+            过期时间(秒)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenResponse.RefreshToken">
+            <summary>
+            刷新Token
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenResponse.OpenId">
+            <summary>
+            用户唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenResponse.Scope">
+            <summary>
+            用户授权的作用域
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AccessTokenResponse.UnionId">
+            <summary>
+            只有在用户将公众号绑定到微信开放平台帐号后，才会出现该字段。
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.AppPayResponse">
+            <summary>
+            微信app支付响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.AppId">
+            <summary>
+            AppID
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.PartnerId">
+            <summary>
+            商户ID
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.PrepayId">
+            <summary>
+            预支付交易会话标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.NonceStr">
+            <summary>
+            随机字符串
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.TimeStamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.Package">
+            <summary>
+            标识(格式为Sign=WXPay)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.AppPayResponse.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.BaseResponse">
+            <summary>
+            消息基本响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.BaseResponse.ErrCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.BaseResponse.ErrMsg">
+            <summary>
+            状态文本
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.JSAPIPayResponse">
+            <summary>
+            微信公众号支付响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSAPIPayResponse.AppId">
+            <summary>
+            AppID
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSAPIPayResponse.NonceStr">
+            <summary>
+            随机字符串
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSAPIPayResponse.TimeStamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSAPIPayResponse.Package">
+            <summary>
+            订单详情扩展字符串
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSAPIPayResponse.SignType">
+            <summary>
+            签名方式
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSAPIPayResponse.PaySign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.JSSDKResponse">
+            <summary>
+            JSSDK输出参数
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSSDKResponse.AppId">
+            <summary>
+            公众号唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSSDKResponse.Timestamp">
+            <summary>
+            生成签名时间戳
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSSDKResponse.NonceStr">
+            <summary>
+            生成签名的随机串
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSSDKResponse.Tickect">
+            <summary>
+            临时票据
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.JSSDKResponse.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.GlobalTokenResponse">
+            <summary>
+            GlobalTokenResponse响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.GlobalTokenResponse.AccessToken">
+            <summary>
+            访问令牌
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.GlobalTokenResponse.ExpiresIn">
+            <summary>
+            过期时间(秒)
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.TickectResponse">
+            <summary>
+            票据响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.TickectResponse.Ticket">
+            <summary>
+            票据
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.TickectResponse.ExpiresIn">
+            <summary>
+            过期时间(秒)
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.TickectResponse.ErrorMessage">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.TickectResponse.ErrorCode">
+            <summary>
+            返回状态
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.UnionIDUserInfoResponse">
+            <summary>
+            通过UnionID机制获取用户信息响应信息
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Subscribe">
+            <summary>
+            用户是否订阅该公众号标识，值为0时，代表此用户没有关注该公众号，拉取不到其余信息。
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.OpenId">
+            <summary>
+            用户的唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Sex">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Language">
+            <summary>
+            用户的语言，简体中文为zh_CN
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Province">
+            <summary>
+            用户省份
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.City">
+            <summary>
+            用户城市
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Country">
+            <summary>
+            用户国家
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Avatar">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.SubscribeTime">
+            <summary>
+            关注时间
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.UnionId">
+            <summary>
+            开发者平台用户唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.Remark">
+            <summary>
+            公众号运营者对粉丝的备注
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.GroupId">
+            <summary>
+            用户所在的分组ID
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UnionIDUserInfoResponse.TagidList">
+            <summary>
+            用户所在的分组ID
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.UserInfoResponse">
+            <summary>
+            用户信息响应实体
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.OpenId">
+            <summary>
+            用户的唯一标识
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.Sex">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.Province">
+            <summary>
+            用户省份
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.City">
+            <summary>
+            用户城市
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.Country">
+            <summary>
+            用户国家
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.Avatar">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.UserInfoResponse.UnionId">
+            <summary>
+            开发者平台用户唯一标识
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.WeChatRefundResponse">
+            <summary>
+            微信支付退款响应信息
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.TransactionId">
+            <summary>
+            微信订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.OutTradeNo">
+            <summary>
+            商户订单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.OutRefundNo">
+            <summary>
+            商户退款单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.RefundId">
+            <summary>
+            微信退款单号
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.RefundFee">
+            <summary>
+            退款总金额,单位为分,可以做部分退款
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.TotalFee">
+            <summary>
+            订单总金额，单位为分，只能为整数。
+            </summary>
+        </member>
+        <member name="P:Galaxy.WeChat.WeChatRefundResponse.SettlementTotalFee">
+            <summary>
+            应结订单金额
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.WeChatConfig">
+            <summary>
+            微信配置信息
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_TOKEN_KEY">
+            <summary>
+            微信AccessToken-Key
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_TICKECT_KEY">
+            <summary>
+            微信JSSDK票据-Key
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_APP_APPID">
+            <summary>
+            APP应用ID，微信开放平台审核通过的应用APPID
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_APP_SECRET">
+            <summary>
+            APP应用Secret，微信开放平台审核通过的应用APPID
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_APP_NOTIFYURL">
+            <summary>
+            APP支付回调地址
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_APP_MCHID">
+            <summary>
+            APP商户号
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_WEB_APPID">
+            <summary>
+            应用ID，微信开放平台审核通过的应用APPID
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_WEB_SECRET">
+            <summary>
+            商户平台Secret，用户微信支付
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_WEB_AUTHORIZE_SECRET">
+            <summary>
+            应用Secret，微信开放平台审核通过的应用APPID
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_WEB_NOTIFYURL">
+            <summary>
+            支付回调地址
+            </summary>
+        </member>
+        <member name="F:Galaxy.WeChat.WeChatConfig.WECHAT_WEB_MCHID">
+            <summary>
+            商户号
+            </summary>
+        </member>
+        <member name="T:Galaxy.WeChat.WeChatHelper">
+            <summary>
+            微信辅助类
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetGlobalAccessToken">
+            <summary>
+            获取全局AccessToken
+            </summary>
+            <returns>访问令牌信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetGlobalAccessToken(System.String,System.String)">
+            <summary>
+            获取全局AccessToken
+            </summary>
+            <param name="appId">应用ID</param>
+            <param name="appSecret">应用秘钥</param>
+            <returns>访问令牌信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetUserInfo(System.String)">
+            <summary>
+            获取微信用户信息
+            </summary>
+            <param name="code">code</param>
+            <returns>微信用户信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetAccessToken(System.String)">
+            <summary>
+            通过Code获取AccessToken
+            </summary>
+            <param name="code">Code</param>
+            <returns>访问令牌信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetUserInfoByUnionId(System.String)">
+            <summary>
+            获取微信用户信息(UnionID机制)
+            </summary>
+            <param name="openId">用户唯一标识</param>
+            <returns>微信用户信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetAppPayResponse(Galaxy.WeChat.PayRequest)">
+            <summary>
+            获取App支付响应信息
+            </summary>
+            <param name="payRequest">支付请求参数</param>
+            <returns>app支付响应信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetNativePayResponse(Galaxy.WeChat.PayRequest)">
+            <summary>
+            获取扫码支付响应信息
+            </summary>
+            <param name="payRequest">支付请求参数</param>
+            <returns>扫码支付响应信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetJSAPIPayResponse(Galaxy.WeChat.PayRequest)">
+            <summary>
+            获取公众号支付响应信息
+            </summary>
+            <param name="payRequest">支付请求参数</param>
+            <returns>公众号支付响应信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.AppRefund(Galaxy.WeChat.WeChatRefundRequest)">
+            <summary>
+            App支付发起退款申请
+            </summary>
+            <param name="refundRequest">退款申请参数</param>
+            <returns>退款结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.WeChatRefund(Galaxy.WeChat.WeChatRefundRequest)">
+            <summary>
+            扫码、公众号支付发起退款申请
+            </summary>
+            <param name="refundRequest">退款申请参数</param>
+            <returns>退款结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.AsyncReturn(System.Func{Galaxy.WeChat.AsyncReturnRequest,Galaxy.Common.ResultMessage})">
+            <summary>
+            微信支付异步回调通知
+            </summary>
+            <param name="func">订单相关业务处理</param>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.AsyncNotify(System.Func{Galaxy.WeChat.AsyncReturnRequest,Galaxy.Common.ResultMessage})">
+            <summary>
+            微信支付异步回调通知
+            </summary>
+            <param name="func">订单相关业务处理</param>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.GetJSSDKConfig(System.String)">
+            <summary>
+            获取调用微信JS-SDK配置信息
+            </summary>
+            <param name="url">url地址</param>
+            <returns>JS-SDk配置信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.SendTextMessage(System.String,System.String)">
+            <summary>
+            发送文本消息
+            </summary>
+            <param name="openId">用户唯一标识</param>
+            <param name="context">发送内容</param>
+            <returns>访问令牌信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatHelper.SendTextMessage(System.String,System.String,System.String,System.String)">
+            <summary>
+            发送文本消息
+            </summary>
+            <param name="appId">应用ID</param>
+            <param name="appSecret">应用秘钥</param>
+            <param name="openId">用户唯一标识</param>
+            <param name="context">发送内容</param>
+            <returns>访问令牌信息</returns>
+        </member>
+        <member name="T:Galaxy.WeChat.WeChatUtil">
+            <summary>
+            微信配置信息帮助类
+            </summary>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.MD5(System.String,System.String)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="encypStr">加密字符串</param>
+            <param name="charset">编码方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.Sha1(System.String,System.String)">
+            <summary>
+            Sha1
+            </summary>
+            <param name="orgStr">加密字符串</param>
+            <param name="encode">编码方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.CreateRandomStr">
+            <summary>
+            创建随机字符串
+            </summary>
+            <returns>返回随机字符串</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetValueFromDic``1(System.Collections.Generic.SortedDictionary{System.String,System.String},System.String)">
+            <summary>
+            根据key获取Value
+            </summary>
+            <typeparam name="T">value类型</typeparam>
+            <param name="dic">集合</param>
+            <param name="key">Key</param>
+            <returns>Value值</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.CreateTimestamp">
+            <summary>
+            创建时间戳
+            </summary>
+            <returns>返回时间戳</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.Transfer(System.String)">
+            <summary>
+            html转义
+            </summary>
+            <param name="转义字符串">instr</param>
+            <returns>返回转移结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.DeTransfer(System.String)">
+            <summary>
+            html转义字符串还原
+            </summary>
+            <param name="instr">转义字符串</param>
+            <returns>还原结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.CreateParameter(Galaxy.WeChat.PayRequest)">
+            <summary>
+            构建支付参数
+            </summary>
+            <param name="payRequest">支付请求参数</param>
+            <returns>支付参数信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.RefundParameter(Galaxy.WeChat.WeChatRefundRequest,Galaxy.WeChat.PayType)">
+            <summary>
+            构建退款请求参数
+            </summary>
+            <param name="refundRequest">支付请求参数</param>
+            <returns>退款参数信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.Sign(System.Collections.Generic.IDictionary{System.String,System.String},Galaxy.WeChat.PayType)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="dicParam">参与签名生成的参数列表</param>
+            <param name="payType">支付类型</param>
+            <returns>签名结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.BuildRequestXML(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            生成POST的xml数据字符串
+            </summary>
+            <param name="postdataDict">>参与生成的参数列表</param>
+            <returns>xml数据</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.FromXml(System.String)">
+            <summary>
+            解析微信支付XML信息
+            </summary>
+            <param name="xml">预支付返回的xml信息</param>
+            <returns>解析结果信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetAppPayResponse(System.String)">
+            <summary>
+            获取APP支付响应信息
+            </summary>
+            <param name="prepayid">预支付交易会话标识</param>
+            <returns>APP支付响应信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetRefundResponse(System.Collections.Generic.SortedDictionary{System.String,System.String})">
+            <summary>
+            获取微信退款响应信息
+            </summary>
+            <param name="refundDict">退款响应字典</param>
+            <returns>退款结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetJSAPIPayResponse(System.String)">
+            <summary>
+            获取APP支付响应信息
+            </summary>
+            <param name="prepayid">预支付交易会话标识</param>
+            <returns>公众号支付响应信息</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.CreateAppPayParam(System.String)">
+            <summary>
+            构建商户APP支付请求参数
+            </summary>
+            <param name="prepayId">预支付ID</param>
+            <returns>参数集合</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.CreateJSAPIPayParam(System.String)">
+            <summary>
+            构建公众号支付请求参数
+            </summary>
+            <param name="prepayId">预支付ID</param>
+            <returns>参数集合</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetPrePayResponse(Galaxy.WeChat.PayRequest,Galaxy.WeChat.PayType)">
+            <summary>
+            获取预支付结果
+            </summary>
+            <param name="payRequest">支付请求参数</param>
+            <param name="payType">支付类型</param>
+            <returns>预支付结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetRefundResponse(Galaxy.WeChat.WeChatRefundRequest,Galaxy.WeChat.PayType)">
+            <summary>
+            获取退款结果
+            </summary>
+            <param name="refundRequest">退款请求参数</param>
+            <param name="payType">退款类型</param>
+            <returns>预支付结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetRequestXmlData">
+            <summary>
+            获取支付回调数据
+            </summary>
+            <returns>支付回调数据</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.BuildReturnXml(System.String,System.String)">
+            <summary>
+            构建返回到支付后台的结果
+            </summary>
+            <param name="code">状态码</param>
+            <param name="message">消息</param>
+            <returns>构建的返回结果</returns>
+        </member>
+        <member name="M:Galaxy.WeChat.WeChatUtil.GetSignature(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            JSSDK签名算法
+            </summary>
+            <param name="jsapi_ticket">jsapi_ticket</param>
+            <param name="noncestr">随机字符串(必须与wx.config中的nonceStr相同)</param>
+            <param name="timestamp">时间戳(必须与wx.config中的timestamp相同)</param>
+            <param name="url">当前网页的URL，不包含#及其后面部分(必须是调用JS接口页面的完整URL)</param>
+            <returns>签名算法</returns>
+        </member>
+    </members>
+</doc>

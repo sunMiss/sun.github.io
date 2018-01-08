@@ -1,0 +1,2654 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Datas</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.Datas.ApplicationUnitOfWork">
+            <summary>
+            应用程序工作单元
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.ApplicationUnitOfWork.#cctor">
+            <summary>
+            初始化应用程序工作单元
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.ApplicationUnitOfWork.#ctor">
+            <summary>
+            初始化应用程序工作单元
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.IApplicationUnitOfWork">
+            <summary>
+            应用程序工作单元
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Activity.SeckillMap">
+            <summary>
+            秒杀映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Activity.SeckillMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Activity.SeckillMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Activity.SeckillMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Activity.SeckillWinnerMap">
+            <summary>
+            秒杀中奖名单映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Activity.SeckillWinnerMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Activity.SeckillWinnerMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Activity.SeckillWinnerMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.AddressMap">
+            <summary>
+            地址映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.AddressMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.BigTest.BigBrandMap">
+            <summary>
+            大品牌映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.BigTest.BigBrandMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.BigTest.BigBrandMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.BigTest.BigBrandMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.AreaMap">
+            <summary>
+            地区映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.AreaMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.AreaMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.AreaMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.DictionaryMap">
+            <summary>
+            字典映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.DictionaryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.DictionaryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.DictionaryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.IconCategoryMap">
+            <summary>
+            图标分类映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.IconCategoryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.IconCategoryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.IconCategoryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.IconMap">
+            <summary>
+            图标映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.IconMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.IconMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.IconMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.ModuleTagConfigMap">
+            <summary>
+            映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.ModuleTagConfigMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.ModuleTagConfigMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.ModuleTagConfigMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.SystemConfigCategoryMap">
+            <summary>
+            系统配置分类映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.SystemConfigCategoryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.SystemConfigCategoryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.SystemConfigCategoryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.SystemConfigMap">
+            <summary>
+            系统配置映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.SystemConfigMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.SystemConfigMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.SystemConfigMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.TagConfigMap">
+            <summary>
+            标签配置映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TagConfigMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TagConfigMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TagConfigMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.TenantConfigMap">
+            <summary>
+            租户配置映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TenantConfigMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TenantConfigMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TenantConfigMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Commons.TenantConfigTemplateMap">
+            <summary>
+            租户配置模板映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TenantConfigTemplateMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TenantConfigTemplateMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Commons.TenantConfigTemplateMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Promotions.PromotionMap">
+            <summary>
+            活动映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Promotions.PromotionMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Promotions.PromotionMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Promotions.PromotionMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.CouponMap">
+            <summary>
+            优惠券映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.CouponMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.CouponMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.CouponMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.CustomerCouponMap">
+            <summary>
+            客户优惠券映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.CustomerCouponMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.CustomerCouponMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.CustomerCouponMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderCouponMap">
+            <summary>
+            订单优惠券映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderCouponMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderCouponMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderCouponMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderPayLogItemMap">
+            <summary>
+            映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderPayLogItemMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderPayLogItemMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderPayLogItemMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.MerchantDeliveryItemMap">
+            <summary>
+            商户发货单明细映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.MerchantDeliveryItemMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.MerchantDeliveryItemMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.MerchantDeliveryItemMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.MerchantDeliveryMap">
+            <summary>
+            商户发货单映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.MerchantDeliveryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.MerchantDeliveryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.MerchantDeliveryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.ShippingTemplateMap">
+            <summary>
+            配送模板映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.ShippingTemplateMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.ShippingTemplateMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.ShippingTemplateMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.StoreDeliveryItemMap">
+            <summary>
+            店铺发货单明细映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.StoreDeliveryItemMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.StoreDeliveryItemMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.StoreDeliveryItemMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.StoreDeliveryMap">
+            <summary>
+            店铺发货单映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.StoreDeliveryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.StoreDeliveryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.StoreDeliveryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderDeliveryItemMap">
+            <summary>
+            发货单明细映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderDeliveryItemMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderDeliveryItemMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderDeliveryItemMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderDeliveryMap">
+            <summary>
+            发货单映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderDeliveryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderDeliveryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderDeliveryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderItemMap">
+            <summary>
+            订单明细映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderItemMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderItemMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderItemMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderMap">
+            <summary>
+            订单映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.OrderPayLogMap">
+            <summary>
+            订单支付记录映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderPayLogMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderPayLogMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.OrderPayLogMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.PayWayMap">
+            <summary>
+            支付方式映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.PayWayMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.PayWayMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.PayWayMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Sales.ShippingMap">
+            <summary>
+            配送方式映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.ShippingMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.ShippingMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Sales.ShippingMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.CustomerMap">
+            <summary>
+            客户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.CustomerMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.CustomerMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.CustomerMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.AccountDetailMap">
+            <summary>
+            账户明细映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.AccountDetailMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.AccountDetailMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.AccountDetailMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.AccountMap">
+            <summary>
+            账户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.AccountMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.AccountMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.AccountMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.EmployeeMap">
+            <summary>
+            员工映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.EmployeeMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.EmployeeMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.EmployeeMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.ApplicationMap">
+            <summary>
+            应用程序映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.ApplicationMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.ApplicationMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.ApplicationMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.LoginLogMap">
+            <summary>
+            登陆日志映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.LoginLogMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.LoginLogMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.LoginLogMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.OnlineUserMap">
+            <summary>
+            在线用户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OnlineUserMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OnlineUserMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OnlineUserMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.OrganizationMap">
+            <summary>
+            机构映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OrganizationMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OrganizationMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OrganizationMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.OrganizationRoleMap">
+            <summary>
+            机构角色映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OrganizationRoleMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OrganizationRoleMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OrganizationRoleMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.OutCashMap">
+            <summary>
+            映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OutCashMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OutCashMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.OutCashMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.PermissionMap">
+            <summary>
+            权限映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.PermissionMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.PermissionMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.PermissionMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.ResourceMap">
+            <summary>
+            资源映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.ResourceMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.ResourceMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.ResourceMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.RoleMap">
+            <summary>
+            角色映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.RoleMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.RoleMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.RoleMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.SystemMessageMap">
+            <summary>
+            消息映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.SystemMessageMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.SystemMessageMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.SystemMessageMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.TenantMap">
+            <summary>
+            租户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.TenantMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.TenantMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.TenantMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.MyDemoMap">
+            <summary>
+            示例映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.MyDemoMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.MyDemoMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.UserAuthorizationMap">
+            <summary>
+            用户授权映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.UserAuthorizationMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.UserAuthorizationMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.UserAuthorizationMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Systems.UserMap">
+            <summary>
+            用户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.UserMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.UserMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Systems.UserMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Consumers.CustomersAuthorizationMap">
+            <summary>
+            客户授权映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.CustomersAuthorizationMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.CustomersAuthorizationMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.CustomersAuthorizationMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Consumers.DeliveryAddressMap">
+            <summary>
+            收货地址映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.DeliveryAddressMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.DeliveryAddressMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.DeliveryAddressMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Consumers.GoodsCollectMap">
+            <summary>
+            商品收藏夹映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.GoodsCollectMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.GoodsCollectMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.GoodsCollectMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Consumers.MerchantCustomerMap">
+            <summary>
+            商户客户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.MerchantCustomerMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.MerchantCustomerMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.MerchantCustomerMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Consumers.ShoppingCartMap">
+            <summary>
+            购物车映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.ShoppingCartMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.ShoppingCartMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Consumers.ShoppingCartMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Finances.BalanceMap">
+            <summary>
+            结算映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Finances.BalanceMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Finances.BalanceMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Finances.BalanceMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.CommissionPlanMap">
+            <summary>
+            分佣方案映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CommissionPlanMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CommissionPlanMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CommissionPlanMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.AttributeMap">
+            <summary>
+            属性映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.AttributeMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.AttributeMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.AttributeMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.BrandMap">
+            <summary>
+            品牌映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.BrandMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.BrandMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.BrandMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.CategoryMap">
+            <summary>
+            商品类目映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CategoryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CategoryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CategoryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.GoodsAttributeValueMap">
+            <summary>
+            商品属性值映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsAttributeValueMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsAttributeValueMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsAttributeValueMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.CatalogMap">
+            <summary>
+            商品目录映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CatalogMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CatalogMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.CatalogMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.GoodsImageMap">
+            <summary>
+            商品图片映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsImageMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsImageMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsImageMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.GoodsMap">
+            <summary>
+            商品映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.GoodsMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.ProductMap">
+            <summary>
+            产品映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.ProductMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.ProductMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.ProductMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.StoreGoodsMap">
+            <summary>
+            店铺商品映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.StoreGoodsMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.StoreGoodsMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.StoreGoodsMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.StoreProductMap">
+            <summary>
+            店铺产品映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.StoreProductMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.StoreProductMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.StoreProductMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Production.TagMap">
+            <summary>
+            标签映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.TagMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.TagMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Production.TagMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Merchants.MerchantMap">
+            <summary>
+            商户映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Merchants.MerchantMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Merchants.MerchantMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Merchants.MerchantMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Stores.StoreMap">
+            <summary>
+            店铺映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Stores.StoreMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Stores.StoreMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Stores.StoreMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Vendors.ProviderEmployeeMap">
+            <summary>
+            供应商员工映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Vendors.ProviderEmployeeMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Vendors.ProviderEmployeeMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Vendors.ProviderEmployeeMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Mappings.Vendors.ProviderMap">
+            <summary>
+            供应商映射配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Vendors.ProviderMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Vendors.ProviderMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Mappings.Vendors.ProviderMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Activity.SeckillRepository">
+            <summary>
+            秒杀仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Activity.SeckillRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化秒杀仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Activity.SeckillRepository.GetUserList(System.Guid)">
+            <summary>
+            获取用户集合
+            </summary>
+            <param name="roleId">角色编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Activity.SeckillRepository.GetSeckill(System.Guid)">
+            <summary>
+            获取秒杀
+            </summary>
+            <param name="seckillId">秒杀id</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Activity.SeckillRepository.SendSeckillOder(System.Guid,System.String,System.Guid)">
+            <summary>
+            秒杀订单入库
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Activity.SeckillWinnerRepository">
+            <summary>
+            秒杀中奖名单仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Activity.SeckillWinnerRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化秒杀中奖名单仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Activity.SeckillWinnerRepository.GetIsJoin(System.Guid,System.Guid)">
+            <summary>
+            查询是否已经参加秒杀
+            </summary>
+            <param name="seckillId">秒杀id</param>
+            <param name="userId">用户id</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.BigTest.BigBrandRepository">
+            <summary>
+            大品牌仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.BigTest.BigBrandRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化大品牌仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.AreaRepository">
+            <summary>
+            地区仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.AreaRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化地区仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.AreaRepository.GetAreaList(System.Data.GetListParameter)">
+            <summary>
+            获取区域信息
+            </summary>
+            <param name="parameter">请求参数</param>
+            <returns>区域信息</returns>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.DictionaryRepository">
+            <summary>
+            字典仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.DictionaryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化字典仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.IconCategoryRepository">
+            <summary>
+            图标分类仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.IconCategoryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化图标分类仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.IconRepository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.IconRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化图标仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.ModuleTagConfigRepository">
+            <summary>
+            仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.ModuleTagConfigRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.TenantConfigTemplateRepository">
+            <summary>
+            租户配置模板仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TenantConfigTemplateRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化租户配置模板仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.SystemConfigCategoryRepository">
+            <summary>
+            系统配置分类仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.SystemConfigCategoryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化系统配置分类仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.SystemConfigRepository">
+            <summary>
+            系统配置仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.SystemConfigRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化系统配置仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.TagConfigRepository">
+            <summary>
+            标签配置仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TagConfigRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化标签配置仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Commons.TenantConfigRepository">
+            <summary>
+            租户配置仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TenantConfigRepository.#ctor(Applications.Datas.IApplicationUnitOfWork,Applications.Domains.Commons.Repositories.ITenantConfigTemplateRepository)">
+            <summary>
+            初始化租户配置仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TenantConfigRepository.GetAllCongfigs">
+            <summary>
+            获取全部配置
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TenantConfigRepository.GetCongfig(Applications.Domains.Commons.Enums.TenantConfigCode)">
+            <summary>
+            获取配置
+            </summary>
+            <param name="code">编码</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TenantConfigRepository.GetCongfigValue(Applications.Domains.Commons.Enums.TenantConfigCode)">
+            <summary>
+            获取配置值
+            </summary>
+            <param name="code">编码</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Commons.TenantConfigRepository.GetDefaultConfigs">
+            <summary>
+            获取默认配置
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Promotions.PromotionRepository">
+            <summary>
+            活动仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Promotions.PromotionRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化活动仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Promotions.PromotionRepository.GetProductPromotions(System.Guid)">
+            <summary>
+            获取店铺单品促销活动
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Promotions.PromotionRepository.GetOrderItemPromotions(System.Guid)">
+            <summary>
+            获取店铺单品促销活动
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.CouponRepository">
+            <summary>
+            客户优惠券仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CouponRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化客户优惠券仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CouponRepository.GetPromotionCouponAll(System.Guid,System.Guid)">
+            <summary>
+            获取活动所有可领取优惠券
+            </summary>
+            <param name="promotionId">活动Id</param>
+            <param name="storeId">店铺Id</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.CustomerCouponRepository">
+            <summary>
+            客户优惠券仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CustomerCouponRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化客户优惠券仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CustomerCouponRepository.GetCustomerCouponAll(System.Guid,System.Guid)">
+            <summary>
+            根据客户编码获取所有客户优惠券
+            </summary>
+            <param name="customerId">客户Id</param>
+            <param name="storeId">店铺Id</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CustomerCouponRepository.GetCustomerCouponByIds(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            查询客户优惠券
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CustomerCouponRepository.ReceiveCustomerCoupon(System.Guid,System.Guid)">
+            <summary>
+            领取优惠券
+            </summary>
+            <param name="customerId"></param>
+            <param name="couponId"></param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.CustomerCouponRepository.GetCustomerCoupon(System.Guid)">
+            <summary>
+            查询用户优惠券
+            </summary>
+            <param name="customerId"></param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.MerchantDeliveryRepository">
+            <summary>
+            商户发货单仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.MerchantDeliveryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商户发货单仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.MerchantDeliveryRepository.CreateMerchantDeliveryCode">
+            <summary>
+            生成商户发货单号
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.ShippingTemplateRepository">
+            <summary>
+            配送模板仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.ShippingTemplateRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化配送模板仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.StoreDeliveryRepository">
+            <summary>
+            店铺发货单仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.StoreDeliveryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化店铺发货单仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.StoreDeliveryRepository.CreateStoreDeliveryCode">
+            <summary>
+            生成店铺发货单号
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.OrderDeliveryRepository">
+            <summary>
+            发货单仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.OrderDeliveryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化发货单仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.OrderPayLogRepository">
+            <summary>
+            订单支付记录仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.OrderPayLogRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化订单支付记录仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.OrderRepository">
+            <summary>
+            订单仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.OrderRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化订单仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.OrderRepository.GetOrdersByPaylogId(System.Guid)">
+            <summary>
+            根据支付单号获取订单列表
+            </summary>
+            <param name="payLogId">支付单号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.PayWayRepository">
+            <summary>
+            支付方式仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.PayWayRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化支付方式仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Sales.ShippingRepository">
+            <summary>
+            配送方式仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.ShippingRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化配送方式仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.ShippingRepository.GetDefaultShipping">
+            <summary>
+            获取默认配送方式
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Sales.ShippingRepository.GetShowShipping">
+            <summary>
+            获取展示的配送方式
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.CustomerRepository">
+            <summary>
+            客户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.CustomerRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化客户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.AccountDetailRepository">
+            <summary>
+            账户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.AccountDetailRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化账户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.BalanceRepository">
+            <summary>
+            结算仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.BalanceRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化结算仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.AccountRepository">
+            <summary>
+            账户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.AccountRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化账户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.OutCashRepository">
+            <summary>
+            仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OutCashRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.EmployeeRepository">
+            <summary>
+            员工仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.EmployeeRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化员工仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.EmployeeRepository.GetRolesByEmployeeId(System.Guid)">
+            <summary>
+            根据员工编号获取员工角色
+            </summary>
+            <param name="employeeId">员工编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.EmployeeRepository.GetEmployees(System.Guid)">
+            <summary>
+            根据用户获取所有员工
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.ApplicationRepository">
+            <summary>
+            应用程序仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ApplicationRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化应用程序仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ApplicationRepository.GetByCode(System.String)">
+            <summary>
+            获取应用程序
+            </summary>
+            <param name="code">应用程序编码</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.LoginLogRepository">
+            <summary>
+            登陆日志仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.LoginLogRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化登陆日志仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.OnlineUserRepository">
+            <summary>
+            在线用户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OnlineUserRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化在线用户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.OrganizationRepository">
+            <summary>
+            机构仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化机构仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRepository.GetPlatformOrganization">
+            <summary>
+            获取平台机构
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRepository.GetOrganization(Applications.Domains.Systems.Enums.OrganizationType)">
+            <summary>
+            获取机构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRepository.GetOrganization(System.Guid)">
+            <summary>
+            根据机构Code获取机构
+            </summary>
+            <param name="organizationCode">机构Code 商户ID或者店铺ID</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRepository.GetResourceList(System.Guid)">
+            <summary>
+            获取模块列表
+            </summary>
+            <param name="organizationId">机构编号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.OrganizationRoleRepository">
+            <summary>
+            机构角色仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRoleRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化机构角色仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.OrganizationRoleRepository.GetModules(System.Guid)">
+            <summary>
+            获取模块
+            </summary>
+            <param name="organizationRoleId">机构角色编号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.PermissionRepository">
+            <summary>
+            权限仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.PermissionRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化权限仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.PermissionRepository.GetEnabledList(System.Guid,Applications.Domains.Systems.Enums.PermissionType,System.Guid)">
+            <summary>
+            获取已启用权限列表
+            </summary>
+            <param name="roleId">角色编号</param>
+            <param name="type">权限类型</param>
+            <param name="applicationId">应用程序编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.PermissionRepository.GetEnabledList(System.Guid)">
+            <summary>
+            获取已启用权限列表
+            </summary>
+            <param name="roleId">角色编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.PermissionRepository.GetList(System.Guid,Applications.Domains.Systems.Enums.PermissionType,System.Guid)">
+            <summary>
+            获取权限列表
+            </summary>
+            <param name="roleId">角色编号</param>
+            <param name="type">权限类型</param>
+            <param name="applicationId">应用程序编号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.ResourceRepository">
+            <summary>
+            资源仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ResourceRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化资源仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ResourceRepository.GetEnabledList(System.Guid,Applications.Domains.Systems.Enums.ResourceType)">
+            <summary>
+            获取已启用模块列表
+            </summary>
+            <param name="applicationId">应用编号</param>
+            <param name="type">资源类型</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ResourceRepository.GetDefaultModule(System.Guid)">
+            <summary>
+            获取默认模块
+            </summary>
+            <param name="applicationId">应用程序编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ResourceRepository.GetEnabledList(System.Guid)">
+            <summary>
+            获取已启用模块列表
+            </summary>
+            <param name="applicationId">应用编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ResourceRepository.GetEnabledList">
+            <summary>
+            获取已启用模块列表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.ResourceRepository.GetModules(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            获取模块
+            </summary>
+            <param name="applicationId">应用编号</param>
+            <param name="roleIds">角色编号列表</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.RoleRepository">
+            <summary>
+            角色仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.RoleRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化角色仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.RoleRepository.GetUserList(System.Guid)">
+            <summary>
+            获取用户集合
+            </summary>
+            <param name="roleId">角色编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.RoleRepository.GetById(System.Guid)">
+            <summary>
+            通过Id获取角色
+            </summary>
+            <param name="id">角色编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.RoleRepository.GetRolesByOrganizationId(System.Guid)">
+            <summary>
+            根据机构编号获取角色
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.SystemMessageRepository">
+            <summary>
+            消息仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.SystemMessageRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化消息仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.TenantRepository">
+            <summary>
+            租户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.TenantRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化租户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.MyDemoRepository">
+            <summary>
+            示例仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.MyDemoRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化应用程序仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.UserAuthorizationRepository">
+            <summary>
+            用户授权仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserAuthorizationRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化用户授权仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserAuthorizationRepository.GetUserByUnionId(System.String,Applications.Domains.Systems.Enums.PlatformType)">
+            <summary>
+            根据第三方授权编号获取用户
+            </summary>
+            <param name="unionId">第三方授权码</param>
+            <param name="platFormType">第三方平台</param>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserAuthorizationRepository.GetUserByWeChatOpenId(System.String)">
+            <summary>
+            根据微信公众号OpenId获取用户
+            </summary>
+            <param name="openId">微信公众号OpenId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserAuthorizationRepository.GetUserByWeChatAPPOpenId(System.String)">
+            <summary>
+            根据微信APPOpenId获取用户
+            </summary>
+            <param name="openId">微信APPOpenId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserAuthorizationRepository.UpdateWeChatOpenId(System.String,Applications.Domains.Systems.Enums.WeChatType,System.String)">
+            <summary>
+            设置微信登陆授权码
+            </summary>
+            <param name="unionId">唯一码</param>
+            <param name="weChatType">微信登陆类型</param>
+            <param name="openId">授权码</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Systems.UserRepository">
+            <summary>
+            用户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化用户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.GetRoles(System.Guid)">
+            <summary>
+            获取角色列表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.GetEnabledList">
+            <summary>
+            获取启用用户集合
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.GetUserId(System.String)">
+            <summary>
+            获取用户编号
+            </summary>
+            <param name="userName">用户名</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.GetUserByToken(System.String)">
+            <summary>
+            根据Token获取用户
+            </summary>
+            <param name="token">安全令牌</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.IsExisted(System.String)">
+            <summary>
+            是否存在
+            </summary>
+            <param name="userName">用户名</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.IsExisted(System.String,System.Guid)">
+            <summary>
+            是否存在
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="id">编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.UpdateUserInfo(System.Guid,System.String,System.String)">
+            <summary>
+            更新用户头像昵称
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="name">昵称</param>
+            <param name="icon">头像</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Systems.UserRepository.GetBindedUserByUserName(System.String)">
+            <summary>
+            根据用户名获取已经绑定过的用户
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Consumers.CustomersAuthorizationRepository">
+            <summary>
+            客户授权仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.CustomersAuthorizationRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化客户授权仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.CustomersAuthorizationRepository.GetAuthorizationByOpenId(System.String,System.Int32)">
+            <summary>
+            根据OpenId获取客户授权信息
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.CustomersAuthorizationRepository.GetAuthorizationByUnionId(System.String,System.Int32)">
+            <summary>
+            根据UnionId获取客户授权信息
+            </summary>
+            <param name="unionId">开发平台用户唯一标识</param>
+            <param name="platformType">平台类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.CustomersAuthorizationRepository.UpdateOpenId(System.String,System.String)">
+            <summary>
+            根据UnionId获取客户授权信息
+            </summary>
+            <param name="unionId">开发平台用户唯一标识</param>
+            <param name="openid">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.CustomersAuthorizationRepository.UpdateAppOpenId(System.String,System.String)">
+            <summary>
+            根据UnionId获取客户授权信息
+            </summary>
+            <param name="unionId">开发平台用户唯一标识</param>
+            <param name="openid">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Consumers.DeliveryAddressRepository">
+            <summary>
+            收货地址仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.DeliveryAddressRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化收货地址仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.DeliveryAddressRepository.GetDefaultAddress(System.Guid)">
+            <summary>
+            获取默认收货地址
+            </summary>
+            <param name="userId">用户Id</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.DeliveryAddressRepository.GetAddressList(System.Data.GetListParameter)">
+            <summary>
+            获取收货地址信息
+            </summary>
+            <param name="parameter">请求参数</param>
+            <returns>收货地址信息</returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.DeliveryAddressRepository.GetAddressById(System.Data.GetListParameter)">
+            <summary>
+            获取收货地址信息
+            </summary>
+            <param name="parameter">请求参数</param>
+            <returns>收货地址信息</returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.DeliveryAddressRepository.UpdateDefaultAddress(System.Guid,System.Guid)">
+            <summary>
+            设置默认地址
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="defaultAddressId">默认地址ID</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Consumers.GoodsCollectRepository">
+            <summary>
+            商品收藏夹仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.GoodsCollectRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商品收藏夹仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.GoodsCollectRepository.GetCollect(System.Guid,System.Guid)">
+            <summary>
+            判断用户是否收藏
+            </summary>
+            <param name="storeGoodsId">店铺商品id</param>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Consumers.MerchantCustomerRepository">
+            <summary>
+            商户客户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.MerchantCustomerRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商户客户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.MerchantCustomerRepository.GetById(System.Guid,System.Guid)">
+            <summary>
+            通过客户Id查找商户客户
+            </summary>
+            <param name="merchantId">商户编号</param>
+            <param name="customerId">客户编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.MerchantCustomerRepository.GetByRecommonder(System.Guid,System.Guid)">
+            <summary>
+            查找指定推荐人的商户客户列表
+            </summary>
+            <param name="merchantId">商户编号</param>
+            <param name="recommonder">推荐人编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.MerchantCustomerRepository.GetByParent(System.Guid,System.Guid)">
+            <summary>
+            查找指定上级分销商的商户客户列表
+            </summary>
+            <param name="merchantId">商户编号</param>
+            <param name="parentId">上级分销商编号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Consumers.ShoppingCartRepository">
+            <summary>
+            购物车仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Consumers.ShoppingCartRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化购物车仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.CommissionPlanRepository">
+            <summary>
+            分佣方案仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.CommissionPlanRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化分佣方案仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.AttributeRepository">
+            <summary>
+            属性仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.AttributeRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化属性仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.BrandRepository">
+            <summary>
+            品牌仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.BrandRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化品牌仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.CategoryRepository">
+            <summary>
+            商品类目仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.CategoryRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商品类目仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.GoodsAttributeValueRepository">
+            <summary>
+            商品属性值仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.GoodsAttributeValueRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商品属性值仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.GoodsAttributeValueRepository.GetAttributeValuesByGoodsId(System.Guid)">
+            <summary>
+            根据商品编号获取商品属性集合
+            </summary>
+            <param name="goodsId">商品编号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.CatalogRepository">
+            <summary>
+            商品目录仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.CatalogRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商品目录仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.CatalogRepository.GetCategoryList(System.Data.GetListParameter)">
+            <summary>
+            获取商品目录信息
+            <param name="parameter">请求参数</param>
+            <returns>分类信息</returns>
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.GoodsImageRepository">
+            <summary>
+            商品图片仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.GoodsImageRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商品图片仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.GoodsImageRepository.GetGoodsImageDtos(System.Guid)">
+            <summary>
+            根据商品编号查询商品图片
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.GoodsRepository">
+            <summary>
+            商品仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.GoodsRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商品仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.GoodsRepository.GetGoods(System.Guid,System.String)">
+            <summary>
+            根据 商户编号 和 商品编码 查找商品
+            </summary>
+            <param name="merchantId">商户编号</param>
+            <param name="goodsCode">商品编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.ProductRepository">
+            <summary>
+            产品仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.ProductRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化产品仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.ProductRepository.GetProduct(Applications.Domains.Main.Production.Repositories.IGoodsRepository,System.Guid,System.String,System.String)">
+            <summary>
+            根据 商品编码 商户编号 和产品编号 来查询对应的产品
+            </summary>
+            <param name="goodsRepository">商品仓储</param>
+            <param name="goodsCode">商品编码</param>
+            <param name="merchantId">商户编号</param>
+            <param name="productCode">产品编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.ProductRepository.GetProductsByGoodsId(System.Guid)">
+            <summary>
+            根据商品编号查询产品集合
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.StoreGoodsRepository">
+            <summary>
+            店铺商品仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreGoodsRepository.#ctor(Applications.Datas.IApplicationUnitOfWork,Applications.Domains.Main.Production.Repositories.ICatalogRepository)">
+            <summary>
+            初始化店铺商品仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreGoodsRepository.GetStoreGoodsPageList(System.Data.GetListByPageParameter)">
+            <summary>
+            分页获取店铺商品信息
+            <param name="parameter">请求参数</param>
+            <returns>分页列表信息</returns>
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreGoodsRepository.GetSearchGoodsProductsByStore(System.Data.GetListByPageParameter,System.String)">
+            <summary>
+            分页获取店铺商品信息
+            <param name="parameter">请求参数</param>
+            <param name="searchName">请求参数</param>
+            <returns>分页列表信息</returns>
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreGoodsRepository.GetStoreGoodsByIds(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            获取店铺商品
+            </summary>
+            <param name="storeGoodsIdList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.StoreProductRepository">
+            <summary>
+            店铺产品仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreProductRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化店铺产品仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreProductRepository.GetStoreProduct(System.Guid,System.Guid)">
+            <summary>
+            获取店铺产品
+            </summary>
+            <param name="storeId">店铺Id</param>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.StoreProductRepository.GetStoreProductForCoupon(System.Guid)">
+            <summary>
+            获取店铺产品
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Production.TagRepository">
+            <summary>
+            标签仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Production.TagRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化标签仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Merchants.MerchantRepository">
+            <summary>
+            商户仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Merchants.MerchantRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化商户仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Merchants.MerchantRepository.GetMerchantList">
+            <summary>
+            获取商户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Merchants.MerchantRepository.GetMerchant(System.Guid)">
+            <summary>
+            获取商户
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Stores.StoreRepository">
+            <summary>
+            店铺仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Stores.StoreRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化店铺仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Stores.StoreRepository.GetStoreModule(System.Guid,System.Guid)">
+            <summary>
+            获取店铺详情
+            </summary>
+            <param name="storeId">店铺ID</param>
+            <param name="merchantId">商户ID</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Stores.StoreRepository.GetStoreList">
+            <summary>
+            获取店铺列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Stores.StoreRepository.GetStore(System.Guid)">
+            <summary>
+            获取店铺
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Vendors.ProviderEmployeeRepository">
+            <summary>
+            供应商员工仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Vendors.ProviderEmployeeRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化供应商员工仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Vendors.ProviderEmployeeRepository.GetEnabledList(System.Nullable{System.Guid})">
+            <summary>
+            获取已启用供应商列表
+            </summary>
+            <param name="parentProviderId">供应商编号</param>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Vendors.ProviderEmployeeRepository.GetDefaultOrganization(System.Nullable{System.Guid})">
+            <summary>
+            获取默认供应商
+            </summary>
+            <param name="parentProviderId">供应商编号</param>
+        </member>
+        <member name="T:Applications.Datas.Repositories.Vendors.ProviderRepository">
+            <summary>
+            供应商仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Repositories.Vendors.ProviderRepository.#ctor(Applications.Datas.IApplicationUnitOfWork)">
+            <summary>
+            初始化供应商仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+    </members>
+</doc>

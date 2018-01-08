@@ -1,0 +1,131 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/category.css")>
+    }
+<!--搜索-->
+<header class="search-head add-border-bottom">
+    <div class="index-top">
+        <span class="search-box">
+            <i>
+                <img src="/Content/dxpImages/index/ico_nav_src.png" alt="">
+            </i>
+            <input type="text" placeholder="春季女装">
+        </span>
+    </div>
+</header>
+<!--页面主体-->
+<section class="wrap-goods" id="wrap-goods">
+    <!--左侧导航-->
+    <div class="left-navbar">
+        <ul>
+            <li>
+                <span></span>
+                <a>热门推荐</a>
+            </li>
+            <li>
+                <span></span>
+                <a>生活用品</a>
+            </li>
+            <li>
+                <span></span>
+                <a>母婴用品</a>
+            </li>
+            <li>
+                <span></span>
+                <a>居家服饰</a>
+            </li>
+            <li>
+                <span></span>
+                <a>文化匠心</a>
+            </li>
+            <li>
+                <span></span>
+                <a>数码电器</a>
+            </li>
+            <li>
+                <span></span>
+                <a>天然美颜</a>
+            </li>
+            <li>
+                <span></span>
+                <a>精选美食</a>
+            </li>
+            <li>
+                <span class="left-nav-style"></span>
+                <a>热门品牌</a>
+            </li>
+        </ul>
+    </div>
+    <!--右侧商品-->
+    <div class="right-category">
+
+
+        <div class="right-item">
+            <h3 class="home-title">
+                <em class="home-title-name">推荐分类</em>
+            </h3>
+        </div>
+
+
+        <div class="goods-category">
+            <ul class="goods-category-list">
+                <li>
+                    <a href="#">
+                        <img src="/Content/dxpImages/category/img_brand_class.png" alt="" class="img-responsive">
+                        <p>七夕热卖</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/dxpImages/category/img_brand_class.png" alt="" class="img-responsive">
+                        <p>超值套装</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/dxpImages/category/img_brand_class.png" alt="" class="img-responsive">
+                        <p>今日上新</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/dxpImages/category/img_brand_class.png" alt="" class="img-responsive">
+                        <p>今日上新</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/dxpImages/category/img_brand_class.png" alt="" class="img-responsive">
+                        <p>今日上新</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--底部导航-->
+@Html.Partial("../Shared/navbar");
+
+
+<script type="text/javascript">
+    /**
+     * 左侧导航点击效果
+     */
+    $(".left-navbar ul li").click(function() {
+        $(this).css("color", "#a78c66");
+        $(this).children("span").addClass("left-nav-style");
+        $(this).siblings().children("span").removeClass("left-nav-style");
+        $(this).siblings().css("color", "#333333");
+    });
+    /**
+动态设置分类的高度
+**/
+    $(function () {
+        var dHeight = $(window).height();
+        var cateHeight = $('.search-head').height();
+        var bHeight = $('.bottom-navbar').height();
+        var heightAll = cateHeight + bHeight + 5;
+        $('#wrap-goods').css('height', dHeight - heightAll + 'px');
+    })
+</script>

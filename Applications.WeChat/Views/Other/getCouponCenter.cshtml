@@ -1,0 +1,99 @@
+﻿@section head{
+<link rel="stylesheet" href=@Url.Scrpit("/Css/finance.css")>
+        <style>
+            htmll,body{
+                height:100%;
+                background:#f0f0f0;
+            }
+        </style>
+    }
+<!--领取优惠卷-->
+<div class="coupon-item">
+    <ul class="coupon-list" id="couponList">
+        @*<li>
+            <div class="youhuiLeft">
+                <em class="youhuiMoney">￥<b>100</b></em>
+                <div class="youhuiLeftItem">
+                    <em>免费的看法看</em>
+                    <span>满2000元可用</span>
+                </div>
+                
+            </div>
+            <div class="youhuiRight">
+                <button>立即领取</button>
+            </div>
+        </li>*@
+    </ul>
+</div>
+
+<script type="text/javascript">
+    Common.headerTitle('领券中心');
+
+    var param = {
+        promotionId: "52ca9cf0-edfe-428d-83bb-3bfc66e51201",
+        storeId: "3bbdfc90-1246-445e-a62b-2f04ad7eea18"
+    }
+    
+    $.ajax({
+        url: Common.API_BASE_URL + Common.API_URL_POST_PROMOTION_COUPONALL + '?promotionId=52ca9cf0-edfe-428d-83bb-3bfc66e51201&storeId=3bbdfc90-1246-445e-a62b-2f04ad7eea18',
+        dataType: "json",
+        contentType: "text/json",
+        type: "POST",
+        headers: {
+            'Authorization': 'Bearer ' + tokenObj,
+        },
+        success: function (res) {
+            if (res.status === 1) {
+                var couPonData = res.data;
+                InitCouPon(couPonData)
+            } else {
+                $.toast(res.message, "forbidden");
+            }
+        },
+        error: function (err) {
+            $.toast(err.message, "forbidden");
+        }
+    })
+    
+
+    //初始化优惠卷
+    function InitCouPon(data) {
+        var $html = '';
+        $.each(data, function (i,item) {
+            $html += '<li id=' + item.Id + '><div class="youhuiLeft"><em class="youhuiMoney">￥<b>' + item.Dicount + '</b></em><div class="youhuiLeftItem">';
+            $html += '<em>' + item.Description + '</em><span>' + item.Condition + '</span></div></div>';
+            $html += '<div class="youhuiRight"><button onclick="receiveCouPon(this)">立即领取</button></div></li>';
+        })
+        $('#couponList').html($html);
+    }
+
+    //领取优惠卷
+    function receiveCouPon(t) {
+        $.showLoading();
+        var $couPonid = $(t).parents('li').attr('id');
+        $.ajax({
+            url: Common.API_BASE_URL + Common.API_URL_POST_RECEIVE_CUSTOMERCOUPON + '?couponId=' + $couPonid + '',
+            dataType: "json",
+            contentType: "text/json",
+            type: "POST",
+            headers: {
+                'Authorization': 'Bearer ' + tokenObj,
+            },
+            success: function (res) {
+                if (res.status === 1) {
+                    $.toast(res.message);
+                } else {
+                    $.toast(res.message, "forbidden");
+                }
+            },
+            error: function (err) {
+                $.toast(err.message, "forbidden");
+            }
+        })
+        $.hideLoading();
+    }
+
+
+
+
+</script>

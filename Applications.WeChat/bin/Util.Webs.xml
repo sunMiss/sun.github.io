@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util.Webs</name>
+    </assembly>
+    <members>
+        <member name="T:Util.Webs.HtmlEscape">
+            <summary>
+            Html转义字符
+            </summary>
+        </member>
+        <member name="F:Util.Webs.HtmlEscape.Quote">
+            <summary>
+            单引号
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Helper">
+            <summary>
+            Web操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Helper.RegisterModule``1">
+            <summary>
+            注册模块
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Helper.RegisterModule(System.Type)">
+            <summary>
+            注册模块
+            </summary>
+            <param name="moduleType">模块类型</param>
+        </member>
+        <member name="T:Util.Webs.Mvc.AjaxOnlyAttribute">
+            <summary>
+            仅允许Ajax操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.AjaxOnlyAttribute.#ctor(System.Boolean)">
+            <summary>
+            初始化仅允许Ajax操作
+            </summary>
+            <param name="ignore">跳过Ajax检测</param>
+        </member>
+        <member name="P:Util.Webs.Mvc.AjaxOnlyAttribute.Ignore">
+            <summary>
+            跳过Ajax检测
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.AjaxOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext,System.Reflection.MethodInfo)">
+            <summary>
+            验证请求有效性
+            </summary>
+            <param name="controllerContext">控制器上下文</param>
+            <param name="methodInfo">方法</param>
+        </member>
+        <member name="T:Util.Webs.Mvc.ErrorLogAttribute">
+            <summary>
+            记录异常日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.ErrorLogAttribute.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            处理异常
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.ErrorLogAttribute.WriteLog(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            记录错误日志
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Mvc.FormExceptionHandlerAttribute">
+            <summary>
+            表单异常处理器
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.FormExceptionHandlerAttribute.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            处理异常
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Mvc.Extentions">
+            <summary>
+            HtmlHelper扩展
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.Extentions.X(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            创建Mvc辅助操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.Extentions.Value``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            获取值
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TProperty">属性类型</typeparam>
+            <param name="helper">HtmlHelper</param>
+            <param name="expression">属性表达式</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.Extentions.Writer``1(System.Web.Mvc.HtmlHelper{``0})">
+            <summary>
+            获取Html写入器
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="helper">HtmlHelper</param>
+        </member>
+        <member name="T:Util.Webs.Mvc.IMvcService">
+            <summary>
+            Mvc服务
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.IMvcService.ImportCss(System.String)">
+            <summary>
+            导入Css
+            </summary>
+            <param name="path">Css文件相对路径</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.IMvcService.ImportJs(System.String)">
+            <summary>
+            导入Js
+            </summary>
+            <param name="path">Js文件相对路径</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.IMvcService.ImportSignalR">
+            <summary>
+            导入SignalR动态脚本
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Mvc.MvcBase">
+            <summary>
+            Mvc基操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcBase.MvcResult(System.String,System.Object[])">
+            <summary>
+            返回Mvc Html结果
+            </summary>
+            <param name="result">结果</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="T:Util.Webs.Mvc.MvcControllerBase">
+            <summary>
+            基控制器
+            </summary>
+        </member>
+        <member name="P:Util.Webs.Mvc.MvcControllerBase.Logger">
+            <summary>
+            日志操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.ToJson(System.Object)">
+            <summary>
+            转换为Json字符串
+            </summary>
+            <param name="data">对象</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.ToJson(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            转换为Json字符串
+            </summary>
+            <param name="data">对象</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.ToJsonResult(System.Object)">
+            <summary>
+            转换为Json结果
+            </summary>
+            <param name="data">对象</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.ToJsonResult(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            转换为Json结果
+            </summary>
+            <param name="data">对象</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.Ok(System.String,System.Object)">
+            <summary>
+            返回成功消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.Ok(System.String,System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            返回成功消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcControllerBase.Fail(System.String)">
+            <summary>
+            返回失败消息
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="T:Util.Webs.Mvc.MvcService">
+            <summary>
+            Mvc服务
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcService.ImportCss(System.String)">
+            <summary>
+            导入Css
+            </summary>
+            <param name="path">Css文件相对路径</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcService.ImportJs(System.String)">
+            <summary>
+            导入Js
+            </summary>
+            <param name="path">Js文件相对路径</param>
+        </member>
+        <member name="M:Util.Webs.Mvc.MvcService.ImportSignalR">
+            <summary>
+            导入SignalR动态脚本
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Mvc.Result">
+            <summary>
+            Mvc返回结果
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.Result.#ctor(Util.Applications.StateCode,System.String,System.Object)">
+            <summary>
+            初始化Mvc返回结果
+            </summary>
+            <param name="code">状态码</param>
+            <param name="message">消息</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="F:Util.Webs.Mvc.Result._code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="F:Util.Webs.Mvc.Result._message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="F:Util.Webs.Mvc.Result._data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.Result.ToString">
+            <summary>
+            输出结果
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.Result.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            执行
+            </summary>
+            <param name="context">控制器上下文</param>
+        </member>
+        <member name="T:Util.Webs.Mvc.TraceLogAttribute">
+            <summary>
+            记录跟踪日志
+            </summary>
+        </member>
+        <member name="P:Util.Webs.Mvc.TraceLogAttribute.Ignore">
+            <summary>
+            是否忽略,为true不记录日志
+            </summary>
+        </member>
+        <member name="P:Util.Webs.Mvc.TraceLogAttribute.Logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            执行前
+            </summary>
+        </member>
+        <member name="F:Util.Webs.Mvc.TraceLogAttribute.MvcTraceLogName">
+            <summary>
+            获取Mvc跟踪日志名
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.WriteLog(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            执行前日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.AddRequestInfo(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            添加请求信息参数
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.AddFormParams(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            添加表单参数
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.AddCookie(System.Web.HttpRequestBase)">
+            <summary>
+            添加Cookie
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            执行后
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.WriteLog(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            执行后日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.AddResponseInfo(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            添加响应信息参数
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Mvc.TraceLogAttribute.AddResult(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            记录响应结果
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Mvc.ViewBase">
+            <summary>
+            基视图
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Mvc.ViewBase`1">
+            <summary>
+            基视图
+            </summary>
+            <typeparam name="TModel">实体</typeparam>
+        </member>
+        <member name="P:Util.Webs.Mvc.ViewBase`1.Skin">
+            <summary>
+            皮肤
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Security.AuthenticateModuleBase">
+            <summary>
+            身份认证模块，如果认证成功，则加载当前用户的上下文信息到安全主体
+            </summary>
+        </member>
+        <member name="F:Util.Webs.Security.AuthenticateModuleBase.AuthorizeTraceLogName">
+            <summary>
+            获取授权跟踪日志名
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.Init(System.Web.HttpApplication)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Util.Webs.Security.AuthenticateModuleBase.Logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.AuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            身份认证操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.IsResource(System.Web.HttpApplication)">
+            <summary>
+            是否静态资源
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.AuthenticateBefore(System.Web.HttpApplication)">
+            <summary>
+            认证前操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.LogAuthenticateBefore">
+            <summary>
+            认证前操作日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.Authenticate(System.Web.HttpApplication)">
+            <summary>
+            身份认证
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.GetToken">
+            <summary>
+            获取安全令牌
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.GetTokenName">
+            <summary>
+            获取安全令牌名称
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.GetPrincipalByToken(System.Web.HttpApplication,System.String)">
+            <summary>
+            通过安全令牌获取用户编号
+            </summary>
+            <param name="application">Http应用程序</param>
+            <param name="token">安全令牌</param>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.IsAuthenticated(System.Web.HttpApplication)">
+            <summary>
+            是否登录
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.GetPrincipal(System.String)">
+            <summary>
+            获取安全主体
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.CreateUserContext(System.String)">
+            <summary>
+            创建用户上下文
+            </summary>
+            <param name="userId">用户编号</param>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.AuthenticateAfter(System.Web.HttpApplication)">
+            <summary>
+            认证后操作
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.LogAuthenticateAfter(System.Web.HttpApplication)">
+            <summary>
+            认证成功操作日志
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.AuthenticateModuleBase.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Util.Webs.Security.SecurityHelper">
+            <summary>
+            Web安全操作
+            </summary>
+        </member>
+        <member name="F:Util.Webs.Security.SecurityHelper.ApplicationCookie">
+            <summary>
+            身份认证类型
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.FormSignIn(System.String,System.Boolean)">
+            <summary>
+            Form认证登入
+            </summary>
+            <param name="userId">用户编号</param>
+            <param name="isPersistent">是否持久保存到Cookie</param>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.FormSignOut">
+            <summary>
+            Form认证退出
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.SignIn(System.String,System.Boolean)">
+            <summary>
+            基于Asp.Net Identity的登入
+            </summary>
+            <param name="userId">用户编号</param>
+            <param name="isPersistent">是否持久保存到Cookie，即“记住密码”</param>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.CreateClaimsIdentity(System.String)">
+            <summary>
+            创建声明标识
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.GetAuthenticationManager">
+            <summary>
+            获取授权管理器
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.GetOwinContext">
+            <summary>
+            获取OWin上下文
+            </summary>
+        </member>
+        <member name="M:Util.Webs.Security.SecurityHelper.SignOut">
+            <summary>
+            基于Asp.Net Identity的退出
+            </summary>
+        </member>
+        <member name="T:Util.Webs.SignalR.HubControllerBase`1">
+            <summary>
+            Hub控制器
+            </summary>
+            <typeparam name="THub">Hub类型</typeparam>
+        </member>
+        <member name="M:Util.Webs.SignalR.HubControllerBase`1.#ctor">
+            <summary>
+            初始化Hub控制器
+            </summary>
+        </member>
+        <member name="P:Util.Webs.SignalR.HubControllerBase`1.Clients">
+            <summary>
+            连接上下文
+            </summary>
+        </member>
+        <member name="P:Util.Webs.SignalR.HubControllerBase`1.Groups">
+            <summary>
+            组管理器
+            </summary>
+        </member>
+        <member name="T:Util.Webs.SignalR.HubControllerBase">
+            <summary>
+            Hub控制器
+            </summary>
+        </member>
+        <member name="T:Util.Webs.SignalR.UtilHub">
+            <summary>
+            内置hub
+            </summary>
+        </member>
+    </members>
+</doc>

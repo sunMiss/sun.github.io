@@ -1,0 +1,53 @@
+﻿
+<nav class="bottom-navbar">
+    <ul id="navFooter">
+        <li>
+            <a href="javascript:Common.goIndex()">
+                <span class="index-icon"></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:Common.goCater()">
+                <span class="category-icon"></span>
+                <p>分类</p>
+            </a>
+        </li>
+        <!--<li>
+            <a href="/Goods/Activity">
+                <span class="activity-icon"></span>
+                <p>活动</p>
+            </a>
+        </li>-->
+        <li>
+            <a href="/Shopping/ShoppingCar?id=cart">
+                <span class="shopping-icon"></span>
+                <p>购物车</p>
+            </a>
+        </li>
+        <li>
+            <a href="/Personal/Personal?id=mine">
+                <span class="personal-icon"></span>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    var headId = Common.getQueryString("id");
+    switch (headId) {
+        case 'cate':
+            $('#navFooter').find('li:nth-child(2)').addClass('active');
+            break
+        case 'cart':
+            $('#navFooter').find('li:nth-child(3)').addClass('active');
+            break
+        case 'mine':
+            $('#navFooter').find('li:nth-child(4)').addClass('active');
+            break
+        default:
+            $('#navFooter').find('li:nth-child(1)').addClass('active');
+    }
+    
+</script>

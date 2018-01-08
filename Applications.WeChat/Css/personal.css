@@ -1,0 +1,333 @@
+html,body{
+    height:100%;
+    overflow:hidden;
+}
+body{
+    background-color: #f5f5f5;
+}
+.section-cintent{
+    height:100%;
+    overflow:auto;
+    background:#fff;
+}
+.style-line{
+    height: 0.2rem;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+/*================以下为个人中心head===============*/
+.my-head {
+    height: 6rem;
+    color: white;
+    overflow: hidden;
+    background: #A88C65 url('../Content/dxpImages/img_me_bg.png') center center no-repeat;
+}
+.my-head>section{
+    overflow:hidden;
+    /*margin: 60px 30px;*/
+}
+.my-head>section .head-img{
+    margin-left:1rem;
+    margin-top:1.5rem;
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #E3CFB2;
+}
+.head-img img{
+    border-radius: 50%;
+    border:none;
+}
+.head-des{
+    margin-top:1.7rem;
+    width: 35%;
+    height: 2rem;
+    float: left;
+    margin-left:1rem;
+    text-align: left;
+}
+.head-des p{
+    margin-bottom: 0.3rem;
+    font-size:0.8rem;
+}
+.head-des span{
+    font-size: 0.65rem;
+    color: #e7e1d9;
+}
+.member-code{
+    float: right;
+    margin-top: 1.6rem;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.member-code span{
+    padding-top: 0.5rem;
+    font-size: 0.55rem;
+    color: #e7e1d9;
+}
+.member-code-icon{
+    margin-left:1.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url("/Content/dxpImages/ico_me_all.png");
+    background-repeat: no-repeat;
+    background-position:0.15rem 0.2rem;
+    background-size:100%;
+}
+/*================以上为个人中心head===============*/
+.my-orders{
+    overflow:hidden;
+    background-color: white;
+    border-bottom: 0.5rem solid #F0F0F0;
+
+}
+.my-orders h3{
+    padding:0 0.5rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    line-height:2rem;
+    color: #333333;
+    text-indent: 0.5rem;
+    margin: 0 auto;
+    border-bottom:1px solid #f0f0f0;
+}
+/*我的订单、分销管理*/
+.mine-navbar{
+    width: 100%;
+    overflow:hidden;
+    padding:0.5rem 0;
+}
+.mine-navbar ul{
+    height: 3rem;
+    overflow:hidden;
+}
+.mine-navbar ul li{
+    width: 24%;
+    float: left;
+    text-align: center;
+    line-height: 0.5rem;
+    position: relative;
+}
+.mine-navbar ul li a{
+    display:block;
+}
+.mine-navbar ul li .message-reminder{
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    color: #ffffff;
+    background-color: #BE394B;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 0.8rem;
+    font-size: 0.6rem;
+    top:0;
+    right:0.55rem;
+}
+.public-icon{
+    display: inline-block;
+    background-image: url("/Content/dxpImages/ico_me_all.png");
+    background-repeat: no-repeat;
+    background-size:100%;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.mine-navbar ul li p{
+    height:0.8rem;
+    line-height:0.8rem;
+    font-size: 0.6rem;
+    color: #333333;
+}
+
+/*我的订单图标*/
+.mine-navbar ul li span.icon-img{
+    display:block;
+    width:1.4rem;
+    height:1.4rem;
+    margin:auto;
+}
+.mine-navbar ul li span.icon-img img{
+    display:block;
+    width:100%;
+}
+.mine-navbar ul li .icons-fukuan{
+    display:block;
+    width:1.6rem;
+    height:1.6rem;
+    margin:auto;
+    background: url("/Content/dxpImages/ico_order_pay.png") center center no-repeat;
+    background-size:100%;
+}
+.mine-navbar ul li .icon-fahuo{
+     background-image: url("/Content/dxpImages/ico_order_receiv.png");
+}
+.mine-navbar ul li .icon-wanchegn{
+     background-image: url("/Content/dxpImages/ico_order_finish.png");
+}
+.mine-navbar ul li .icon-dingdan{
+     background-image: url("/Content/dxpImages/ico_order_all.png");
+}
+
+/*分销管理图标*/
+.mine-navbar ul li .icons-jiangjin{
+    background-position: 0.2rem -6.7rem;
+}
+.mine-navbar ul li .icon-fenxi{
+    background-position: 0.2rem -8.1rem;
+}
+.mine-navbar ul li .icon-mengyou{
+    background-position: 0.2rem -9.4rem;
+}
+.mine-navbar ul li .icon-code{
+    background-position: 0.2rem -10.75rem;
+}
+
+
+.my-management,.add-margin-space{
+    margin-top: 0.5rem;
+}
+
+
+
+/*余额、优惠券*/
+.my-discount{
+    margin:0.2rem auto 3rem
+}
+
+.my-discount li{
+    background-color: white;
+    height: 2rem;
+    line-height:2rem;
+    font-size: 0.65rem;
+    position: relative;
+}
+.my-discount li a{
+    display:block;
+    height:100%;
+}
+.my-discount li a span{
+    display:block;
+    width:100%;
+    text-indent:0.5rem;
+}
+.my-discount li{
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.my-discount li span:nth-of-type(2){
+    margin-left: 20px;
+}
+.my-discount .public-icon{
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    margin-top: -0.6rem;
+    width:1.2rem;
+    height:1.2rem;
+    background-size:135%;
+}
+.my-discount li a i{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    float: left;
+}
+.my-discount ul li .icon-youhuiquan{
+    background: url(/Content/dxpImages/order/yh.png) 1rem center no-repeat;
+    background-size: 45%;
+}
+.my-discount ul li .icon-yue{
+    background: url(/Content/dxpImages/order/ye.png) 1rem center no-repeat;
+    background-size: 45%;
+}
+.my-discount ul li .icon-dizhi{
+   background: url(/Content/dxpImages/order/dz.png) 1rem center no-repeat;
+   background-size: 45%;
+}
+.my-discount ul li .icon-zhangha{
+	background: url(/Content/dxpImages/order/bd.png) 1rem center no-repeat;
+    background-size: 45%;
+}
+.my-discount ul li .icon-shoucang{
+   background-position: 0.1rem -15.49rem;
+}
+
+.my-discount ul li .icon-fuwu{
+    background-position: 0.1rem -17.55rem;
+}
+.my-discount ul li .icon-shezhi{
+    background-position: 0.1rem -18.5rem;
+}
+
+
+/*微信登陆中*/
+.wxChat,.wxChat-item{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.wxChat-item img{
+	display: block;
+	width: 3.5rem;
+	height: 3.5rem;
+	margin: auto;
+	margin: 7rem auto 0.5rem;
+}
+
+.wxChat-item .wxChat-text{
+	display:flex;
+	flex-direction: row;
+	overflow: hidden;
+	justify-content: center;
+}
+.wxChat-item .wxChat-text em{
+	display: block;
+	font-size: 0.65rem;
+	color: #333;
+}
+.spinner {
+  margin: 0.5rem auto 0;
+  width: 100%;
+  text-align: center;
+}
+ 
+.spinner > div {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #67CF22;
+ 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

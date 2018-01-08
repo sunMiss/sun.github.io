@@ -1,0 +1,89 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/finance.css")>
+    }
+
+	<div class="finance">
+		<div class="StoreAdmin">
+			<ul class="StoreAdminList">
+				<li>
+					<span>账号</span>
+					<input type="text" placeholder="请输入账号" id="Account" />
+				</li>
+				<li>
+					<span>密码</span>
+					<input type="password" placeholder="请输入密码" id="pass"/>
+				</li>
+				<li>
+					<span>确认密码</span>
+					<input type="password" placeholder="请再次输入密码" id="password"/>
+				</li>
+			</ul>
+			<div class="StoreAdminBtn">
+				<button onclick="AccountBtn()">确认绑定</button>
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+    Common.headerTitle('账号绑定');
+
+$('.StoreAdminList input').click(function(){
+	$(this).val('');
+})
+
+//绑定账号
+function AccountBtn(){
+	var Account =$('#Account').val();
+	var pass =$('#pass').val();
+	var password =$('#password').val();
+	
+	if(Account == '' || Account == null){
+		$.toast("账号不能为空", "forbidden");
+		return false;
+	}else if(pass == '' || pass == null){
+		$.toast("密码不能为空", "forbidden");
+		return false;
+	}else if(password == '' || password == null){
+		$.toast("密码不能为空", "forbidden");
+		return false;
+	}else if(pass != password){
+		$.toast("两次密码不一致", "forbidden");
+		return false;
+	}
+	AccountData(Account,pass);
+}
+
+//账号绑定数据请求
+function AccountData(Account,pass){
+	var param = {
+		"Name": Account,
+  		"PassWord": pass
+	}
+	$.ajax({
+	    url: Common.API_BASE_URL + Common.API_URL_SEND_BIND_USER,
+        dataType: "json",
+        contentType: "text/json",
+        type: "POST",
+        data:JSON.stringify(param),
+        headers: {
+            'Authorization': 'Bearer ' + tokenObj,
+        },
+        success: function (data) {
+            if (data.status == '1') {
+                $.toast("操作成功");
+                setTimeout(function () {
+                    location.href = "/Personal/Personal";
+                },500)
+            } else {
+                $.toast(data.message, "forbidden");
+            }
+        },
+        error: function(err){
+        	$.toast("操作失败");
+        }
+    })
+}
+
+</script>

@@ -1,0 +1,359 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+/*余额*/
+.finance{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.ballance{
+	height: 11rem;
+	background: url(../Content/dxpImages/img_me_mon_bg.png) center center no-repeat;
+	background-size: 100%;
+}
+.ballance p{
+	padding: 0.5rem;
+	overflow: hidden;
+	text-align: right;
+}
+.ballance p a{
+	color: #333;
+	font-size: 0.65rem;
+}
+.ballanceBox{
+	margin-top: 1rem;
+	padding:0.5rem;
+	overflow: hidden;
+	height: 5rem;
+	text-align: center;
+}
+.ballanceBox em{
+	display: block;
+	font-size: 1.6rem;
+	color: #333;
+}
+.ballanceBox span{
+	display: block;
+	font-size: 0.65rem;
+	color: #666;
+}
+.ballanceBtn{
+	padding: 0.5rem;
+	overflow: hidden;
+	margin-top: 5rem;
+}
+.ballanceBtn a{
+	display: block;
+	text-align: center;
+	width: 100%;
+	border-radius: 3px;
+	height: 2rem;
+	line-height: 2rem;
+}
+.ballanceBtn button{
+	display: block;
+	width: 100%;
+	border-radius: 3px;
+	height: 2rem;
+	line-height: 2rem;
+}
+.Btn-top{
+	background: #dcb87f;
+	color: #fff;
+	font-size: 0.65rem;
+	border: 1px solid #dcb87f;
+}
+.Btn-bot{
+	background: #FFF;
+	color: #333;
+	font-size: 0.65rem;
+	border: 1px solid #333;
+	margin-top: 1rem;
+}
+
+/*提现*/
+.withdred{
+	padding: 0.5rem;
+	overflow: hidden;
+}
+.withdred h3{
+	height: 2rem;
+	font-size: 0.7rem;
+	color: #333;
+}
+.withdred .content{
+	width: 100%;
+	border: 1px solid #C5C4C0;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: row;
+}
+.withdred .content i{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	color: #333;
+	font-size: 0.9rem;
+	font-style: normal;
+}
+.withdred .content input{
+	display: block;
+	border: none;
+	width: 12rem;
+	height: 2rem;
+	font-size: 0.9rem;
+	line-height: 2rem;
+	font-family: helvetica;	
+}
+input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+    color: #aab2bd;
+  /* placeholder字体大小  */
+    font-size: 0.7rem;
+ }
+.withdred .small{
+	height: 2rem;
+	line-height: 2rem;
+	color: #999;
+	font-size: 0.65rem;
+}
+
+
+/*明细*/
+.detailed{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: #F0F0F0;
+}
+.detailedList{
+	overflow: auto;
+}
+.detailedList li{
+	padding: 0.5rem;
+	overflow: hidden;
+	font-family: helvetica;
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 0.3rem;
+	background: #FFF;
+}
+.detailedList li .title{
+	width: 100%;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.detailedList li .title em,.detailedList li .title span{
+	display: block;
+	font-size: 0.7rem;
+	color: #333;
+}
+.detailedList li .txt{
+	height: 1rem;
+	line-height: 1rem;
+	color: #999;
+	font-size: 0.6rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.detailedList li .txt span{
+	display: block;
+}
+
+
+/*账号绑定*/
+.StoreAdmin{
+	width: 100%;
+	overflow: hidden;
+}
+.StoreAdminList{
+	padding: 0.5rem;
+	overflow: hidden;
+}
+.StoreAdminList li{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #F0F0F0;
+}
+.StoreAdminList li span{
+	display: block;
+	width: 3.5rem;
+	height: 2rem;
+	line-height: 2rem;
+	color: #333;
+	font-size: 0.65rem;
+}
+.StoreAdminList li input{
+	display: block;
+	width: 10rem;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 0.65rem;
+	border: none;
+}
+.StoreAdminBtn{
+	overflow: hidden;
+	padding: 0.5rem;
+	margin-top: 2rem;
+}
+.StoreAdminBtn button{
+	width: 100%;
+	overflow: hidden;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 0.7rem;
+	background: #a78c66;
+	color: #FFF;
+	border: none;
+	border-radius: 3px;
+}
+
+.detailNotData{
+	display: none;
+	padding: 1rem;
+	margin-top: 5rem;	
+	overflow: hidden;
+}
+.detailNotData img{
+	display: block;
+	width: 5.5rem;
+	height: 5.5rem;
+	margin: auto;
+}
+.detailNotData p{
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 0.7rem;
+	color: #666;
+	height: 1.5rem;
+	line-height: 1.5rem;
+}
+.Btn-top.disabled{
+    background:#C5C4C0 !important;
+}
+
+.coupon,.couponItem{
+    width:100%;
+    overflow:hidden;
+}
+.couponItem{
+    padding:0.5rem;
+    background:#f0f0f0;
+}
+.couponItem li{
+    width:100%;
+    overflow:hidden;
+    margin-bottom:0.25rem;
+}
+.couponItem li img{
+    display:block;
+    width:100%;
+    overflow:hidden;
+}
+
+
+.coupon-item{
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+.coupon-list{
+    margin:0.5rem 0.5rem 0;
+    overflow:hidden;
+}
+.coupon-list li{
+    overflow:hidden;
+    background:#FFF;
+    margin-bottom:0.5rem;
+    border-radius:0.1rem;
+    -webkit-border-radius:0.1rem;
+}
+.youhuiLeft{
+    width:70%;
+    float:left;
+    height:4.2rem;
+    color:#34342a;
+    background:#e2d1b3;
+}
+.youhuiRight{
+    width:30%;
+    float:left;
+    color:#fff;
+    height:4.2rem;
+    background:#a78e66;
+    border-left:1px dashed #FFF;
+}
+.youhuiLeft .youhuiMoney{
+    display:block;
+    padding-left:1rem;
+    font-size:0.6rem;
+    padding-top:0.2rem;
+}
+.youhuiLeft .youhuiMoney b{
+    font-size:1.1rem;
+}
+.youhuiLeftItem{
+    overflow:hidden;
+    text-indent:1rem;
+    padding-bottom:0.3rem;
+}
+.youhuiLeftItem em{
+    width:100%;
+    display:block;
+    font-size:0.65rem;
+    line-height:0.6rem;
+    color:#5e4e3f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-top:0.3rem;
+    height:0.8rem;
+}
+
+.youhuiLeftItem span{
+    display:block;
+    color:#5c503a;
+    font-size:0.5rem;
+}
+.youhuiRight button{
+    border:none;
+    width:100%;
+    text-align:center;
+    font-size:0.7rem;
+    height:4rem;
+    line-height:4rem;
+    background: #a78e66;
+    color:#fffcf3;
+}
+.couponNull{
+    width:8rem;
+    overflow:hidden;
+    margin:0 auto;
+    margin-top:5rem;
+    display:none;
+}
+.couponNull img{
+    display:block;
+    width:70%;
+    margin:auto;
+}
+.couponNull span{
+    display:block;
+    text-align:center;
+    color:#666;
+    font-size:0.65rem;
+    margin-top:1rem;
+}

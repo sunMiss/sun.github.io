@@ -1,0 +1,832 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util.Datas</name>
+    </assembly>
+    <members>
+        <member name="T:Util.Datas.Ef.AggregateRootMapBase`2">
+            <summary>
+            聚合根映射配置
+            </summary>
+            <typeparam name="TEntity">聚合根类型</typeparam>
+            <typeparam name="TKey">实体标识类型</typeparam>
+        </member>
+        <member name="M:Util.Datas.Ef.AggregateRootMapBase`2.MapVersion">
+            <summary>
+            映射乐观离线锁
+            </summary>
+        </member>
+        <member name="P:Util.Datas.Ef.AggregateRootMapBase`2.IsSupportRowVersion">
+            <summary>
+            是否支持行版本，Sql Server支持，MySql等不支持
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.AggregateRootMapBase`2.MapRowVersion">
+            <summary>
+            映射行版本
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.AggregateRootMapBase`2.MapConcurrencyToken">
+            <summary>
+            映射乐观并发标记
+            </summary>
+        </member>
+        <member name="T:Util.Datas.Ef.AggregateRootMapBase`1">
+            <summary>
+            聚合根映射
+            </summary>
+            <typeparam name="TEntity">聚合根类型</typeparam>
+        </member>
+        <member name="T:Util.Datas.Ef.EfLog">
+            <summary>
+            Ef日志
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.#ctor(System.String,Util.Logs.ILog)">
+            <summary>
+            初始化Ef日志
+            </summary>
+            <param name="traceId">跟踪号</param>
+            <param name="log">日志</param>
+        </member>
+        <member name="F:Util.Datas.Ef.EfLog._traceId">
+            <summary>
+            跟踪号
+            </summary>
+        </member>
+        <member name="P:Util.Datas.Ef.EfLog.Logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.Write(System.String)">
+            <summary>
+            写日志
+            </summary>
+            <param name="log">sql日志</param>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.FilterLog(System.String)">
+            <summary>
+            过滤日志
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.AddLog(System.String)">
+            <summary>
+            添加日志
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.IsSql(System.String)">
+            <summary>
+            是否Sql语句
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.AddSql(System.String)">
+            <summary>
+            添加Sql
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.IsParam(System.String)">
+            <summary>
+            是否参数
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.ReplaceParam(System.String)">
+            <summary>
+            替换Sql中的参数
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.IsClose(System.String)">
+            <summary>
+            是否关闭连接
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.ResolveParam(System.String)">
+            <summary>
+            从sql日志中解析出参数名和参数值
+            </summary>
+            <param name="log">sql日志</param>
+        </member>
+        <member name="M:Util.Datas.Ef.EfLog.FilterValue(System.String)">
+            <summary>
+            过滤值的引号
+            </summary>
+        </member>
+        <member name="T:Util.Datas.Ef.Exceptions.EfValidationException">
+            <summary>
+            Entity Framework实体验证异常
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.Exceptions.EfValidationException.#ctor(System.Data.Entity.Validation.DbEntityValidationException)">
+            <summary>
+            初始化Entity Framework实体验证异常
+            </summary>
+            <param name="exception">实体验证异常</param>
+        </member>
+        <member name="M:Util.Datas.Ef.Exceptions.EfValidationException.SetExceptionDatas(System.Data.Entity.Validation.DbEntityValidationException)">
+            <summary>
+            设置异常数据
+            </summary>
+        </member>
+        <member name="T:Util.Datas.Ef.Extensions">
+            <summary>
+            系统扩展 - 工作单元扩展
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.Extensions.SetFilterValue(Util.Datas.IUnitOfWork,System.String,System.String,System.Object)">
+            <summary>
+            设置过滤器的值
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="filterName">过滤器名称</param>
+            <param name="paramName">参数名称</param>
+            <param name="value">参数值</param>
+        </member>
+        <member name="M:Util.Datas.Ef.Extensions.DisableFilter(Util.Datas.IUnitOfWork,System.String)">
+            <summary>
+            禁用过滤器
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="filterName">过滤器名称</param>
+        </member>
+        <member name="T:Util.Datas.Ef.RepositoryBase`2">
+            <summary>
+            仓储
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TKey">实体标识类型</typeparam>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.#ctor(Util.Datas.IUnitOfWork)">
+            <summary>
+            初始化仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="P:Util.Datas.Ef.RepositoryBase`2.UnitOfWork">
+            <summary>
+            Ef工作单元
+            </summary>
+        </member>
+        <member name="P:Util.Datas.Ef.RepositoryBase`2.Set">
+            <summary>
+            实体集
+            </summary>
+        </member>
+        <member name="P:Util.Datas.Ef.RepositoryBase`2.Connection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Add(`0)">
+            <summary>
+            添加实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Add(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            添加实体
+            </summary>
+            <param name="entities">实体</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Update(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Attach(`0)">
+            <summary>
+            附加实体
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Update(`0,`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="newEntity">新实体</param>
+            <param name="oldEntity">数据库中旧的实体</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.GetExceptionMessage(`0,`0)">
+            <summary>
+            获取异常消息
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Remove(`1)">
+            <summary>
+            移除实体
+            </summary>
+            <param name="id">实体标识</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Remove(`0)">
+            <summary>
+            移除实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Delete(`0)">
+            <summary>
+            删除实体
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Remove(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            移除实体集合
+            </summary>
+            <param name="ids">实体编号集合</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Remove(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            移除实体集合
+            </summary>
+            <param name="entities">实体集合</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            移除实体
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.FindAll">
+            <summary>
+            查找实体集合
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取单个实体
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.FindAsNoTracking">
+            <summary>
+            获取未跟踪的实体集
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Find">
+            <summary>
+            查找实体
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Find(Util.Domains.Repositories.ICriteria{`0})">
+            <summary>
+            查找实体集合
+            </summary>
+            <param name="criteria">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Find(System.Object[])">
+            <summary>
+            查找实体
+            </summary>
+            <param name="id">实体标识</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查找实体集合
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.FindByIds(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            查找实体列表
+            </summary>
+            <param name="ids">实体标识列表</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.FindByIds(System.String)">
+            <summary>
+            查找实体列表
+            </summary>
+            <param name="ids">实体标识列表</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.FindList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查找实体集合
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Exists(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            判断实体是否存在
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Exists(Util.Domains.Repositories.ICriteria{`0})">
+            <summary>
+            判断实体是否存在
+            </summary>
+            <param name="criteria">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.OrderBy(System.Linq.IQueryable{`0},System.String)">
+            <summary>
+            排序
+            </summary>
+            <param name="queryable">查询对象</param>
+            <param name="orderBy">排序列表</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.QueryAsNoTracking(Util.Datas.Queries.IQueryBase{`0})">
+            <summary>
+            获取未跟踪的实体集
+            </summary>
+            <param name="query">查询对象</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Query(Util.Datas.Queries.IQueryBase{`0})">
+            <summary>
+            查询
+            </summary>
+            <param name="query">查询对象</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.PagerQuery(Util.Datas.Queries.IQueryBase{`0})">
+            <summary>
+            分页查询
+            </summary>
+            <param name="query">查询对象</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取实体个数
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.Clear">
+            <summary>
+            清空实体
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.ClearCache">
+            <summary>
+            清空缓存
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`2.GetUnitOfWork">
+            <summary>
+            获取工作单元
+            </summary>
+        </member>
+        <member name="T:Util.Datas.Ef.RepositoryBase`1">
+            <summary>
+            仓储
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:Util.Datas.Ef.RepositoryBase`1.#ctor(Util.Datas.IUnitOfWork)">
+            <summary>
+            初始化仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Util.Datas.Ef.UnitOfWork">
+            <summary>
+            Entity Framework工作单元
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.#ctor(System.String)">
+            <summary>
+            初始化Entity Framework工作单元
+            </summary>
+            <param name="connectionName">连接字符串的名称</param>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.WriteLog">
+            <summary>
+            写日志
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.GetLog">
+            <summary>
+            获取Ef日志操作
+            </summary>
+        </member>
+        <member name="F:Util.Datas.Ef.UnitOfWork.SqlTraceLogName">
+            <summary>
+            获取Sql跟踪日志名
+            </summary>
+        </member>
+        <member name="F:Util.Datas.Ef.UnitOfWork._log">
+            <summary>
+            Ef日志操作
+            </summary>
+        </member>
+        <member name="P:Util.Datas.Ef.UnitOfWork.TraceId">
+            <summary>
+            跟踪号
+            </summary>
+        </member>
+        <member name="F:Util.Datas.Ef.UnitOfWork._userContext">
+            <summary>
+            用户上下文
+            </summary>
+        </member>
+        <member name="F:Util.Datas.Ef.UnitOfWork.SoftDeleteFilterName">
+            <summary>
+            逻辑删除过滤名称
+            </summary>
+        </member>
+        <member name="F:Util.Datas.Ef.UnitOfWork.TenantFilterName">
+            <summary>
+            租户过滤名称
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.Commit">
+            <summary>
+            提交
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            配置映射
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.GetMaps">
+            <summary>
+            获取映射配置
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.GetAssemblies">
+            <summary>
+            获取定义映射配置的程序集列表
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.Filter(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            过滤
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.Init(Util.Datas.IUnitOfWork[])">
+            <summary>
+            初始化工作单元列表
+            </summary>
+            <param name="unitOfWorks">工作单元列表</param>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.InitUnitOfWork(Util.Datas.IUnitOfWork)">
+            <summary>
+            初始化工作单元
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.SaveChanges">
+            <summary>
+            保存更改
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.SaveChangesBefore">
+            <summary>
+            保存更改前操作
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.InterceptAddedOperation(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            拦截添加操作
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.InitCreationAudited(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            初始化创建审计信息
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.GetUserContext">
+            <summary>
+            获取用户上下文
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.InitModificationAudited(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            初始化修改审计信息
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.SetTenant(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            设置租户
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.InterceptModifiedOperation(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            拦截修改操作
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.InterceptDeletedOperation(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            拦截删除操作
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.UnitOfWork.SaveChangesAfter(System.Int32)">
+            <summary>
+            保存更改后操作
+            </summary>
+            <param name="result">影响的行数</param>
+        </member>
+        <member name="T:Util.Datas.Ef.EntityMapBase`1">
+            <summary>
+            实体映射配置
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:Util.Datas.Ef.EntityMapBase`1.#ctor">
+            <summary>
+            初始化实体映射配置
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EntityMapBase`1.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EntityMapBase`1.MapVersion">
+            <summary>
+            映射乐观离线锁
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EntityMapBase`1.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EntityMapBase`1.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.EntityMapBase`1.Register(System.Data.Entity.ModelConfiguration.Configuration.ConfigurationRegistrar)">
+            <summary>
+            注册映射配置
+            </summary>
+            <param name="registrar">配置管理器</param>
+        </member>
+        <member name="T:Util.Datas.Ef.IMapRegister">
+            <summary>
+            映射注册器
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.IMapRegister.Register(System.Data.Entity.ModelConfiguration.Configuration.ConfigurationRegistrar)">
+            <summary>
+            注册映射配置
+            </summary>
+            <param name="registrar">配置管理器</param>
+        </member>
+        <member name="T:Util.Datas.Ef.ValueObjectMapBase`1">
+            <summary>
+            值对象映射配置
+            </summary>
+            <typeparam name="TValueObject">值对象类型</typeparam>
+        </member>
+        <member name="M:Util.Datas.Ef.ValueObjectMapBase`1.#ctor">
+            <summary>
+            初始化值对象映射配置
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.ValueObjectMapBase`1.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Ef.ValueObjectMapBase`1.Register(System.Data.Entity.ModelConfiguration.Configuration.ConfigurationRegistrar)">
+            <summary>
+            注册映射配置
+            </summary>
+            <param name="registrar">配置管理器</param>
+        </member>
+        <member name="T:Util.Datas.Extensions">
+            <summary>
+            查询扩展
+            </summary>
+        </member>
+        <member name="M:Util.Datas.Extensions.OrderBy``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            排序
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="source">数据源</param>
+            <param name="order">排序属性列表，多个属性用逗号分隔，降序用desc字符串，范例：Name,Age desc</param>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterDefinition.ColumnName">
+            <summary>
+            Set if the filter is a single column equality filter.  Null if filter is a Predicate (LambdaExpression)
+            </summary>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterDefinition.Predicate">
+            <summary>
+            Set if the filter is a LambdaExpression.  Null if filter is a single column equality filter.
+            </summary>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterDefinition.GetFilterAndParamFromDBParameter(System.String)">
+            <summary>
+            Reaturns the Filter name and Parameter names associated with the db parameter
+            </summary>
+            <param name="dbParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="F:EntityFramework.DynamicFilters.DynamicFilterExtensions._GlobalParameterValues">
+            <summary>
+            Key: Filter Name
+            Value: The parameters for the filter
+            </summary>
+        </member>
+        <member name="F:EntityFramework.DynamicFilters.DynamicFilterExtensions._ScopedParameterValues">
+            <summary>
+            Key: The DbContext to which the scoped parameter values belong
+            Values: A dictionary defined as _GlobalParameterValues that contains the scoped parameter values for the DbContext
+            </summary>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.InitializeDynamicFilters(System.Data.Entity.DbContext)">
+            <summary>
+            Initialize the Dynamic Filters.  Adding a Filter now automatically calls this method.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.ResetDynamicFilters(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Resets all of DynamicFilters internal static lookups.  Only intended to be used in unit tests where multiple
+            DbContexts are being used and we need to make sure everything is reset to an initial state.
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.String,System.String,System.Object)" -->
+        <!-- Badly formed XML comment ignored for member "M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``2(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Func{System.Object})" -->
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.EnableFilter(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Enable the filter.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.EnableAllFilters(System.Data.Entity.DbContext)">
+            <summary>
+            Enable all filters.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.DisableFilter(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Disable the filter within the current DbContext scope.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.DisableAllFilters(System.Data.Entity.DbContext)">
+            <summary>
+            Disable all filters within the current DbContext scope.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.DisableFilterGlobally(System.Data.Entity.DbModelBuilder,System.String)">
+            <summary>
+            Globally disable the filter.  Can be enabled as needed via DbContext.EnableFilter().
+            </summary>
+            <param name="modelBuilder"></param>
+            <param name="filterName"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.Func{System.Object})">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="func">A delegate that returns the value of the parameter.  This will be evaluated each time
+            the parameter value is needed.</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.Object)">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.String,System.Func{System.Object})">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <param name="func"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.String,System.Object)">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterGlobalParameterValue(System.Data.Entity.DbContext,System.String,System.Func{System.Object})">
+            <summary>
+            Set the parameter value for a filter with global scope.  If a scoped parameter value is not found, this
+            value will be used.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="func">A delegate that returns the value of the parameter.  This will be evaluated each time
+            the parameter value is needed.</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterGlobalParameterValue(System.Data.Entity.DbContext,System.String,System.Object)">
+            <summary>
+            Set the parameter value for a filter with global scope.  If a scoped parameter value is not found, this
+            value will be used.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.GetFilterParameterValue(System.Data.Entity.DbContext,System.String,System.String)">
+            <summary>
+            Returns the value for the filter.  If a scoped value exists within this DbContext, that is returned.
+            Otherwise, a global parameter value will be returned.  If the parameter was set with a delegate, the
+            delegate is evaluated and the result is returned.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.IsFilterEnabled(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Checks to see if the filter is currently enabled based on the DbContext or global settings.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.ClearScopedParameters(System.Data.Entity.DbContext)">
+            <summary>
+            Clear all parameter values within the DbContext scope.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetParameterList(System.Collections.IEnumerable,System.Data.Common.DbParameter,System.Data.Common.DbCommand,System.Boolean)">
+            <summary>
+            Set a collection of parameter values in place of a single parameter.  The '=' condition in the sql
+            command is changed to an 'in' expression.
+            </summary>
+            <param name="paramValueCollection"></param>
+            <param name="param"></param>
+            <param name="command"></param>
+            <param name="isOracle"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.CreateEqualComparisonOfNullablePropToNullableParam(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>
+            Creates an Equal comparison of a nullable property (db column) to a nullable parameter (lambda param)
+            that adds the necessary "is null" checks to support a filter like "e.TenantId = tenantId".
+            Results in sql: (e.TenantID is null and @tenantID is null) or (e.TenantID is not null and e.TenantID = @tenantID)
+            which will support parmeter values that are "null" or a specific value and will correctly filter on columns that
+            are "null" or a specific value.
+            </summary>
+            <param name="propExpression"></param>
+            <param name="paramExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.MapNullComparison(System.Linq.Expressions.Expression,System.Linq.Expressions.ExpressionType)">
+            <summary>
+            Maps a comparison of an expression to a "null" constant.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.VisitMember(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Visit a Member Expression.  Creates a mapping of the MemberExpression to a DbPropertyExpression
+            which is a reference to the table/column name that matches the MemberExpression.
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Visit a Parameter Expression.  Creates a mapping from the ParameterExpression to a
+            DbParameterReferenceExpression which is a reference to a SQL Parameter bound to the
+            table being queries (_Binding).
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.SupportsIn">
+            <summary>
+            Returns true if this provider supports the DbInExpression.  Does this by checking to see if the provider
+            is one that is known to NOT to support it will default to assuming it does.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.PrimitiveTypeForType(System.Type)">
+            <summary>
+            Returns the primitive type of the Type.  If this is a collection type, this is the type of the objects inside the collection.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.IsNullableExpressionOfType``1(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>
+            Returns true if the expression is a DbPropertyExpression (i.e. a class property that has been mapped
+            to a database column) and the type is a Nullable type.
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.IsNullConstantExpression(System.Linq.Expressions.Expression)">
+            <summary>
+            Returns true if the expression is for the "null" constant
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

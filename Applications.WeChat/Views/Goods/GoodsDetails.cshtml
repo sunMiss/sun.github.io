@@ -1,0 +1,303 @@
+﻿@section head{
+
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/swiper-3.4.2.min.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/goods-details.css")>
+}
+<!--页头交互返回按钮-->
+<header>
+    <div class="head-btn-box">
+        <a href="/Home/Index" class="head-btn icon-pre"></a>
+        <a href="/Home/Index" class="head-btn icon-home"></a>
+        <a href="#" class="head-btn icon-share"></a>
+    </div>
+</header>
+
+<!--商品图轮播-->
+<div class="swiper-container slide-margin-top">
+    <div class="swiper-wrapper" id="index-banner-img">
+        
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination add-banner-bottom"></div>
+</div>
+
+<!--折扣信息-->
+<section class="goods-discount">
+    @*<em>限时折扣</em>
+    <span>距结束还剩 <b>23:25:21</b></span>*@
+</section>
+<!--商品信息-->
+<section class="goods-information"></section>
+
+<div class="goods-new-box">
+    
+</div>
+
+<div class="goods-prices-box">
+    
+</div>
+
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--规格、数量 优惠券-->
+<ul class="size-num-box" id="format">
+    <li class="pop-show-size" data-s="number">
+        <span>规格、数量选择</span>
+        <div>
+            <span class="user-select-style"></span>
+            <span></span>
+        </div>
+    </li>
+    <li class="pop-show-coupon" data-s="discount" style="display:none">
+        <span>优惠券</span>
+        <div>
+            <span>5元现金券</span>
+            <span></span>
+        </div>
+    </li>
+</ul>
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--商品详情、规格选项卡-->
+<section class="goods-details-size">
+    <ul class="goods-details-title" style="display: none;">
+        <li class="goods-info-btn active-title-li">商品详情</li>
+        <li class="goods-specification-btn">商品规格</li>
+    </ul>
+    <!--商品详情选项卡-->
+    <div class="goods-info">
+        <!--<ul>
+            <li>
+                <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+            </li>
+            <li>
+                <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+            </li>
+        </ul>-->
+    </div>
+    <!--商品规格选项卡-->
+    <div class="goods-specification">
+        <ul id="goodsSpec">
+            @*<li class="base-pro">
+                <h2>品名</h2>
+                <p>秋月流光冰月妍月饼礼盒</p>
+            </li>*@
+        </ul>
+
+    </div>
+</section>
+
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--猜你喜欢-->
+<div class="home-item">
+    <h3 class="home-title">
+        大家都在看
+    </h3>
+</div>
+
+<section class="goods-list">
+    <ul class="goods-list-description" id="loveGoods">
+        @*<li>
+            <a href="#">
+                <div class="goods-img-show">
+                    <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                </div>
+                <div class="goods-text-show">
+                    <div class="add-discount">限时折扣</div>
+                    <p>CK制造商 休闲抱枕 纯...</p>
+                    <span class="normal-price">￥20.00</span>
+                    <span class="discount-price">￥200.00</span>
+                </div>
+            </a>
+        </li>*@
+    </ul>
+</section>
+
+<!--底部购买按钮-->
+<nav class="bottom-navbar">
+    <ul>
+        <li class="icon-car-category" id="mainIndex">
+            <a href="javascript:Common.goIndex()">
+                <span class="icon-home" data-house="1" id="house"></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li class="icon-car-category" id="storeIndex" style="display:none">
+            <a href="javascript:Common.goIndex()">
+                <span class="icon-home" data-house="1" id="house"></span>
+                <p>店铺</p>
+            </a>
+        </li>
+        <li class="icon-car-category">
+            <a href="/Shopping/ShoppingCar">
+                <span class="icon-car">
+                    <em id="shoppingCartNum"></em>
+                </span>
+                <p>购物车</p>
+            </a>
+        </li>
+        <!--<li class="icon-car-category " onclick="collection(this)" style="display: none;">
+            <a href="#">
+                <span class="icon-category" data-house="1" id="house"></span>
+                <p>收藏</p>
+            </a>
+        </li>-->
+        <!-- onclick="onclick="addCar()"  -->
+        <li class="enter-buy hava-buy click-enter-car" onclick="showBox(this, 'cart')" id="addCartItem">
+            <a href="#">
+                <p>加入购物车</p>
+            </a>
+        </li>
+        <!-- onclick="placeOrder(this)"  -->
+        <li class="enter-buy not-buy confirmBtn" data-confirm="cancel" onclick="showBox(this, 'buy')" id="purchaseItem">
+            <a href="javascript:;">
+                <p>立即购买</p>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!--规格数量弹窗 默认隐藏-->
+<div id="pop-up">
+    <!--商品信息-->
+    <ul class="pop-goods-info">
+        <!--<li class="left-goods-img">
+            <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+        </li>
+        <li class="right-goods-des">
+            <h3>CK制造商 休闲抱枕蓝灰色...</h3>
+            <p>萌趣太鼓造型 萌趣太鼓造型</p>
+            <span>￥119.00</span>
+        </li>-->
+    </ul>
+    <section class="color-size-wrap">
+        <!--颜色、尺寸-->
+        <div class="goods-color-choice" id="goods-color-select"></div>
+        <!--数量-->
+        <div class="goods-color-choice">
+            <h2>数量</h2>
+            <div class="add-reduce-btn">
+                <span class="reduceBtn disabled" onclick="addChange(-1)">－</span>
+                <span class="numValue" id="numValue">1</span>
+                <span class="addBtn" id="addBtn" onclick="addChange(1)">＋</span>
+            </div>
+        </div>
+        <!--库存显示-->
+        <!--<p id="shows_number"></p>-->
+    </section>
+    <!--加入购物车 按钮-->
+    <ul class="pop-up-shopcar">
+        <li class="enter-buy hava-buy hidden-lay enter-shopping-car">
+            <div onclick="addShopCar()">
+                <p>加入购物车</p>
+            </div>
+        </li>
+        <li class="enter-buy not-buy confirmBtn" onclick="placeOrder(this)" data-confirm="cancel">
+            <a href="javascript:;">
+                <p>立即购买</p>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<!--请选择商品属性 弹层-->
+@*<span class="please-select-property" id="selectProperty">请选择商品属性</span>
+<span class="please-select-property" id="addShoppingCart">购物车添加成功</span>*@
+
+
+
+<!--优惠券弹窗-->
+<div id="coupon-lay">
+    <h2>当下品优惠券</h2>
+    <div class="discount-coupon-box">
+        <div class="discount-coupon-show">
+            <!--<h3>礼包兑换券</h3>
+            <p>兑换机会1次</p>
+            <p>有效期 2017.01.30</p>-->
+        </div>
+        <div class="discount-coupon-get"></div>
+    </div>
+    <div class="discount-coupon-box">
+        <div class="discount-coupon-show">
+            <!--<h3>礼包兑换券</h3>
+            <p>兑换机会1次</p>
+            <p>有效期 2017.01.30</p>-->
+        </div>
+        <div class="discount-coupon-get"></div>
+    </div>
+    <div class="submit-btn">完成</div>
+</div>
+<!--规格数量弹窗 页面蒙版-->
+<div class="body-masking hidden-lay"></div>
+
+
+
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/swiper-3.4.2.jquery.min.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/goods-details.js")></script>
+<script type="text/javascript">
+    /*商品图轮播*/
+    var swiperIndex = new Swiper('.swiper-container',
+        {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            autoplayDisableOnInteraction: false,
+            autoplay: 2000,
+            observer: true, //修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true, //修改swiper的父元素时，自动初始化swiper
+        });
+    /*商品详情、规格点击*/
+    $(document).on("click",".goods-details-title li",function() {
+            $(this).addClass("active-title-li").siblings().removeClass("active-title-li");
+        });
+
+    /*点击规格、优惠券弹出页面*/
+    $('#format').on('click', 'li', function () {
+        var $dataS = $(this).attr('data-s');
+        $('body').css('overflow', 'hidden');
+        $(".body-masking").show();
+        if ($dataS == 'number') {
+            $("#pop-up").show();
+            $("#pop-up").removeClass('bombEn').addClass('bombAn');
+        } else if ($dataS == 'discount') {
+            $("#coupon-lay").show();
+            $("#coupon-lay").removeClass('bombEn').addClass('bombAn');
+        }
+    });
+    
+
+    /*点击遮罩层*/
+    $(".body-masking").click(function () {
+        $(".body-masking").hide();
+        $('body').css('overflow', 'auto');
+        $("#pop-up").removeClass('bombAn').addClass('bombEn');
+        $("#coupon-lay").removeClass('bombAn').addClass('bombEn');
+        setTimeout(function () {
+            $("#pop-up").hide();
+            $("#coupon-lay").hide();
+        }, 500)
+    });
+
+    /*商品详情、规格选项卡切换*/
+    $(".goods-info-btn").click(function() {
+        $(".goods-info").css("display", "block");
+        $(".goods-specification").css("display", "none");
+
+    });
+    $(".goods-specification-btn").click(function() {
+        $(".goods-info").css("display", "none");
+        $(".goods-specification").css("display", "block");
+    });
+
+    $(function () {
+        if (Common.isStore()) {
+            $("#mainIndex").hide();
+            $("#storeIndex").show();
+        }
+    });
+
+</script>

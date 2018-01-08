@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util.Biz</name>
+    </assembly>
+    <members>
+        <member name="T:Biz.Abstractions.IConfig">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:Biz.Abstractions.IConfig.GetValue(System.String)">
+            <summary>
+            获取配置的值
+            </summary>
+            <param name="code">配置编码</param>
+        </member>
+        <member name="T:Biz.Abstractions.IDictionary">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="M:Biz.Abstractions.IDictionary.GetText(System.Guid)">
+            <summary>
+            获取字典文本
+            </summary>
+            <param name="dictionaryId">字典编号</param>
+        </member>
+        <member name="T:Biz.Enums.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Gender.Female">
+            <summary>
+            女
+            </summary>        
+        </member>
+        <member name="F:Biz.Enums.Gender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="T:Biz.Enums.GenderExtensions">
+            <summary>
+            性别枚举扩展
+            </summary>
+        </member>
+        <member name="M:Biz.Enums.GenderExtensions.Description(System.Nullable{Biz.Enums.Gender})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Biz.Enums.GenderExtensions.Value(System.Nullable{Biz.Enums.Gender})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Biz.Enums.Nation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Hz">
+            <summary>
+            汉族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Mgz">
+            <summary>
+            蒙古族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.HuiZ">
+            <summary>
+            回族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Zz">
+            <summary>
+            藏族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Wwez">
+            <summary>
+            维吾尔族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Mz">
+            <summary>
+            苗族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Yz">
+            <summary>
+            彝族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.ZhuangZ">
+            <summary>
+            壮族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Byz">
+            <summary>
+            布依族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Cxz">
+            <summary>
+            朝鲜族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.ManZ">
+            <summary>
+            满族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Tz">
+            <summary>
+            侗族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.YaoZ">
+            <summary>
+            瑶族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Bz">
+            <summary>
+            白族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Tjz">
+            <summary>
+            土家族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Hnz">
+            <summary>
+            哈尼族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Hskz">
+            <summary>
+            哈萨克族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Dz">
+            <summary>
+            傣族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Lz">
+            <summary>
+            黎族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Lsz">
+            <summary>
+            傈僳族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Wz">
+            <summary>
+            佤族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Sz">
+            <summary>
+            畲族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Gsz">
+            <summary>
+            高山族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Lhz">
+            <summary>
+            拉祜族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.ShuiZ">
+            <summary>
+            水族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Dxz">
+            <summary>
+            东乡族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Nxz">
+            <summary>
+            纳西族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Jpz">
+            <summary>
+            景颇族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Kekzz">
+            <summary>
+            柯尔克孜族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.TuZ">
+            <summary>
+            土族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Dwez">
+            <summary>
+            达斡尔族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Mlz">
+            <summary>
+            仫佬族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Qz">
+            <summary>
+            羌族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Blz">
+            <summary>
+            布朗族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Slz">
+            <summary>
+            撒拉族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Mnz">
+            <summary>
+            毛南族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Ylz">
+            <summary>
+            仡佬族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Xbz">
+            <summary>
+            锡伯族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Acz">
+            <summary>
+            阿昌族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Pmz">
+            <summary>
+            普米族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Tjkz">
+            <summary>
+            塔吉克族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Nz">
+            <summary>
+            怒族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Wzbkz">
+            <summary>
+            乌孜别克族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Elsz">
+            <summary>
+            俄罗斯族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Ewkz">
+            <summary>
+            鄂温克族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Daz">
+            <summary>
+            德昂族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Baz">
+            <summary>
+            保安族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Ygz">
+            <summary>
+            裕固族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Jz">
+            <summary>
+            京族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Ttrz">
+            <summary>
+            塔塔尔族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Dlz">
+            <summary>
+            独龙族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Elcz">
+            <summary>
+            鄂伦春族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Hzz">
+            <summary>
+            赫哲族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Mbz">
+            <summary>
+            门巴族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Lbz">
+            <summary>
+            珞巴族        
+            </summary>
+        </member>
+        <member name="F:Biz.Enums.Nation.Jnz">
+            <summary>
+            基诺族        
+            </summary>
+        </member>
+        <member name="T:Biz.Enums.NationExtensions">
+            <summary>
+            民族枚举扩展
+            </summary>
+        </member>
+        <member name="M:Biz.Enums.NationExtensions.Description(System.Nullable{Biz.Enums.Nation})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Biz.Enums.NationExtensions.Value(System.Nullable{Biz.Enums.Nation})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Biz.ValueObjects.Address">
+            <summary>
+            地址 - 不可变
+            </summary>
+        </member>
+        <member name="M:Biz.ValueObjects.Address.#ctor">
+            <summary>
+            初始化地址
+            </summary>
+        </member>
+        <member name="M:Biz.ValueObjects.Address.#ctor(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化地址
+            </summary>
+            <param name="provinceId">省份编号</param>
+            <param name="cityId">城市编号</param>
+            <param name="countyId">区县编号</param>
+            <param name="province">省份</param>
+            <param name="city">城市</param>
+            <param name="county">区县</param>
+            <param name="street">街道</param>
+            <param name="zip">邮政编码</param>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.ProvinceId">
+            <summary>
+            省份编号
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.CityId">
+            <summary>
+            城市编号
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.CountyId">
+            <summary>
+            区县编号
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.County">
+            <summary>
+            区县
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.Zip">
+            <summary>
+            邮政编码
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.Description">
+            <summary>
+            地址描述
+            </summary>
+        </member>
+        <member name="M:Biz.ValueObjects.Address.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.Address.Null">
+            <summary>
+            空地址
+            </summary>
+        </member>
+        <member name="T:Biz.ValueObjects.AddressInfo">
+            <summary>
+            地址信息 - 可变
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.ProvinceId">
+            <summary>
+            省份编号
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.CityId">
+            <summary>
+            城市编号
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.CountyId">
+            <summary>
+            区县编号
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.County">
+            <summary>
+            区县
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.Zip">
+            <summary>
+            邮政编码
+            </summary>
+        </member>
+        <member name="P:Biz.ValueObjects.AddressInfo.Description">
+            <summary>
+            地址描述
+            </summary>
+        </member>
+        <member name="T:Biz.ValueObjects.AddressInfoExtension">
+            <summary>
+            地址信息扩展
+            </summary>
+        </member>
+        <member name="M:Biz.ValueObjects.AddressInfoExtension.ToAddress(Biz.ValueObjects.AddressInfo)">
+            <summary>
+            转换为地址
+            </summary>
+        </member>
+        <member name="M:Biz.ValueObjects.AddressInfoExtension.ToInfo(Biz.ValueObjects.Address)">
+            <summary>
+            转换为地址信息
+            </summary>
+            <param name="address">地址</param>
+        </member>
+        <member name="T:Biz.ValueObjects.NullAddress">
+            <summary>
+            空地址
+            </summary>
+        </member>
+        <member name="M:Biz.ValueObjects.NullAddress.IsNull">
+            <summary>
+            是否空对象
+            </summary>
+        </member>
+    </members>
+</doc>

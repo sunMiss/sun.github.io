@@ -1,0 +1,71 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/shoppingcar.css")>
+    }
+<header class="shopping-title">
+    <span>购物车</span>
+</header>
+<section class="shopping-car-null-show">
+    <div class="shopping-car-wrap">
+        <span>
+            <img src="/Content/dxpImages/img_shop_nopro.png" alt="" class="img-responsive">
+        </span>
+        <div>
+            <p>购物车还没有商品哦</p>
+            <a href="/Home/Index">去逛逛</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!--看了该商品的用户还买了-->
+<div class="home-item">
+    <h3 class="home-title">
+        看了该商品的用户还买了
+    </h3>
+</div>
+<section class="goods-list">
+    <ul class="goods-list-description">
+        <li>
+            <a href="#">
+                <div class="goods-img-show">
+                    <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                </div>
+                <div class="goods-text-show">
+                    <div class="add-discount">限时折扣</div>
+                    <p>CK制造商 休闲抱枕 纯...</p>
+                    <span class="normal-price">￥20.00</span>
+                    <span class="discount-price">￥200.00</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="goods-img-show">
+                    <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                </div>
+                <div class="goods-text-show">
+                    <p>CK制造商 休闲抱枕 纯...</p>
+                    <span class="normal-price">￥20.00</span>
+                </div>
+
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="goods-img-show">
+                    <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                </div>
+                <div class="goods-text-show">
+                    <p>CK制造商 休闲抱枕 纯...</p>
+                    <span class="normal-price">￥20.00</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!--底部导航-->
+@Html.Partial("../Shared/navbar");
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/jquery-3.1.1.js")></script>

@@ -1,0 +1,2341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Domains.Commons</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.Domains.Commons.Config">
+            <summary>
+            应用程序配置
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AdminApplicationCode">
+            <summary>
+            管理后台
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.ClientApplicationCode">
+            <summary>
+            客户端
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.DealerRoleId">
+            <summary>
+            经销商角色编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.OperatorTenantId">
+            <summary>
+            运营商编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.CustomerServiceRoleId">
+            <summary>
+            客服角色编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.TenantAdminRoleId">
+            <summary>
+            租户管理员角色编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.TenantEmployeenRoleId">
+            <summary>
+            租户员工角色编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.CustomersRoleId">
+            <summary>
+            客户角色编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.TenantCustomersRoleId">
+            <summary>
+            租户客户角色编号
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.InitPassword">
+            <summary>
+            初始密码
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.ServiceTell">
+            <summary>
+            服务热线
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.ResourceServerUrl">
+            <summary>
+            资源服务器Url
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.QiniuAK">
+            <summary>
+            七牛云存储AK
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.QiniuSK">
+            <summary>
+            七牛云存储SK
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.QiniuBucket">
+            <summary>
+            七牛云存储空间
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.UploadSaveRootPath">
+            <summary>
+            上传文件保存根目录
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AppYearPrice">
+            <summary>
+            手机版每年价格
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayRechargeablePartner">
+            <summary>
+            支付宝续费身份证
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayRechargeableSign">
+            <summary>
+            支付宝续费签名
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayRechargeableAppId">
+            <summary>
+            支付宝应用Id
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayRechargeableQrNotify_url">
+            <summary>
+            二维码充值回调
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayRechargeableNotify_url">
+            <summary>
+            支付宝续费异步通知
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayRechargeableReturn_url">
+            <summary>
+            支付宝续费异步回调界面
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayBatchRechargeableNotify_url">
+            <summary>
+            支付宝续费异步通知
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.AlipayBatchRechargeableReturn_url">
+            <summary>
+            支付宝续费异步回调界面
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.TenantRole">
+            <summary>
+            租户角色分类code
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Config.RegisterPrice">
+            <summary>
+            注册价格
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.DeviceType">
+            <summary>
+            终端设备类型
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.Web">
+            <summary>
+            Web浏览器
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.Pc">
+            <summary>
+            虚幻客户端
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.AndroidPhone">
+            <summary>
+            安卓手机
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.IosPhone">
+            <summary>
+            苹果手机
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.IosPad">
+            <summary>
+            苹果平板
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.AndroidPad">
+            <summary>
+            安卓平板
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.Sell">
+            <summary>
+            销售客户端
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.DeviceType.WerixinSmallApp">
+            <summary>
+            微信小程序
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.DeviceTypeExtensions">
+            <summary>
+            终端设备类型枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.DeviceTypeExtensions.Description(System.Nullable{Applications.Domains.Commons.Enums.DeviceType})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.DeviceTypeExtensions.Value(System.Nullable{Applications.Domains.Commons.Enums.DeviceType})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.Gender">
+            <summary>
+            性别类型
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Gender.Man">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Gender.Woman">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.GenderExtensions">
+            <summary>
+            性别类型枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.GenderExtensions.Description(System.Nullable{Applications.Domains.Commons.Enums.Gender})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.GenderExtensions.Value(System.Nullable{Applications.Domains.Commons.Enums.Gender})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.ModuleType">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.ModuleType.Article">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.ModuleType.DIY">
+            <summary>
+            DIY
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.ModuleType.Product">
+            <summary>
+            产品
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.ModuleTypeExtensions">
+            <summary>
+            模块类型枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.ModuleTypeExtensions.Description(System.Nullable{Applications.Domains.Commons.Enums.ModuleType})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.ModuleTypeExtensions.Value(System.Nullable{Applications.Domains.Commons.Enums.ModuleType})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.Nation">
+            <summary>
+            民族类型
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.HanZu">
+            <summary>
+            汉族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ZhuangZu">
+            <summary>
+            壮族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.HuiZu">
+            <summary>
+            回族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.MamZu">
+            <summary>
+            满族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.WeiWuErZu">
+            <summary>
+            维吾尔族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.MiaoZu">
+            <summary>
+            苗族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.YiZu">
+            <summary>
+            彝族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.TuJiaZu">
+            <summary>
+            土家族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ZangZu">
+            <summary>
+            藏族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.MengGuZu">
+            <summary>
+            蒙古族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.DongZu">
+            <summary>
+            侗族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.BuYiZu">
+            <summary>
+            布依族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.YaoZu">
+            <summary>
+            瑶族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.BaiZu">
+            <summary>
+            白族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ChaoXianZu">
+            <summary>
+            朝鲜族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.HaNiZu">
+            <summary>
+            哈尼族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.LiZu">
+            <summary>
+            黎族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.HaSaKeZu">
+            <summary>
+            哈萨克族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.DaiZu">
+            <summary>
+            傣族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.SheZu">
+            <summary>
+            畲族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.LiSuZu">
+            <summary>
+            傈僳族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.DongXiangZu">
+            <summary>
+            东乡族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.GeLaoZu">
+            <summary>
+            仡佬族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.LaHuZu">
+            <summary>
+            拉祜族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.WaZu">
+            <summary>
+            佤族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ShuiZu">
+            <summary>
+            水族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.NaXiZu">
+            <summary>
+            纳西族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.QiangZu">
+            <summary>
+            羌族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.TuZu">
+            <summary>
+            土族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.MuLaoZu">
+            <summary>
+            仫佬族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.XiBoZu">
+            <summary>
+            锡伯族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.KeErKeZiZu">
+            <summary>
+            柯尔克孜族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.JingPoZu">
+            <summary>
+            景颇族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.DaWoErZu">
+            <summary>
+            达斡尔族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.SaLaZu">
+            <summary>
+            撒拉族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.BuLangZu">
+            <summary>
+            布朗族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.MaoNanZu">
+            <summary>
+            毛南族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.TaJiKeZu">
+            <summary>
+            塔吉克族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.PuMiZu">
+            <summary>
+            普米族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.AChangZu">
+            <summary>
+            阿昌族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.NuZu">
+            <summary>
+            怒族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.EWenKeZu">
+            <summary>
+            鄂温克族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.JingZu">
+            <summary>
+            京族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.JiNuoZu">
+            <summary>
+            基诺族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.DeAngZu">
+            <summary>
+            德昂族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.BaoAnZu">
+            <summary>
+            保安族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ELuoSiZu">
+            <summary>
+            俄罗斯族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.YuGuZu">
+            <summary>
+            裕固族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.WuZiBieKeZu">
+            <summary>
+            乌孜别克族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.MenBaZu">
+            <summary>
+            门巴族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ELunCunZu">
+            <summary>
+            鄂伦春族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.DuLongZu">
+            <summary>
+            独龙族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.HeZheZu">
+            <summary>
+            赫哲族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.GaoShanZu">
+            <summary>
+            高山族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.LuoBaZu">
+            <summary>
+            珞巴族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.TaTaErZu">
+            <summary>
+            塔塔尔族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.Nation.ChuanQingZu">
+            <summary>
+            穿青族
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.NationExtensions">
+            <summary>
+            民族类型枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.NationExtensions.Description(System.Nullable{Applications.Domains.Commons.Enums.Nation})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.NationExtensions.Value(System.Nullable{Applications.Domains.Commons.Enums.Nation})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.OperationType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.OperationType.GoodsReceipt">
+            <summary>
+            收货操作
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.OperationTypeExtensions">
+            <summary>
+            性别类型枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.OperationTypeExtensions.Description(System.Nullable{Applications.Domains.Commons.Enums.OperationType})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.OperationTypeExtensions.Value(System.Nullable{Applications.Domains.Commons.Enums.OperationType})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.TenantConfigCode">
+            <summary>
+            租户配置编码
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.LargeImageSize">
+            <summary>
+            大图尺寸
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.MiddleImageSize">
+            <summary>
+            中图尺寸
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.SmallImageSize">
+            <summary>
+            小图尺寸
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.PushAppId">
+            <summary>
+            PushAppId
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.PushAppKey">
+            <summary>
+            PushAppKey
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.PushMasterSecret">
+            <summary>
+            PushMasterSecret
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantConfigCode.AttachContent">
+            <summary>
+            AttachContent
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.TenantConfigCodeExtensions">
+            <summary>
+            租户配置编码枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.TenantConfigCodeExtensions.Description(System.Nullable{Applications.Domains.Commons.Enums.TenantConfigCode})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Enums.TenantConfigCodeExtensions.Value(System.Nullable{Applications.Domains.Commons.Enums.TenantConfigCode})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Enums.TenantDataType">
+            <summary>
+            租户数据类型
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.String">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.Int">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.Double">
+            <summary>
+            浮点数
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.DateTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.Accessory">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.Png">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.Color">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Commons.Enums.TenantDataType.ArticleChannel">
+            <summary>
+            文章频道
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Factories.IconFactory">
+            <summary>
+            图标工厂
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Factories.IconFactory.Create(Util.Files.ImageInfo)">
+            <summary>
+            图片信息转换为图标
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Factories.TenantConfigTemplateFactory">
+            <summary>
+            租户配置模板工厂
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Factories.TenantConfigTemplateFactory.Create(System.Guid,System.String,System.String,System.String,System.String,System.Int32,Applications.Domains.Commons.Enums.TenantDataType,System.Nullable{System.DateTime},System.Nullable{System.Guid},System.Nullable{System.DateTime},System.Nullable{System.Guid},System.Boolean,System.Byte[])">
+            <summary>
+            创建租户配置模板
+            </summary>
+            <param name="tenantConfigTemplateId">租户配置模板</param>
+            <param name="name">名称</param>
+            <param name="code">编码</param>
+            <param name="defaultValue">默认值</param>
+            <param name="description">说明</param>
+            <param name="sortId">排序号</param>
+            <param name="dataType">数据类型</param>
+            <param name="creationTime">创建时间</param>
+            <param name="creatorId">创建人</param>
+            <param name="lastModificationTime">最后修改时间</param>
+            <param name="lastModifierId">最后修改人</param>
+            <param name="isDeleted">是否删除</param>
+            <param name="version">版本号</param>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.Area">
+            <summary>
+            地区
+            </summary>
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.#ctor">
+            <summary>
+            初始化地区
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.#ctor(System.Guid,System.String,System.Int32)">
+            <summary>
+            初始化地区
+            </summary>
+            <param name="id">地区标识</param>
+            <param name="path">路径</param>
+            <param name="level">级数</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.Text">
+            <summary>
+            地区名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.FullPinYin">
+            <summary>
+            全拼
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.AddChanges(Applications.Domains.Commons.Models.Area)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.Dictionary">
+            <summary>
+            字典
+            </summary>
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dictionary.#ctor">
+            <summary>
+            初始化字典
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dictionary.#ctor(System.Guid,System.String,System.Int32)">
+            <summary>
+            初始化字典
+            </summary>
+            <param name="id">字典标识</param>
+            <param name="path">路径</param>
+            <param name="level">级数</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dictionary.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dictionary.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dictionary.AddChanges(Applications.Domains.Commons.Models.Dictionary)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dictionary.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dictionary.InitPinYin">
+            <summary>
+            初始化拼音
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.Icon">
+            <summary>
+            图标
+            </summary>
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.#ctor">
+            <summary>
+            初始化图标
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.#ctor(System.Guid)">
+            <summary>
+            初始化图标
+            </summary>
+            <param name="id">图标标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.CategoryId">
+            <summary>
+            图标分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Name">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Path">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Size">
+            <summary>
+            图标大小
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Css">
+            <summary>
+            Css代码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.IconCategory">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.AddChanges(Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.GetCategoryName">
+            <summary>
+            获取图标分类名称
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.GetSize">
+            <summary>
+            获取文件大小
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.GenerateCss(System.String)">
+            <summary>
+            生成Css
+            </summary>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.CreateClassName(System.String)">
+            <summary>
+            创建类名
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.CreateCss(System.String)">
+            <summary>
+            创建Css
+            </summary>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.IconCategory">
+            <summary>
+            图标分类
+            </summary>
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.#ctor">
+            <summary>
+            初始化图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.#ctor(System.Guid)">
+            <summary>
+            初始化图标分类
+            </summary>
+            <param name="id">图标分类标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.Icons">
+            <summary>
+            图标列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.AddChanges(Applications.Domains.Commons.Models.IconCategory)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.ModuleTagConfig">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.ModuleTagConfig.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.ModuleTagConfig.#ctor(System.Guid)">
+            <summary>
+            初始化
+            </summary>
+            <param name="id">标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.ModuleType">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.TagConfigIds">
+            <summary>
+            标签Id列表 ',' 分隔
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.ModuleTagConfig.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.ModuleTagConfig.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.ModuleTagConfig.AddChanges(Applications.Domains.Commons.Models.ModuleTagConfig)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.ModuleTagConfig.#ctor(Applications.Domains.Commons.Enums.ModuleType)">
+            <summary>
+            初始化
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.SystemConfig">
+            <summary>
+            系统配置
+            </summary>
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfig.#ctor">
+            <summary>
+            初始化系统配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfig.#ctor(System.Guid)">
+            <summary>
+            初始化系统配置
+            </summary>
+            <param name="id">系统配置标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.CategoryId">
+            <summary>
+            配置分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfig.SystemConfigCategory">
+            <summary>
+            系统配置分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfig.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfig.AddChanges(Applications.Domains.Commons.Models.SystemConfig)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.SystemConfigCategory">
+            <summary>
+            系统配置分类
+            </summary>
+            <summary>
+            系统配置分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfigCategory.#ctor">
+            <summary>
+            初始化系统配置分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfigCategory.#ctor(System.Guid)">
+            <summary>
+            初始化系统配置分类
+            </summary>
+            <param name="id">系统配置分类标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.SystemConfigCategory.SystemConfigs">
+            <summary>
+            系统配置列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfigCategory.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.SystemConfigCategory.AddChanges(Applications.Domains.Commons.Models.SystemConfigCategory)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.TagConfig">
+            <summary>
+            标签配置
+            </summary>
+            <summary>
+            标签配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TagConfig.#ctor">
+            <summary>
+            初始化标签配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TagConfig.#ctor(System.Guid)">
+            <summary>
+            初始化标签配置
+            </summary>
+            <param name="id">标签配置标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.Name">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.Option">
+            <summary>
+            选项值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.Note">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TagConfig.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TagConfig.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TagConfig.AddChanges(Applications.Domains.Commons.Models.TagConfig)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.TenantConfig">
+            <summary>
+            租户配置
+            </summary>
+            <summary>
+            租户配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfig.#ctor">
+            <summary>
+            初始化租户配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfig.#ctor(System.Guid)">
+            <summary>
+            初始化租户配置
+            </summary>
+            <param name="id">租户配置标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.TenantConfigTemplateId">
+            <summary>
+            租户配置模板编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfig.TenantConfigTemplate">
+            <summary>
+            租户模板
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfig.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfig.AddChanges(Applications.Domains.Commons.Models.TenantConfig)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfig.UpdateValue(System.String)">
+            <summary>
+            更新值
+            </summary>
+            <param name="value">值</param>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.TenantConfigTemplate">
+            <summary>
+            租户配置模板
+            </summary>
+            <summary>
+            租户配置模板
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfigTemplate.#ctor">
+            <summary>
+            初始化租户配置模板
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfigTemplate.#ctor(System.Guid)">
+            <summary>
+            初始化租户配置模板
+            </summary>
+            <param name="id">租户配置模板标识</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.TenantConfigTemplate.TenantConfigs">
+            <summary>
+            租户配置列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfigTemplate.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.TenantConfigTemplate.AddChanges(Applications.Domains.Commons.Models.TenantConfigTemplate)">
+            <summary>
+            添加变更列表
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.AreaQuery">
+            <summary>
+            地区查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.AreaId">
+            <summary>
+            地区编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.Text">
+            <summary>
+            地区名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.FullPinYin">
+            <summary>
+            全拼
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.AreaQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.AreaQuery.CheckEmpty">
+            <summary>
+            检查查询参数是否全部为空
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.DictionaryQuery">
+            <summary>
+            字典查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.DictionaryId">
+            <summary>
+            字典编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.BeginLastModificationTime">
+            <summary>
+            起始最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DictionaryQuery.EndLastModificationTime">
+            <summary>
+            结束最后修改时间
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.DictionaryQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.DictionaryQuery.CheckEmpty">
+            <summary>
+            检查查询参数是否全部为空
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.IconCategoryQuery">
+            <summary>
+            图标分类查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.CategoryId">
+            <summary>
+            图标分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.IconCategoryQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.IconQuery">
+            <summary>
+            图标查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.IconId">
+            <summary>
+            图标编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.CategoryId">
+            <summary>
+            图标分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Name">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Path">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.MinSize">
+            <summary>
+            最小图标容量
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.MaxSize">
+            <summary>
+            最大图标容量
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Css">
+            <summary>
+            Css代码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.IconQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.ModuleTagConfigQuery">
+            <summary>
+            查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.ModuleTagConfigId">
+            <summary>
+            模块标签配置编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.ModuleType">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.TagConfigIds">
+            <summary>
+            标签Id列表 ',' 分隔
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.BeginLastModificationTime">
+            <summary>
+            起始最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.EndLastModificationTime">
+            <summary>
+            结束最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.ModuleTagConfigQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery">
+            <summary>
+            系统配置分类查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.CategoryId">
+            <summary>
+            配置分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.SystemConfigCategoryQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.SystemConfigQuery">
+            <summary>
+            系统配置查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.ConfigId">
+            <summary>
+            配置编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.CategoryId">
+            <summary>
+            配置分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.BeginLastModificationTime">
+            <summary>
+            起始最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.EndLastModificationTime">
+            <summary>
+            结束最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.SystemConfigQuery.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.SystemConfigQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.TagConfigQuery">
+            <summary>
+            标签配置查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.TagConfigId">
+            <summary>
+            标签配置编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.Name">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.Option">
+            <summary>
+            选项值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.Note">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.BeginLastModificationTime">
+            <summary>
+            起始最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.EndLastModificationTime">
+            <summary>
+            结束最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TagConfigQuery.ModuleType">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.TagConfigQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.TenantConfigQuery">
+            <summary>
+            租户配置查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.ConfigId">
+            <summary>
+            租户配置编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.BeginLastModificationTime">
+            <summary>
+            起始最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.EndLastModificationTime">
+            <summary>
+            结束最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigQuery.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.TenantConfigQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery">
+            <summary>
+            租户配置模板查询实体
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.TenantConfigTemplateId">
+            <summary>
+            租户配置模板
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.BeginCreationTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.EndCreationTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.BeginLastModificationTime">
+            <summary>
+            起始最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.EndLastModificationTime">
+            <summary>
+            结束最后修改时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.LastModifierId">
+            <summary>
+            最后修改人
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.TenantConfigTemplateQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IAreaRepository">
+            <summary>
+            地区仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Repositories.IAreaRepository.GetAreaList(System.Data.GetListParameter)">
+            <summary>
+            获取区域信息
+            </summary>
+            <param name="parameter">请求参数</param>
+            <returns>区域信息</returns>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IDictionaryRepository">
+            <summary>
+            字典仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IIconCategoryRepository">
+            <summary>
+            图标分类仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IIconRepository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IModuleTagConfigRepository">
+            <summary>
+            仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.ISystemConfigCategoryRepository">
+            <summary>
+            系统配置分类仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.ISystemConfigRepository">
+            <summary>
+            系统配置仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.ITagConfigRepository">
+            <summary>
+            标签配置仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.ITenantConfigRepository">
+            <summary>
+            租户配置仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Repositories.ITenantConfigRepository.GetAllCongfigs">
+            <summary>
+            获取全部配置
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Repositories.ITenantConfigRepository.GetCongfig(Applications.Domains.Commons.Enums.TenantConfigCode)">
+            <summary>
+            获取配置
+            </summary>
+            <param name="code">编码</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Repositories.ITenantConfigRepository.GetCongfigValue(Applications.Domains.Commons.Enums.TenantConfigCode)">
+            <summary>
+            获取配置值
+            </summary>
+            <param name="code">编码</param>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.ITenantConfigTemplateRepository">
+            <summary>
+            租户配置模板仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Response.AreaResponse">
+            <summary>
+            区域响应信息
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Response.AreaResponse.AreaId">
+            <summary>
+            区域ID
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Response.AreaResponse.AreaName">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Services.IconManager">
+            <summary>
+            图标管理器
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.#ctor(Util.Files.IFileUpload,Applications.Domains.Commons.Repositories.IIconRepository,Util.Files.IFileManager)">
+            <summary>
+            初始化图标管理器
+            </summary>
+            <param name="fileUpload">文件上传操作</param>
+            <param name="iconRepository">图标仓储</param>
+            <param name="fileManager">文件管理器</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Services.IconManager.FileUpload">
+            <summary>
+            文件上传操作
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Services.IconManager.IconRepository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Services.IconManager.FileManager">
+            <summary>
+            文件管理器
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.Upload(System.Guid,System.String,System.String)">
+            <summary>
+            上传图标
+            </summary>
+            <param name="categoryId">图标分类编号</param>
+            <param name="uploadIconPath">上传图标的路径</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.ValidateUpload(System.Guid,System.String,System.String)">
+            <summary>
+            验证上传
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.UploadImage(System.String)">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.ToIcon(System.Guid,Util.Files.ImageInfo)">
+            <summary>
+            转换为图标
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.AddToRepository(Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            添加到仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.AppendToFile(System.String,Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            添加到CSS文件末尾
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.Delete(System.Collections.Generic.List{System.Guid},System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标编号集合</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.RemoveFromRepository(System.Collections.Generic.IEnumerable{Applications.Domains.Commons.Models.Icon})">
+            <summary>
+            从仓储移除图标集合
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.DeleteFiles(System.Collections.Generic.IEnumerable{Applications.Domains.Commons.Models.Icon})">
+            <summary>
+            删除文件集合
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.RemoveCss(System.Collections.Generic.IEnumerable{Applications.Domains.Commons.Models.Icon},System.String)">
+            <summary>
+            从Css文件中移除Css代码
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Services.IIconManager">
+            <summary>
+            图标管理器
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IIconManager.Upload(System.Guid,System.String,System.String)">
+            <summary>
+            上传图标
+            </summary>
+            <param name="categoryId">图标分类编号</param>
+            <param name="uploadIconPath">上传图标的路径</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IIconManager.Delete(System.Collections.Generic.List{System.Guid},System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标编号集合</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+    </members>
+</doc>

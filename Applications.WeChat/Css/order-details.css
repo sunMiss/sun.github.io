@@ -1,0 +1,268 @@
+body{
+    position: relative;
+    height: 100%;
+}
+.shopping-title{
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.shop-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.obligation {
+    margin-top: 2rem;
+    height: 100%;
+    overflow: auto;
+}
+.shopping-title>span{
+    font-size: 0.3rem;
+}
+.go-back-pre{
+background: url(/Content/dxpImages/ico_shop_all.png)no-repeat center;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0;
+    background-size: 500%;
+}
+.shopping-title .go-back-pre{
+    left: 0rem;
+    margin-top: 0.28rem;
+    background-position: 0 -2.9rem;
+}
+
+.last-remind{
+    height: 2rem;
+    line-height: 2rem;
+    width: 100%;
+    font-size: 0.6rem;
+    color: #aa906b;
+    background-color: #F8F7F3;
+    overflow:hidden;
+}
+.last-remind .remind-icon{
+    display:inline-block;
+    background: url("/Content/dxpImages/ico_shop_all.png")0rem 0.4rem no-repeat;
+    width:1rem;
+    height: 1.3rem;
+    background-size: 600%;
+    margin-top:0.2rem;
+    vertical-align: top;
+    margin-left:0.5rem;
+}
+
+
+/*包裹信息*/
+.package-head-info{
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+.package-head-info .package-name{
+    border-radius: 3px;
+    background-color: #83C44E;
+    padding:0.15rem 0.4rem;
+    color: #ffffff;
+    margin: auto 0.5rem;
+}
+.package-state{
+    float: right;
+    margin-right: 24px;
+    color: #a78c66;
+}
+/*包裹位置*/
+.package-location{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.package-location .location-icon{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top:1.5rem;
+    left: 0.5rem;
+    margin-top: -28px;
+    background: url(/Content/dxpImages/ico_shop_all.png) center no-repeat;
+    background-position: 2px -5rem;
+    background-size: 400%;
+}
+.show-address{
+    margin:0.5rem 2rem 0.5rem 2.5rem;
+}
+.show-address p{
+    margin-top: 0.3rem;
+    color: #999999;
+    font-size: 0.65rem;
+}
+.show-address span{
+    font-size: 0.65rem;
+    color: #83c44e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+/*订单内商品列表*/
+.goods-list-show{
+    height: 2rem;
+    border: 1px solid #f0f0f0;
+}
+.package-one .goods-list-show{
+    height: 2rem;
+    border: 1px solid #f0f0f0;
+
+}
+.package-one .goods-list-show-wrap{
+    position: relative;
+    overflow: hidden;
+}
+.package-one li .left-img-show,.package-one li .right-goods-details{
+    float: left;
+}
+.package-one li .left-img-show{
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+}
+
+.package-one .right-goods-details{
+    margin-left: 0.3rem;
+    width: 10rem;
+}
+
+.package-one .right-goods-details .details-name{
+    font-size: 0.65rem;
+}
+.package-one .right-goods-details .details-choice{
+   font-size: 0.6rem;
+    color: #999999;
+    margin: 0.2rem auto 0.2rem;
+}
+.package-one .right-goods-details .prices-show{
+    font-size: 0.7rem;
+    color: #be394b;
+}
+
+.package-one .right-goods-details .details-num{
+    float: right;
+     margin-right: 0.5rem;
+    font-size: 0.6rem;
+
+    color: #333333;
+}
+.package-location .go-back-pre{
+    transform: rotateY(180deg);
+    top:0.8rem;
+    right: 0.5rem;
+    background-position:2px -2.9rem;
+}
+/*receiver收货人信息*/
+.receiver-info{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.info-name-phone{
+    margin: 0.5rem 0.5rem 0.3rem;
+}
+.info-name-phone span{
+    font-size: 0.7rem;
+    color: #333333;
+}
+.info-name-phone span:nth-of-type(1){
+    display: inline-block;
+    width:5rem;
+   margin-right:1rem;
+}
+.info-address{
+    font-size: 0.65rem;
+    color: #666666;
+    margin:0 0.5rem;
+    line-height: 0.8rem;
+}
+/*商品价格详情*/
+.goods-prices-details ul li{
+    border-bottom: 1px solid #f0f0f0;
+}
+.goods-prices-details ul li:first-child div{
+    height:1.5rem;
+    line-height: 1.5rem;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size:0.65rem;
+}
+.goods-total,.goods-total-prices{
+    color: #333333;
+}
+.goods-coupon,.goods-coupon-price{
+    color: #666666;
+}
+.goods-prices-details ul li:last-child{
+
+}
+.goods-prices-details ul li:last-child p{
+    overflow:hidden;
+    margin:0.5rem;
+    text-align:right;
+}
+.goods-prices-details ul li:last-child p em{
+    color: #BE394B;
+    font-size: 0.7rem;
+}
+/*其他详情*/
+.other-details{
+}
+.other-details ul li{
+    margin: 0.5rem;
+    color: #666666;
+    font-size: 0.65rem;
+}
+.other-details ul li:first-child{
+    margin-top: 0.5rem;
+}
+
+.package-operate{
+    height: 3rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.package-operate a{
+    text-align: center;
+    line-height: 1.3rem;
+    width: 4rem;
+    height: 1.3rem;
+    font-size: 0.65rem;
+    border-radius: 3px;
+    float: right;
+    margin-top: 0.5rem;
+
+}
+.package-operate a:first-child{
+    border: 1px solid grey;
+    margin-right:0.5rem;
+
+}
+.package-operate a:last-child{
+    background-color: #DCB87F;
+    color: #ffffff;
+    margin-right: 0.5rem;
+}
+
+
+

@@ -1,0 +1,531 @@
+body{
+    /*background-color: #F5F5F5;*/
+}
+.shopping-title{
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.shop-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.shopping-title>span{
+    font-size: 0.3rem;
+}
+.shopping-title>a{
+    background: url(/Content/dxpImages/ico_shop_all.png)no-repeat center;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0;
+    background-size: 500%;
+}
+.shopping-title .go-back-pre {
+    left: 0rem;
+    margin-top: 0.28rem;
+    background-position: 0 -2.9rem;
+}
+/*receiver收货人信息*/
+.receiver-info{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.info-name-phone{
+    margin: 0.5rem;
+}
+.info-name-phone span{
+    font-size: 0.7rem;
+    color: #333333;
+}
+.info-name-phone span:nth-of-type(1){
+    display: inline-block;
+    width: 50%;
+}
+.info-address{
+    height:1.6rem;
+    line-height:0.9rem;
+    font-size: 0.65rem;
+    color: #666666;
+    margin:0 0.5rem 0rem;
+}
+.info-address a{
+    display:block;
+    position:relative;
+    height:1.6rem;
+    overflow: hidden;
+    padding-right:0.5rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.info-address i{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 50%;
+    right: 0;
+    margin-top: -0.55rem;
+    position: absolute;
+    background: url(/Content/dxpImages/ico_next_jump.png)0.4rem center no-repeat;
+    background-size: 100%;
+}
+/*信封类边框*/
+.model-box{
+    width: 100%;
+    height: 10px;
+   	margin-top: 10px;
+    overflow: hidden;
+    background: url(../Content/dxpImages/img_shop_address.png) repeat-x;
+    background-size: 90%;
+}
+
+/*订单列表详情*/
+#max-wrap-goods-order{
+    margin-bottom: 2rem;
+    height: auto;
+    background:#f0f0f0;
+}
+.goods-list-company{
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+}
+.goods-list-company h2{
+    font-size: 0.7rem;
+    color: #333333;
+    text-indent: 0.5rem;
+}
+
+.shop-goods-list-shop ul .goods-list-show{
+    height: 2rem;
+    border: 1px solid #f0f0f0;
+
+}
+.shop-goods-list-shop .goods-list-show-wrap{
+    position: relative;
+    overflow: hidden;
+}
+.shop-goods-list-shop ul li>span,.shop-goods-list-shop  ul li .left-img-show,.shop-goods-list-shop  ul li .right-goods-details{
+    float: left;
+}
+.shop-goods-list-shop ul li .left-img-show{
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+}
+
+.shop-goods-list-shop .right-goods-details{
+     margin-left: 0.3rem;
+    width: 11rem;
+}
+
+.shop-goods-list-shop .right-goods-details .details-name{
+   font-size: 0.65rem;
+}
+.shop-goods-list-shop .right-goods-details .details-choice{
+    font-size: 0.6rem;
+    color: #999999;
+    margin: 0.2rem auto 0.2rem;
+}
+.shop-goods-list-shop .right-goods-details .prices-show{
+   font-size: 0.7rem;
+    color: #be394b;
+}
+
+.shop-goods-list-shop .right-goods-details .details-num{
+    float: right;
+    margin-right: 0.5rem;
+    font-size: 0.6rem;
+    color: #333333;
+}
+.his-parents{
+    overflow:hidden;
+}
+.his-parents li{
+    overflow:hidden;
+    padding:0.3rem 0;
+    border-bottom:1px solid #f0f0f0;
+}
+
+/*规格、数量*/
+.size-num-box{
+    overflow:hidden;
+}
+.size-num-box li div{
+    float: right;
+    position: relative;
+}
+.size-num-box li{
+    padding:0 0.5rem;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    font-size: 28px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.size-num-box li span:nth-of-type(1){
+    display:block;
+    font-size:0.65rem;
+    padding-right:1rem;
+}
+.size-num-box li div span:nth-of-type(2){
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 50%;
+    right: 0;
+    margin-top: -0.55rem;
+    position: absolute;
+    background: url("/Content/dxpImages/ico_next_jump.png")0.4rem center no-repeat;
+    background-size:100%;
+}
+.size-num-box .goods-counts span{
+    float: right;
+    font-size: 0.65rem;
+    padding-right: 0.5rem !important;
+}
+.size-num-box .goods-counts{
+    justify-content:flex-end;
+}
+.size-num-box .goods-counts .counts-money{
+   padding-right: 0rem  !important; 
+}
+.goods-counts .counts-money em{
+    color: #be394b;
+    font-size: 0.6rem;
+}
+.goods-list-max-wrap{
+    overflow:hidden;
+    margin-bottom:0.5rem;
+    background:#FFF;
+}
+
+/*结算*/
+.accounts-foot-wrap{
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #ffffff;
+    border-top:1px solid #ddd;
+}
+.accounts-foot{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    position: relative;
+}
+.accounts-foot .accounts-total{
+    display:inline-block;
+    font-size:0.6rem;
+    text-indent:0.5rem;
+}
+.accounts-foot .accounts-result-tips{
+    background-color:#BE394B;
+    width: 5rem;
+    height: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+    float: right;
+}
+
+.accounts-foot .accounts-total em{
+    font-size: 0.7rem;
+    color: #be394b;
+    text-indent:0.5rem
+}
+
+/*页面蒙版*/
+.body-masking,.choose-distribution-way{
+    display: none;
+}
+.body-masking{
+    width: 100%;
+    background:rgba(0,0,0,.5);
+    opacity: 0.4;
+    height:100%;
+    position: fixed;
+    top:0;
+    z-index: 900;
+}
+
+/*选择配送方式 蒙版*/
+.choose-distribution-way{
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    height: 12rem;
+    z-index: 999;
+    background-color: #ffffff;
+
+}
+.choose-distribution-way h2{
+    height: 1.76rem;
+    line-height: 1.76rem;
+    font-size: 0.7rem;
+    color: #666666;
+    text-indent: 0.5rem;
+    border-bottom:1px solid #f0f0f0;
+}
+.choose-distribution-way ul li{
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0 0.5rem;
+    position: relative;
+    font-size: 0.65rem;
+    color: #333333;
+}
+.choose-distribution-way .choose-yes{
+    width: 100%;
+    border:none;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    text-align: center;
+    background-color: #BE394B;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.7rem;
+
+}
+
+
+/*点击 选择框*/
+#distribution li .content-box{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top:1rem;
+    right: 1rem;
+    margin-top: -20px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/Content/dxpImages/order/ico_shop_select_nor.png");
+    background-size:100%;
+}
+#distribution li.active .content-box{
+    background-image: url("/Content/dxpImages/order/ico_shop_select_pre-.png");
+     background-size:100%;
+}
+.has-not-select-icon{
+    background-image: url("/Content/dxpImages/order/ico_shop_select_nor.png");
+     background-size:100%;
+}
+.size-num-box li div.orCofmessage{
+    display:block;
+    float:left;
+    width:10rem;
+    height:100%;
+}
+
+.size-num-box li div.orCofmessage input{
+    display:block;
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+.size-num-box li.pop-message{
+    justify-content:flex-start;
+}
+.size-num-box li:last-child{
+    border-bottom:none;
+}
+
+.subtotal{
+    font-weight:400;
+    font-size:0.6rem;
+    padding:0 0.2rem;
+}
+.addressNll {
+    padding:0.5rem;
+    margin: 1rem auto;
+    overflow:hidden;
+}
+.addressNll i{
+    display:inline-block;
+    width:1rem;
+    height:1rem;
+    vertical-align:middle
+}
+.addressNll i img{
+    display:block;
+    width:100%;
+    vertical-align:middle;
+}
+
+.addressNll p a{
+    display:inline-block;
+    font-size:0.65rem;
+    line-height:1rem;
+    vertical-align:middle;
+}
+.weui-toast .weui-toast_content{
+	font-size: 0.65rem;
+}
+/*优惠卷*/
+.makeItem{
+    display:none;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+}
+.youhui{
+    display:none;
+    width:100%;
+    height:18rem;
+    overflow:auto;
+    background:#f0f0f0;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index:1000;
+}
+.youhuiList{
+    margin:0.5rem 0.5rem 0;
+    overflow:hidden;
+    background:#f0f0f0;
+}
+.youhuiList li{
+    overflow:hidden;
+    background:#FFF;
+    margin-bottom:0.5rem;
+}
+.youhuiLeft{
+    width:30%;
+    float:left;
+    color:#fff;
+    padding:0.5rem 0;
+    background:#a78e66;
+}
+.youhuiRight{
+    width:70%;
+    float:left;
+    color:#fff;
+    background:#fff;
+    position:relative;
+}
+.youhuiLeft em{
+    display:block;
+    text-align:center;
+    font-size:0.6rem;
+    height:1.5rem;
+    line-height:1.5rem;
+}
+.youhuiLeft em{
+    font-size:0.6rem;
+}
+.youhuiLeft em b{
+    font-size:0.9rem;
+}
+.youhuiLeft span{
+    display:block;
+    text-align:center;
+    font-size:0.5rem;
+}
+.youhuiRight em{
+    display:block;
+    padding-left:0.5rem;
+    font-size:0.65rem;
+    line-height:1.5rem;
+    color:#333;
+}
+.youhuiRight span{
+    display:block;
+    padding-left:0.5rem;
+    font-size:0.5rem;
+    color:#999;
+}
+.youhuiRight button{
+    border:1px solid #0094ff;
+    font-size:0.5rem;
+    padding:0.1rem 0.3rem;
+    border-radius:0.4rem;
+    -webkit-border-radius:0.4rem;
+    background:#FFF;
+    color:#0094ff;
+    position:absolute;
+    top:1.5rem;
+    right:0.5rem;
+}
+.youhuiRight button.disabled{
+    color:#999;
+    border:1px solid #999;
+}
+.check-box{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top:0.7rem;
+    right:0.5rem;
+    margin: 0;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/Content/dxpImages/order/ico_shop_select_nor.png);
+    background-size: 100%;
+}
+.check-box.checked {
+    background-image: url(/Content/dxpImages/order/ico_shop_select_pre-.png);
+    background-size: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

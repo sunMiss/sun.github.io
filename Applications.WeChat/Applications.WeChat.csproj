@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{462FDADA-4DE0-42FE-8DC4-9A3B3CB6CCE5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Applications.WeChat</RootNamespace>
+    <AssemblyName>Applications.WeChat</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\Applications.Library\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Util">
+      <HintPath>..\lib\Applications.Library\Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Biz">
+      <HintPath>..\lib\Applications.Library\Util.Biz.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Commons">
+      <HintPath>..\lib\Applications.Library\Util.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas">
+      <HintPath>..\lib\Applications.Library\Util.Datas.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.EasyUi">
+      <HintPath>..\lib\Applications.Library\Util.EasyUi.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Webs">
+      <HintPath>..\lib\Applications.Library\Util.Webs.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UrlHelper.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OtherController.cs" />
+    <Compile Include="Controllers\PersonalController.cs" />
+    <Compile Include="Controllers\ShoppingController.cs" />
+    <Compile Include="Controllers\GoodsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppResult.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dxpImages\category\ico_oder_site.png" />
+    <Content Include="Content\dxpImages\category\ico_price_high_nor%402x.png" />
+    <Content Include="Content\dxpImages\category\ico_price_high_pre%402x.png" />
+    <Content Include="Content\dxpImages\category\ico_price_low_nor%402x.png" />
+    <Content Include="Content\dxpImages\category\ico_price_low_pre%402x.png" />
+    <Content Include="Content\dxpImages\category\ico_src_close%402x.png" />
+    <Content Include="Content\dxpImages\category\img_act_banner1.png" />
+    <Content Include="Content\dxpImages\category\img_brand_class.png" />
+    <Content Include="Content\dxpImages\category\img_class_banner.png" />
+    <Content Include="Content\dxpImages\category\img_product_class.png" />
+    <Content Include="Content\dxpImages\category\img_pro_s.png" />
+    <Content Include="Content\dxpImages\category\img_recommend1.png" />
+    <Content Include="Content\dxpImages\category\img_recommend2.png" />
+    <Content Include="Content\dxpImages\category\img_theme1.png" />
+    <Content Include="Content\dxpImages\coupon.jpg" />
+    <Content Include="Content\dxpImages\home_iconup.png" />
+    <Content Include="Content\dxpImages\home_icondown.png" />
+    <Content Include="Content\dxpImages\ico_comm_coll_nor.png" />
+    <Content Include="Content\dxpImages\ico_comm_home.png" />
+    <Content Include="Content\dxpImages\ico_comm_nav_back.png" />
+    <Content Include="Content\dxpImages\ico_comm_nav_home.png" />
+    <Content Include="Content\dxpImages\ico_comm_nav_share.png" />
+    <Content Include="Content\dxpImages\ico_comm_shop.png" />
+    <Content Include="Content\dxpImages\ico_me_all.png" />
+    <Content Include="Content\dxpImages\ico_me_number.png" />
+    <Content Include="Content\dxpImages\ico_next_jump.png" />
+    <Content Include="Content\dxpImages\ico_order_all.png" />
+    <Content Include="Content\dxpImages\ico_order_finish.png" />
+    <Content Include="Content\dxpImages\ico_order_pay.png" />
+    <Content Include="Content\dxpImages\ico_order_receiv.png" />
+    <Content Include="Content\dxpImages\ico_proxq_all.png" />
+    <Content Include="Content\dxpImages\ico_shop_all.png" />
+    <Content Include="Content\dxpImages\ico_shop_pay.png" />
+    <Content Include="Content\dxpImages\img_comm_couponbg-1.png" />
+    <Content Include="Content\dxpImages\img_comm_couponbg2.png" />
+    <Content Include="Content\dxpImages\img_comm_hint.png" />
+    <Content Include="Content\dxpImages\img_comm_note.png" />
+    <Content Include="Content\dxpImages\img_comm_pro.png" />
+    <Content Include="Content\dxpImages\img_me_bg.png" />
+    <Content Include="Content\dxpImages\img_me_mon_bg.png" />
+    <Content Include="Content\dxpImages\img_shop_address.png" />
+    <Content Include="Content\dxpImages\img_shop_delet.png" />
+    <Content Include="Content\dxpImages\img_shop_nomon.png" />
+    <Content Include="Content\dxpImages\img_shop_nopro%403x.png" />
+    <Content Include="Content\dxpImages\index\3.jpg" />
+    <Content Include="Content\dxpImages\index\ico_homepag.png" />
+    <Content Include="Content\dxpImages\index\ico_jup.png" />
+    <Content Include="Content\dxpImages\index\ico_nav_src.png" />
+    <Content Include="Content\dxpImages\index\img_banner.png" />
+    <Content Include="Content\dxpImages\index\img_nav_logo.png" />
+    <Content Include="Content\dxpImages\index\img_product_banner.png" />
+    <Content Include="Content\dxpImages\index\img_theme1.png" />
+    <Content Include="Content\dxpImages\index\product.png" />
+    <Content Include="Content\dxpImages\order\bd.png" />
+    <Content Include="Content\dxpImages\order\dz.png" />
+    <Content Include="Content\dxpImages\order\ico_payment_wallet.png" />
+    <Content Include="Content\dxpImages\order\ico_shop_nav_back.png" />
+    <Content Include="Content\dxpImages\order\ico_shop_pay_wx.png" />
+    <Content Include="Content\dxpImages\order\ico_shop_select_nor.png" />
+    <Content Include="Content\dxpImages\order\ico_shop_select_pre-.png" />
+    <Content Include="Content\dxpImages\order\img_me_unsiteaddress.png" />
+    <Content Include="Content\dxpImages\order\img_null_oder.png" />
+    <Content Include="Content\dxpImages\order\img_shop_address.png" />
+    <Content Include="Content\dxpImages\order\img_shop_nomon.png" />
+    <Content Include="Content\dxpImages\order\ye.png" />
+    <Content Include="Content\dxpImages\order\yh.png" />
+    <Content Include="Content\dxpImages\wxChatLogin.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Css\base.css" />
+    <Content Include="Css\category.css" />
+    <Content Include="Css\common.css" />
+    <Content Include="Css\dxpActivity.css" />
+    <Content Include="Css\dxpIndex.css" />
+    <Content Include="Css\finance.css" />
+    <Content Include="Css\goods-details.css" />
+    <Content Include="Css\goods-seckill.css" />
+    <Content Include="Css\LogisticsInfo.css" />
+    <Content Include="Css\newly-increased-address.css" />
+    <Content Include="Css\obligation-order-form.css" />
+    <Content Include="Css\order-confirm.css" />
+    <Content Include="Css\order-details.css" />
+    <Content Include="Css\order-pay-way.css" />
+    <Content Include="Css\orderaddress.css" />
+    <Content Include="Css\personal-logistics-details.css" />
+    <Content Include="Css\personal.css" />
+    <Content Include="Css\shopCommon.css" />
+    <Content Include="Css\shopping-payment-success.css" />
+    <Content Include="Css\shoppingcar.css" />
+    <Content Include="Css\swiper-3.4.2.min.css" />
+    <Content Include="Css\ydui.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="get-weixin-code.html" />
+    <Content Include="Global.asax" />
+    <Content Include="log4net.config" />
+    <Content Include="Scripts\page-used-js\AddAddress.js" />
+    <Content Include="Scripts\page-used-js\baseClick.js" />
+    <Content Include="Scripts\page-used-js\category.js" />
+    <Content Include="Scripts\page-used-js\GoodShopCategory.js" />
+    <Content Include="Scripts\page-used-js\GoodsSearch.js" />
+    <Content Include="Scripts\page-used-js\GoodsAllShopList.js" />
+    <Content Include="Scripts\page-used-js\GoodsShopListBaner.js" />
+    <Content Include="Scripts\page-used-js\GoodsShopList.js" />
+    <Content Include="Scripts\page-used-js\GoodsStoreList.js" />
+    <Content Include="Scripts\page-used-js\home.js" />
+    <Content Include="Scripts\page-used-js\homeTabs.js" />
+    <Content Include="Scripts\page-used-js\store.js" />
+    <Content Include="Scripts\page-used-js\LogisticsInfo.js" />
+    <Content Include="Scripts\page-used-js\OrderConfirm.js" />
+    <Content Include="Scripts\page-used-js\OrderDetails.js" />
+    <Content Include="Scripts\page-used-js\OrderFound.js" />
+    <Content Include="Scripts\page-used-js\OrderOarticulars.js" />
+    <Content Include="Scripts\page-used-js\OrderPayment.js" />
+    <Content Include="Scripts\page-used-js\OrderPayWay.js" />
+    <Content Include="Scripts\page-used-js\PendingShipment.js" />
+    <Content Include="Scripts\page-used-js\public.js" />
+    <Content Include="Scripts\page-used-js\shoppingCart.js" />
+    <Content Include="Scripts\page-used-js\getShoppingCar.js" />
+    <Content Include="Scripts\page-used-js\goods-details.js" />
+    <Content Include="Scripts\page-used-js\increased-address.js" />
+    <Content Include="Scripts\page-used-js\index.js" />
+    <Content Include="Scripts\page-used-js\sku.js" />
+    <Content Include="Scripts\page-used-js\swiperPage.js" />
+    <Content Include="Scripts\page-used-js\userInfo.js" />
+    <Content Include="Scripts\plug\autoSize.js" />
+    <Content Include="Scripts\plug\doT.js" />
+    <Content Include="Scripts\plug\doT.min.js" />
+    <Content Include="Scripts\plug\dropload.css" />
+    <Content Include="Scripts\plug\dropload.min.js" />
+    <Content Include="Scripts\plug\idangerous.swiper.min.js" />
+    <Content Include="Scripts\plug\jquery-3.1.1.js" />
+    <Content Include="Scripts\plug\layui\css\layui.css" />
+    <Content Include="Scripts\plug\layui\css\layui.mobile.css" />
+    <Content Include="Scripts\plug\layui\css\modules\code.css" />
+    <Content Include="Scripts\plug\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="Scripts\plug\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Scripts\plug\layui\css\modules\layer\default\icon.png" />
+    <Content Include="Scripts\plug\layui\css\modules\layer\default\layer.css" />
+    <Content Include="Scripts\plug\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Scripts\plug\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Scripts\plug\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Scripts\plug\layui\images\face\0.gif" />
+    <Content Include="Scripts\plug\layui\images\face\1.gif" />
+    <Content Include="Scripts\plug\layui\images\face\10.gif" />
+    <Content Include="Scripts\plug\layui\images\face\11.gif" />
+    <Content Include="Scripts\plug\layui\images\face\12.gif" />
+    <Content Include="Scripts\plug\layui\images\face\13.gif" />
+    <Content Include="Scripts\plug\layui\images\face\14.gif" />
+    <Content Include="Scripts\plug\layui\images\face\15.gif" />
+    <Content Include="Scripts\plug\layui\images\face\16.gif" />
+    <Content Include="Scripts\plug\layui\images\face\17.gif" />
+    <Content Include="Scripts\plug\layui\images\face\18.gif" />
+    <Content Include="Scripts\plug\layui\images\face\19.gif" />
+    <Content Include="Scripts\plug\layui\images\face\2.gif" />
+    <Content Include="Scripts\plug\layui\images\face\20.gif" />
+    <Content Include="Scripts\plug\layui\images\face\21.gif" />
+    <Content Include="Scripts\plug\layui\images\face\22.gif" />
+    <Content Include="Scripts\plug\layui\images\face\23.gif" />
+    <Content Include="Scripts\plug\layui\images\face\24.gif" />
+    <Content Include="Scripts\plug\layui\images\face\25.gif" />
+    <Content Include="Scripts\plug\layui\images\face\26.gif" />
+    <Content Include="Scripts\plug\layui\images\face\27.gif" />
+    <Content Include="Scripts\plug\layui\images\face\28.gif" />
+    <Content Include="Scripts\plug\layui\images\face\29.gif" />
+    <Content Include="Scripts\plug\layui\images\face\3.gif" />
+    <Content Include="Scripts\plug\layui\images\face\30.gif" />
+    <Content Include="Scripts\plug\layui\images\face\31.gif" />
+    <Content Include="Scripts\plug\layui\images\face\32.gif" />
+    <Content Include="Scripts\plug\layui\images\face\33.gif" />
+    <Content Include="Scripts\plug\layui\images\face\34.gif" />
+    <Content Include="Scripts\plug\layui\images\face\35.gif" />
+    <Content Include="Scripts\plug\layui\images\face\36.gif" />
+    <Content Include="Scripts\plug\layui\images\face\37.gif" />
+    <Content Include="Scripts\plug\layui\images\face\38.gif" />
+    <Content Include="Scripts\plug\layui\images\face\39.gif" />
+    <Content Include="Scripts\plug\layui\images\face\4.gif" />
+    <Content Include="Scripts\plug\layui\images\face\40.gif" />
+    <Content Include="Scripts\plug\layui\images\face\41.gif" />
+    <Content Include="Scripts\plug\layui\images\face\42.gif" />
+    <Content Include="Scripts\plug\layui\images\face\43.gif" />
+    <Content Include="Scripts\plug\layui\images\face\44.gif" />
+    <Content Include="Scripts\plug\layui\images\face\45.gif" />
+    <Content Include="Scripts\plug\layui\images\face\46.gif" />
+    <Content Include="Scripts\plug\layui\images\face\47.gif" />
+    <Content Include="Scripts\plug\layui\images\face\48.gif" />
+    <Content Include="Scripts\plug\layui\images\face\49.gif" />
+    <Content Include="Scripts\plug\layui\images\face\5.gif" />
+    <Content Include="Scripts\plug\layui\images\face\50.gif" />
+    <Content Include="Scripts\plug\layui\images\face\51.gif" />
+    <Content Include="Scripts\plug\layui\images\face\52.gif" />
+    <Content Include="Scripts\plug\layui\images\face\53.gif" />
+    <Content Include="Scripts\plug\layui\images\face\54.gif" />
+    <Content Include="Scripts\plug\layui\images\face\55.gif" />
+    <Content Include="Scripts\plug\layui\images\face\56.gif" />
+    <Content Include="Scripts\plug\layui\images\face\57.gif" />
+    <Content Include="Scripts\plug\layui\images\face\58.gif" />
+    <Content Include="Scripts\plug\layui\images\face\59.gif" />
+    <Content Include="Scripts\plug\layui\images\face\6.gif" />
+    <Content Include="Scripts\plug\layui\images\face\60.gif" />
+    <Content Include="Scripts\plug\layui\images\face\61.gif" />
+    <Content Include="Scripts\plug\layui\images\face\62.gif" />
+    <Content Include="Scripts\plug\layui\images\face\63.gif" />
+    <Content Include="Scripts\plug\layui\images\face\64.gif" />
+    <Content Include="Scripts\plug\layui\images\face\65.gif" />
+    <Content Include="Scripts\plug\layui\images\face\66.gif" />
+    <Content Include="Scripts\plug\layui\images\face\67.gif" />
+    <Content Include="Scripts\plug\layui\images\face\68.gif" />
+    <Content Include="Scripts\plug\layui\images\face\69.gif" />
+    <Content Include="Scripts\plug\layui\images\face\7.gif" />
+    <Content Include="Scripts\plug\layui\images\face\70.gif" />
+    <Content Include="Scripts\plug\layui\images\face\71.gif" />
+    <Content Include="Scripts\plug\layui\images\face\8.gif" />
+    <Content Include="Scripts\plug\layui\images\face\9.gif" />
+    <Content Include="Scripts\plug\layui\layer_mobile\layer.css" />
+    <Content Include="Scripts\plug\layui\layer_mobile\layer.js" />
+    <Content Include="Scripts\plug\layui\layui.all.js" />
+    <Content Include="Scripts\plug\layui\layui.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\carousel.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\code.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\element.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\flow.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\form.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\jquery.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\laydate.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\layedit.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\layer.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\laypage.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\laytpl.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\mobile.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\table.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\tree.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\upload.js" />
+    <Content Include="Scripts\plug\layui\lay\modules\util.js" />
+    <Content Include="Scripts\plug\lyz.delayLoading.min.js" />
+    <Content Include="Scripts\plug\md5.js" />
+    <Content Include="Scripts\plug\sha1.js" />
+    <Content Include="Scripts\plug\swiper-3.4.2.jquery.min.js" />
+    <Content Include="Scripts\plug\swiper-3.4.2.min.css" />
+    <Content Include="Scripts\plug\swiper-3.4.2.min.js" />
+    <Content Include="Scripts\plug\swiper.min.css" />
+    <Content Include="Scripts\plug\swiper.min.js" />
+    <Content Include="Scripts\plug\touchslider.js" />
+    <Content Include="Scripts\plug\uplink\dist\distpicker.data.js" />
+    <Content Include="Scripts\plug\uplink\dist\distpicker.data.min.js" />
+    <Content Include="Scripts\plug\uplink\dist\distpicker.js" />
+    <Content Include="Scripts\plug\uplink\dist\distpicker.min.js" />
+    <Content Include="Scripts\plug\uplink\index.html" />
+    <Content Include="Scripts\plug\uplink\js\distpicker.data.js" />
+    <Content Include="Scripts\plug\uplink\js\distpicker.js" />
+    <Content Include="Scripts\plug\uplink\js\main.js" />
+    <Content Include="Scripts\plug\uplink\src\distpicker.data.js" />
+    <Content Include="Scripts\plug\uplink\src\distpicker.js" />
+    <Content Include="Scripts\plug\uplink\swiper-3.4.2.min.css" />
+    <Content Include="Scripts\plug\uplink\swiper-3.4.2.min.js" />
+    <Content Include="Scripts\plug\weui\fastclick.js" />
+    <Content Include="Scripts\plug\weui\jquery-weui.min.css" />
+    <Content Include="Scripts\plug\weui\jquery-weui.min.js" />
+    <Content Include="Scripts\plug\weui\swiper.min.js" />
+    <Content Include="Scripts\plug\weui\weui.min.css" />
+    <Content Include="Scripts\plug\wxs.js" />
+    <Content Include="Scripts\tools\common.js" />
+    <Content Include="Scripts\tools\exsoft-form.js" />
+    <Content Include="Views\Goods\GoodsShopList.cshtml" />
+    <Content Include="Views\Goods\GoodsSearch.cshtml" />
+    <Content Include="Views\Goods\GoodsShopCategory.cshtml" />
+    <Content Include="Views\Goods\GoodsStoreList.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Goods\GoodsStoreListBaner.cshtml" />
+    <Content Include="Views\Goods\GoodsAllShopList.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Goods\Activity.cshtml" />
+    <None Include="Views\Goods\CategoryHotbrad.cshtml" />
+    <None Include="Views\Goods\Category.cshtml" />
+    <Content Include="Views\Order\PlaceOrder.cshtml" />
+    <Content Include="Views\Order\AddAddress.cshtml" />
+    <Content Include="Views\Order\FoundAddress.cshtml" />
+    <Content Include="Views\Order\PendingShipment.cshtml" />
+    <Content Include="Views\Order\OrderOarticulars.cshtml" />
+    <Content Include="Views\Order\LogisticsInfo.cshtml" />
+    <Content Include="Views\Order\LogisticsList.cshtml" />
+    <Content Include="Views\Home\Store.cshtml" />
+    <Content Include="Views\Order\PhpOrderList.cshtml" />
+    <None Include="Views\Other\CityLine.cshtml" />
+    <None Include="Views\Goods\GoodsDetails.cshtml" />
+    <None Include="Views\Goods\GoodsSeckill.cshtml" />
+    <None Include="Views\Other\Login1.cshtml" />
+    <None Include="Views\Other\NewlyIncreasedAddress.cshtml" />
+    <None Include="Views\Order\ObligationOrderForm.cshtml" />
+    <None Include="Views\Order\OrderConfirm.cshtml" />
+    <None Include="Views\Order\OrderDetails.cshtml" />
+    <None Include="Views\Order\OrderPayWay.cshtml" />
+    <Content Include="Views\Personal\Balance.cshtml" />
+    <Content Include="Views\Personal\Detailed.cshtml" />
+    <Content Include="Views\Personal\wxChatLogin.cshtml" />
+    <Content Include="Views\Personal\LogOut.cshtml" />
+    <Content Include="Views\Personal\Coupon.cshtml" />
+    <Content Include="Views\Other\getCouponCenter.cshtml" />
+    <None Include="Views\Personal\PersonalLogisticsDetails.cshtml" />
+    <None Include="Views\Personal\Personal.cshtml" />
+    <Content Include="Views\Personal\Recharge.cshtml" />
+    <Content Include="Views\Personal\Withdrawals.cshtml" />
+    <Content Include="Views\Personal\StoreUserAdmin.cshtml" />
+    <Content Include="Views\Shared\navbar.cshtml" />
+    <None Include="Views\Shopping\ShoppingPaymentSuccess.cshtml" />
+    <None Include="Views\Shopping\ShoppingRechargeSuccess.cshtml" />
+    <None Include="Views\Shopping\ShoppingCarNull.cshtml" />
+    <None Include="Views\Shopping\ShoppingCar.cshtml" />
+    <None Include="Views\Other\Test.cshtml" />
+    <Content Include="Scripts\tools\wx.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <None Include="发布.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\plug\layui\font\iconfont.eot" />
+    <Content Include="Scripts\plug\layui\font\iconfont.svg" />
+    <Content Include="Scripts\plug\layui\font\iconfont.ttf" />
+    <Content Include="Scripts\plug\layui\font\iconfont.woff" />
+    <Content Include="Scripts\tools\city.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications.Datas\Applications.Datas.csproj">
+      <Project>{FC68FC72-DAF8-4378-B8B0-3137176FD34A}</Project>
+      <Name>Applications.Datas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Commons\01-Applications.Domains.Commons.csproj">
+      <Project>{a43cb0bf-cf49-4a8b-9ee9-4ac7bfa78eed}</Project>
+      <Name>01-Applications.Domains.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Main\03-Applications.Domains.Main.csproj">
+      <Project>{7771515b-6782-4354-9383-f98be351ffca}</Project>
+      <Name>04-Applications.Domains.Main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Systems\02-Applications.Domains.Systems.csproj">
+      <Project>{59efbe9a-84ef-45fd-9760-d879dab3da1c}</Project>
+      <Name>02-Applications.Domains.Systems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Extends\Applications.Extends.csproj">
+      <Project>{a35a5888-1633-454f-ac4e-8730208d3358}</Project>
+      <Name>Applications.Extends</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Services\Applications.Services.csproj">
+      <Project>{00565702-A508-4306-BAA5-BA9E0C94BE93}</Project>
+      <Name>Applications.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50586</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2078/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

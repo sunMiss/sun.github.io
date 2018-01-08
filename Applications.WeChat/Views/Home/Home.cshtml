@@ -1,0 +1,100 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/swiper-3.4.2.min.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Scripts/plug/layui/css/layui.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/dxpIndex.css")>
+   	<link rel="stylesheet" href=@Url.Scrpit("/Scripts/plug/weui/weui.min.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.css")>
+}
+<!--搜索-->
+<header class="search-head">
+    <div class="index-top">
+        @*<a class="head-img-box" href="/Home/Index"></a>*@
+        <a class="head-img-box" href="javascript:;"></a>
+        <span>
+            <i>
+                <img src="/Content/dxpImages/index/ico_nav_src.png" alt="">
+            </i>
+            <a href="/Goods/GoodsSearch">春季女装</a>
+        </span>
+    </div>
+</header>
+<!--首页轮播-->
+<div class="swiper-container slide-margin-top">
+    <div class="swiper-wrapper" id="index-banner-img">
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination add-banner-bottom"></div>
+</div>
+<!--福利活动-->
+<div class="home-item">
+    <h3 class="home-title">
+        福利活动
+    </h3>
+</div>
+<section class="Welfare-activities">
+    <ul class="activity-content"></ul>
+</section>
+<script type="text/x-dot-template" id="test-temp">
+    {{~it:item:index}}
+    <li>
+        <a href="#" class="time-sale common-text">
+            <h3>{{= item.skipType}}</h3>
+            <p>{{= item.value}}</p>
+            <div>
+                <img src="{{= item.imageUrl}}" alt="" class="img-responsive">
+            </div>
+        </a>
+    </li>
+    {{~}}
+</script>
+<script type="text/javascript">
+    function getActivity(req) {
+        if (req.status === Common.HTTP_VALUE_SUCCESS) {
+            var data = req.data;
+            var evalText = doT.template($("#test-temp").html());
+            $(".activity-content").html(evalText(data));
+        }
+    }
+</script>
+
+<!--热门专题-->
+<div class="home-item hot-topic-new">
+    <h3 class="home-title">
+        热门专题
+    </h3>
+    <a href="#">
+        <span>更多</span>
+        <p class="right-icon"></p>
+    </a>
+</div>
+<nav class="swiper-container-slide">
+    <ul class="swiper-wrapper slide-other-style" id="hot-topic-slide"></ul>
+</nav>
+
+<section id="max-wrap-goods">
+
+</section>
+
+<!--左右图片+描述-->
+<div class="home-item">
+    <h3 class="home-title">
+        所有商品
+    </h3>
+</div>
+<section class="goods-list">
+    <ul class="goods-list-description" id="goods-list-description">
+       
+    </ul>
+</section>
+
+<!--底部导航-->
+@Html.Partial("../Shared/navbar");
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/swiper-3.4.2.jquery.min.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/swiperPage.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/tools/exsoft-form.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/layui/layui.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/home.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.js")></script>
+<script src="../../Scripts/plug/weui/fastclick.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,46 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/shopCommon.css")>
+}
+
+<div class="shopItem">
+	<div class="shopbox">
+		<h3 class="shopName">方方儿童服装店</h3>
+		<div class="shopSearch">
+			<img src="../../Content/dxpImages/index/ico_nav_src.png" class="search"/>
+			<a href="/Goods/GoodsSearch">春季女装</a>
+		</div>
+	</div>
+
+	<div class="shop-list-item">
+		<ul id="shopList">
+			<!--<li>
+				<a href="#">
+					<img src="../../Content/dxpImages/category/img_product_class.png" alt="" />
+					<em>植物填充</em>
+					<span><b>￥</b>48.00</span>
+				</a>
+			</li>-->
+		</ul>
+		<div class="weui-loadmore" id="loadings">
+		  <i class="weui-loading"></i>
+		  <span class="weui-loadmore__tips">正在加载</span>
+		</div>
+		<p class="weui-endmore" id="loadend" style="display: none;">暂无数据</p>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+<!--底部导航-->
+@Html.Partial("../Shared/navbar")
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/store.js")></script>
+

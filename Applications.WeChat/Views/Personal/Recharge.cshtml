@@ -1,0 +1,139 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/finance.css")>
+    }
+
+
+	<div class="finance">
+		<div class="withdred">
+			<h3>充值金额</h3>
+			<div class="content">
+				<i>￥</i>
+				<input type="number" placeholder="请输入充值金额" id="Money"  maxlength="6"/>
+			</div>
+			<p class="small">备注:账户充值最低不能少于10元</p>
+		</div>
+		
+		<div class="ballanceBtn">
+			<button class="Btn-top" onclick="Recharge()">确认充值</button>
+		</div>
+		
+		
+	</div>
+
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.js")></script>
+<script type="text/javascript">
+    Common.headerTitle('充值');
+	
+//绑定账号
+function Recharge() {
+	var Money =$('#Money').val();
+	if(Money == '' || Money == null){
+		$.toast("充值金额不能为空", "forbidden");
+		return false;
+	}
+	AccountData(Money);
+}
+
+//账号绑定数据请求
+function AccountData(Money) {
+    $('.Btn-top').attr('display', true);
+    $('.Btn-top').addClass('disabled');
+	var param = {
+		"Money": Money
+	}
+	$.ajax({
+        url: Common.API_BASE_URL + Common.API_URL_GET_CREATESEND_ORDERPAYLOG,
+        dataType: "json",
+        contentType: "text/json",
+        type: "POST",
+        data:JSON.stringify(param),
+        headers: {
+            'Authorization': 'Bearer ' + tokenObj,
+        },
+        success: function (data) {
+            if (data.status == '1') {
+                chongzhi(data);
+            } else {
+                $.toast(data.message, "forbidden");
+            }
+        },
+        error: function(err){
+            $.toast(err.message, "forbidden"); 
+        }
+	})
+}
+
+//充值
+function chongzhi(data){
+	var OrderPayId = data.data;
+        var param = {
+            "OrderPayLogId": OrderPayId
+        }
+        $.ajax({
+            url: Common.API_BASE_URL + Common.API_URL_POST_WECHAT_PAY,
+            dataType: "json",
+            contentType: "text/json",
+            type: "POST",
+            data: JSON.stringify(param),
+            headers: {
+                'Authorization': 'Bearer ' + tokenObj,
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.status === 1) {
+                    var $wacthData = res.data;
+                    console.log($wacthData);
+                    callpay($wacthData);
+                }
+            },
+            error: function () {
+                console.log("更新失败");
+            }
+        })
+        $('.Btn-top').attr('display', false);
+        $('.Btn-top').removeClass('disabled');
+}
+
+
+
+//调用微信支付
+    function onBridgeReady($wacthData) {
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest', {
+                "appId": $wacthData.AppId,     //公众号名称，由商户传入     
+                "timeStamp": $wacthData.TimeStamp,         //时间戳，自1970年以来的秒数     
+                "nonceStr": $wacthData.NonceStr, //随机串     
+                "package": $wacthData.Package,
+                "signType": $wacthData.SignType,         //微信签名方式：     
+                "paySign": $wacthData.PaySign //微信签名 
+            },
+            function (res) {
+            	// 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
+                if (res.err_msg == "get_brand_wcpay_request:ok") {
+                	//$.toast("充值成功");
+					location.href="/Personal/Balance"
+                }else{
+                	$.toast("充值失败");
+                }
+            }
+        );
+
+    }
+    
+    function callpay($wacthData){
+  		if (typeof WeixinJSBridge == "undefined") {
+	        if (document.addEventListener) {
+	            document.addEventListener('WeixinJSBridgeReady', onBridgeReady($wacthData), false);
+	        } else if (document.attachEvent) {
+	            document.attachEvent('WeixinJSBridgeReady', onBridgeReady($wacthData));
+	            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady($wacthData));
+	        }
+	    } else {
+	        onBridgeReady($wacthData);
+	    }
+    }
+
+
+</script>

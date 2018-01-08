@@ -1,0 +1,138 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/order-confirm.css")>
+}
+<header class="shopping-title white-background" style="display:none">
+    <div class="shop-relative">
+        <a href="#" class="go-back-pre"></a>
+        <span>订单支付方式</span>
+    </div>
+</header>
+<!--receiver收货人信息-->
+<section class="receiver-info white-background">
+    <div id="address" >
+        @*<h2 class="info-name-phone">
+            <span>收货人：<em>胡善良</em></span>
+            <span>18781998965</span>
+        </h2>
+        <p class="info-address">四川省成都市青羊区苏坡街道222号苏坡街道222号222号</p>*@
+    </div>
+
+    <!-- 如果地址为空 -->
+    <div class="addressNll" id="addressNll" style="display:none">
+        <p>
+            <i><img src="/Content/dxpImages/category/ico_oder_site.png" alt=""></i>
+            <a href="javascript:;" onclick="addAress()">暂无收获地址，请点击添加</a>
+        </p>
+    </div>
+
+    <!--信封类边框-->
+    <div class="model-box"></div>
+    
+</section>
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--所有订单-->
+<section id="max-wrap-goods-order">
+    <!--商品列表详情1-->
+    <section class="goods-list-max-wrap">
+        @*<section class="goods-list-company">
+                <h2>广州翔宇箱包用名有限公司</h2>
+            </section>
+            <div class="shop-goods-list-shop">
+                <ul class="his-parents">
+                    <li>
+                        <div class="goods-list-show-wrap">
+                            <a class="left-img-show">
+                                <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                            </a>
+                            <div class="right-goods-details">
+                                <p class="details-name">CK制造商 休闲抱枕 蓝灰色...</p>
+                                <p class="details-choice">蓝色 M</p>
+                                <span class="prices-show">￥250.00</span>
+                                <span class="details-num">X 3</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>*@
+        <!--优惠券、配送方式-->
+        @*<ul class="size-num-box">
+                    <li class="pop-show-size">
+                        <span>优惠券</span>
+                        <div>
+                            <span>现金：￥5.00</span>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="pop-show-coupon">
+                        <span>配送方式</span>
+                        <div>
+                            <span>快递运输</span>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="pop-message">
+                        <span>买家留言:</span>
+                        <div class="orCofmessage">
+                            <input type="text" name="name" value="" placeholder="留言信息" />
+                        </div>
+                    </li>
+                    <li class="goods-counts">
+                        <span>共计6件商品</span>
+                        <span class="counts-money">小计：<em>￥220.00</em></span>
+                    </li>
+                </ul>
+            </section>*@
+
+    </section>
+    <!-- 优惠卷选择 -->
+    <div class="youhui">
+        <ul class="youhuiList">
+            @*<li>
+                <div class="youhuiLeft">
+                    <em>￥<b>100</b></em>
+                    <span>满2000元可用</span>
+                </div>
+                <div class="youhuiRight">
+                    <em>免费的看法看</em>
+                    <span>2017.12.22-2018.01.05</span>
+                    <button disabled="disabled" class="disabled">立即使用</button>
+                </div>
+            </li>*@
+        </ul>
+    </div>
+    
+    <div class="makeItem"></div>
+
+
+</section>
+<!--结算 -->
+<section class="accounts-foot-wrap">
+    <div class="accounts-foot">
+        <span class="accounts-total">合计：<em>￥<strong id="totalAll"></strong></em></span>
+        <a href="javascript:;" class="accounts-result-tips" onclick="submitOrder()">提交订单</a>
+    </div>
+</section>
+
+
+<!--页面蒙版-->
+<div class="body-masking"></div>
+<!--选择配送方式 蒙版-->
+<div class="choose-distribution-way">
+    <h2>配送方式</h2>
+    <ul id="distribution">
+    </ul>
+    <button class="choose-yes" onclick="DistriEnd(this)">完成</button>
+    <div id="shopid"></div>
+</div>
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/OrderConfirm.js")></script>
+
+<script>
+    $('.makeItem').on('click', function () {
+        $(this).hide();
+        $('.youhui').hide();
+    })
+</script>

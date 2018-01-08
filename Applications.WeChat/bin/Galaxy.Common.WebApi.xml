@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Galaxy.Common.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Galaxy.Common.WebApi.BaseApiController">
+            <summary>
+            控制器基类
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseApiController.HttpContext">
+            <summary>
+            当前请求上下文
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseApiController.CurrentUserId">
+            <summary>
+            当前用户Id
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseApiController.OwinContext">
+            <summary>
+            OWIN上下文
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseApiController.AuthenticationManager">
+            <summary>
+            身份认证管理器
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseApiController.IsAuthenticated">
+            <summary>
+            用户是否认证
+            </summary>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.BaseToken">
+            <summary>
+            Token基本信息
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseToken.AccessToken">
+            <summary>
+            访问令牌
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseToken.TokenType">
+            <summary>
+            令牌类型
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseToken.ExpiresIn">
+            <summary>
+            还有多久过期(单位：秒)
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseToken.Issued">
+            <summary>
+            令牌发行日期
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.BaseToken.Expires">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.Captcha.RndCode">
+             <summary>  
+            RndCode 的摘要说明  
+             </summary>  
+        </member>
+        <member name="T:Galaxy.Common.WebApi.Captcha.CaptchaController">
+            <summary>
+            验证码Api
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaController.Image">
+            <summary>
+            生成验证码
+            </summary>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.Captcha.CaptchaImage">
+            <summary> 
+            CAPTCHA Image 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.GetCachedCaptcha(System.String)">
+            <summary> 
+            Gets the cached captcha. 
+            </summary> 
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaImage.UniqueId">
+            <summary> 
+            Returns a GUID that uniquely identifies this Captcha 
+            </summary> 
+            <value>The unique id.</value> 
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaImage.Text">
+            <summary> 
+            Gets the randomly generated Captcha text. 
+            </summary> 
+            <value>The text.</value> 
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaImage.Value">
+            <summary>
+            Gets the randomly generated Captcha value.
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.GetRandomFontFamily">
+            <summary> 
+            Returns a random font family from the font whitelist 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.GenerateRandomText">
+            <summary> 
+            generate random text for the CAPTCHA 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.RandomPoint(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary> 
+            Returns a random point within the specified x and y ranges 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.GetRandomColor">
+            <summary> 
+            Get Random color. 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.RandomPoint(System.Drawing.Rectangle)">
+            <summary> 
+            Returns a random point within the specified rectangle 
+            </summary>  
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.TextPath(System.String,System.Drawing.Font,System.Drawing.Rectangle)">
+            <summary> 
+            Returns a GraphicsPath containing the specified string and font 
+            </summary>  
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.GetFont">
+            <summary> 
+            Returns the CAPTCHA font in an appropriate size 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.RenderImage">
+            <summary> 
+            Renders the CAPTCHA image 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.WarpText(System.Drawing.Drawing2D.GraphicsPath,System.Drawing.Rectangle)">
+            <summary> 
+            Warp the provided text GraphicsPath by a variable amount 
+            </summary> 
+            <param name="textPath">The text path.</param> 
+            <param name="rect">The rect.</param> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.AddNoise(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary> 
+            Add a variable level of graphic noise to the image 
+            </summary> 
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.CaptchaImage.AddLine(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary> 
+            Add variable level of curved lines to the image 
+            </summary> 
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.TextLength">
+            <summary>
+            验证字符长度（字符个数）
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.TextChars">
+            <summary>
+            生成验证码用的字符
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.FontWarp">
+            <summary>
+            Font warp factor
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.BackgroundNoise">
+            <summary>
+            Background Noise level
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.LineNoise">
+            <summary>
+            线条杂色级别
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.Type">
+            <summary>
+            验证码类型
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.Width">
+            <summary>
+            Width of captcha image
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.Height">
+            <summary>
+            Height of captcha image
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.ValidationInputBoxId">
+            <summary>
+            客户端验证码输入文本框的Id
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.CaptchaOptions.DelayLoad">
+            <summary>
+            是否延迟加载（验证文本框获得焦点时才生成并加载验证图片）
+            </summary>
+        </member>
+        <member name="F:Galaxy.Common.WebApi.Captcha.Constant.CAPTCHA_SESSION_KEY">
+            <summary>
+            验证码 Session Key
+            </summary>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.Captcha.ValidateCodeType">
+            <summary>
+            验证码类型
+            </summary>
+        </member>
+        <member name="F:Galaxy.Common.WebApi.Captcha.ValidateCodeType.None">
+            <summary>
+            普通字符验证
+            </summary>
+        </member>
+        <member name="F:Galaxy.Common.WebApi.Captcha.ValidateCodeType.Arithmetic">
+            <summary>
+            算术运算验证
+            </summary>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute">
+            <summary>
+            API验证码筛选器
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the CaptchaValidationAttribute class.
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the CaptchaValidationAttribute class.
+            </summary>
+            <param name="field">The field.</param>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.Field">
+            <summary>
+            Gets or sets the field.
+            </summary>
+            <value>The field.</value>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.ParameterName">
+            <summary>
+            Gets or sets the field.
+            </summary>
+            <value>The field.</value>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.OnActionExecutingAsync(System.Web.Http.Controllers.HttpActionContext,System.Threading.CancellationToken)">
+            <summary>
+            执行前的处理
+            </summary>
+            <param name="actionContext">包含执行的操作信息</param>
+            <param name="cancellationToken">传播有关应取消操作的通知</param>
+            <returns></returns>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.GetCaptchaErrorResult">
+            <summary>
+            获取验证码错误信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCaptchaAttribute.GetValueByKeyAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dict"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCode.CreateValidateCode(System.Int32)">
+            生成验证码
+            <param name="length">指定验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Captcha.ValidateCode.CreateValidateGraphic(System.String)">
+            <summary>
+            创建验证码的图片
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Cors.CorsPolicyFactory.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="appConfigKey"></param>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Cors.CorsPolicyFactory.GetCorsPolicyProvider(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.Cors.CurrentCorsPolicyAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Cors.CurrentCorsPolicyAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="appConfigKey"></param>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Cors.CurrentCorsPolicyAttribute.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.FileController">
+            <summary>
+            上传附件API
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.FileController.UploadImage">
+            <summary>
+            图片上传
+            </summary>
+            <returns>返回上传结果</returns>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.FileController.UploadAttachment">
+            <summary>
+            附件上传
+            </summary>
+            <returns>返回上传结果</returns>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.IApiUserContext">
+            <summary>
+            API用户上下文
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.HttpContextBase">
+            <summary>
+            当前请求上下文。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.OwinContext">
+            <summary>
+            OWIN 上下文。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.AuthenticationManager">
+            <summary>
+            身份认证管理器。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.IsAuthenticated">
+            <summary>
+            是否验证了用户。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.CurrentUserId">
+            <summary>
+            当前用户Id
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.CurrentRoleId">
+            <summary>
+            当前用户角色Id
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.UserName">
+            <summary>
+            当前用户名称
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.IApiUserContext.Identity">
+            <summary>
+            当前登录用户声明标识
+            </summary>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Startup.ConfigureAuth(Owin.IAppBuilder,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="expireTime"></param>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Startup.ConfigureAuth(Owin.IAppBuilder,Microsoft.Owin.Security.AuthenticationMode)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="authenticationMode"></param>
+        </member>
+        <member name="M:Galaxy.Common.WebApi.Startup.ConfigureAuth(Owin.IAppBuilder,Microsoft.Owin.Security.AuthenticationMode,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="authenticationMode"></param>
+            <param name="expireTime"></param>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.ApiUserContext">
+            <summary>
+            API用户上下文
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.HttpContextBase">
+            <summary>
+            当前请求上下文。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.OwinContext">
+            <summary>
+            OWIN 上下文。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.AuthenticationManager">
+            <summary>
+            身份认证管理器。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.IsAuthenticated">
+            <summary>
+            是否验证了用户。
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.CurrentUserId">
+            <summary>
+            当前用户Id
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.CurrentRoleId">
+            <summary>
+            当前用户角色Id
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.UserName">
+            <summary>
+            当前用户名称
+            </summary>
+        </member>
+        <member name="P:Galaxy.Common.WebApi.ApiUserContext.Identity">
+            <summary>
+            当前登录用户声明标识
+            </summary>
+        </member>
+        <member name="T:Galaxy.Common.WebApi.TokenHelper">
+            <summary>
+            Token辅助类
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.BWAuthorizeAttribute.OnAuthorization(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            用户认证
+            </summary>
+            <param name="actionContext">上下文对象</param>
+        </member>
+        <member name="M:System.Web.Http.BWAuthorizeAttribute.IsAuthorized(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            判断用户是否认证
+            </summary>
+            <param name="actionContext">上下文对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Http.BWAuthorizeAttribute.GetUnauthorizedResult">
+            <summary>
+            获取已拒绝为此请求授权的 ResultMessage
+            </summary>
+            <returns>已拒绝为此请求授权的 ResultMessage</returns>
+        </member>
+        <member name="T:System.Web.Http.ModelValidFilterAttribute">
+            <summary>
+            请求实体对象实例有效性验证筛选器。
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.ModelValidFilterAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            在执行操作方法之前由 ASP.NET WebApi 框架调用。
+            </summary>
+            <param name="actionContext">操作上下文。</param>
+        </member>
+        <member name="T:System.Web.Http.NoLogAttribute">
+            <summary>
+            如若加此特性,将不记录日志信息。
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.NoLogAttribute.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtentions.EnableCors(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="httpConfiguration"></param>
+            <param name="appConfigKey"></param>
+        </member>
+        <member name="T:System.Web.Http.ValidErrorMessageAttribute">
+            <summary>
+            验证不通过时，默认提示消息
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.ValidErrorMessageAttribute.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">验证不通过是默认提示消息</param>
+        </member>
+        <member name="T:System.Net.Http.HttpRequestMessageExtentions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:System.Net.Http.HttpRequestMessageExtentions.CreateErrorResponse``1(System.Net.Http.HttpRequestMessage,System.Net.HttpStatusCode,``0)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="statusCode"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.Http.HttpRequestMessageExtentions.CreateErrorResponse``1(System.Net.Http.HttpRequestMessage,System.Net.HttpStatusCode,System.Func{System.Boolean,``0})">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="statusCode"></param>
+            <param name="resultCreator"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

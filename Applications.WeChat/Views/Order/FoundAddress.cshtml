@@ -1,0 +1,99 @@
+﻿@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/order-confirm.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/orderaddress.css")>
+}
+
+<div>
+    <!-- 地址为空 -->
+    <div class="foundAddress">
+        <ul>
+            <li>
+                <input type="text" class="cargoName" placeholder="收货人姓名">
+            </li>
+            <li>
+                <input type="tel" class="cargoPhone" placeholder="手机号码"  maxlength="11" >
+            </li>
+            <li id="chooesAresss" onclick="foundlist()">
+                <em>选择区域</em>
+                <span class="cargoRegion"></span>
+            </li>
+            <li>
+                <input type="number" class="cargoCode" placeholder="邮政编码"  maxlength="6" >
+            </li>
+            <li>
+                <input type="text" class="cargoCodeAress" placeholder="请输入详细地址">
+            </li>
+            <li class="foundlist" data-on="false">
+                <input type="checkbox"  class="check-box">
+                <span class="default">设为默认地址</span>
+            </li>
+        </ul>
+        <div id="attrItem" style="display:none;"></div>
+    </div>
+
+
+
+    <!-- 地址选择列表 -->
+    <div class="masking" style="display:none;"></div>
+    <div class="CityBox" style="display:none;">
+        <div class="Cityheader">
+            <span class="cur" id="proitem">请选择</span>
+            <span id="cityitem">请选择</span>
+            <span id="areaitem">请选择</span>
+            <a href="javascript:;" class="comfig">确定</a>
+        </div>
+       
+        <div class="CityContent">
+            <!-- 省 -->
+            <ul id="province">
+            </ul>
+            <!-- 市 -->
+            <ul id="city">
+            </ul>
+            <!-- 区 -->
+            <ul id="area">
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+<!-- 添加收货地址and保存 -->
+<footer class="addressBtn">
+    <button type="button" onclick="addSaveBtn(this)">保存</button>
+</footer>
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/OrderFound.js")></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

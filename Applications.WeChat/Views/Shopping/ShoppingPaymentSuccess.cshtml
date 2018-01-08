@@ -1,0 +1,38 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/shopping-payment-success.css")>
+    }
+<!--支付成功-->
+<section class="pay-sucessc-box">
+    <div class="pay-show-success">
+        <p>支付成功</p>
+    </div>
+
+    <p class="pay-success-prices" id="orderPrice"></p>
+    <p class="pay-success-order-number same-font">订单号：<em id="orderNum"></em>
+    </p>
+    <p class="pay-success-method same-font">支付方式：<em id="orderPwy"></em>
+    </p>
+
+    <div class="pay-success-back-btn">
+        <a href="/Order/ObligationOrderForm?OrderState=100" class="check-order">查看订单</a>
+        <a href="/Home/Index" class="back-index">返回首页</a>
+    </div>
+</section>
+
+<script type="text/javascript">
+    Common.headerTitle('支付成功');
+
+    var OrderP = Common.getQueryString("orderP");
+    var OrderN = Common.getQueryString("orderN");
+    var OrderW = Common.getQueryString("orderW");
+    $('#orderPrice').html('￥'+OrderP);
+    $('#orderNum').html(OrderN);
+    if (OrderW == '1') {
+        $('#orderPwy').html('余额支付');
+    } else if (OrderW == '0') {
+        $('#orderPwy').html('微信支付');
+    }
+    
+
+</script>

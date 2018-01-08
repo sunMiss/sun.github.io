@@ -1,0 +1,56 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/order-pay-way.css")>
+}
+<header class="shopping-title white-background">
+    <section class="shop-relative">
+        <a href="#"></a>
+        <span>订单支付方式</span>
+    </section>
+</header>
+
+<section class="obligation">
+<p class="last-remind"><span class="remind-icon"></span>抢到后就在<em>5</em>分钟内下单支付，否则名额将被收回。
+</p>
+<ul class="order-info white-background">
+    <li><span>订单金额：</span><span class="orderPrice"></span></li>
+    <li><span>订单编号：</span><span id="orderCode"></span></li>
+    <li><span class="gain-address">收获地址：</span><span class="gain-addredd-des" id="orderAddress"></span></li>
+</ul>
+
+<div class="hr10"></div>
+
+<ul class="pay-select-method" id="choosePay">
+    <li class="white-background active" data-style="wechat">
+        <span class="pay-icon-weixin pay-icon"></span>
+        <span class="pay-tips">微信支付</span>
+        <span class="pay-icon-select has-not-select-icon"></span>
+    </li>
+    <li class="white-background" data-style="balance">
+        <span class="pay-icon-wallet pay-icon"></span>
+        <span class="pay-tips">钱包支付</span>
+        <span class="usable-money" style="display: none;">可用余额 <em>￥0.00</em></span>
+        <span class="pay-icon-select has-not-select-icon"></span>
+    </li>
+</ul>
+
+</section>
+
+<!--结算-->
+<footer class="accounts-foot white-background">
+    <span class="accounts-total">合计：<em class="orderPrice"></em></span>
+    <a href="javascript:;" class="accounts-submit" id="submit" onclick="WechatPay(this)" data-style="wechat">支付</a>
+</footer>
+
+<!--余额不足弹窗-默认隐藏-->
+<section class="not-sufficient-funds-pop">
+    <div>
+        <img src="/Content/dxpImages/order/img_shop_nomon.png" alt="" class="img-responsive">
+    </div>
+    <p>您的账户余额为20元，购买该商品还需80元，快去充值吧！</p>
+    <a href="#">去充值</a>
+</section>
+<!--弹窗遮罩-默认隐藏-->
+<div class="pop-wrap-lay"></div>
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/OrderPayWay.js")></script>

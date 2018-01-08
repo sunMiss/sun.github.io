@@ -1,0 +1,23 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/category.css")>
+}
+<!--搜索-->
+<header class="search-head search-border-bottom" id="cateHeight">
+    <div class="index-serach">
+        <span class="search-box">
+            <img src="../../Content/dxpImages/index/ico_nav_src.png"/ class="serachImg">
+            <input type="text" placeholder="抱枕" id="searchVal">
+            <img src="../../Content/dxpImages/category/ico_src_close@2x.png"/ class="searchClear" style="display: none;" onclick="clearInput(this)">
+        </span>
+        <em class="searchBtn" onclick="searchBtn()">搜索</em>
+    </div>
+</header>
+<!--页面主体-->
+<section class="search-goods">
+	<ul id="searchList">
+	</ul>
+	<p class="callShop" id="callShop">没有找到你需要的商品</p>
+</section>
+
+<script type="text/javascript" src=@Url.Scrpit("../../Scripts/page-used-js/GoodsSearch.js")></script>

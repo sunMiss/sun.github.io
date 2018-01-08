@@ -1,0 +1,74 @@
+
+/*秒杀页面添加内容样式*/
+.goods-new-box .limit-skill{
+    display: inline-block;
+    color: white;
+    background-color: #DCB87F;
+    border:1px solid #DCB87F;
+}
+/*秒杀提示*/
+.skill-reminder{
+    height: 1.76rem;
+    line-height: 1.76rem;
+    color: #ffffff;
+    background-color: #BE394B;
+    overflow: hidden;
+    text-align:left;
+}
+
+.skill-reminder  .skill-price{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+.skill-reminder  .skill-num{
+    margin-left: 0.5rem;
+    font-size: 0.65rem;
+    color: #edd1d4;
+}
+.skill-reminder .skill-start{
+    font-size: 0.6rem;
+    color: #edd1d4;
+}
+.skill-reminder .skill-time{
+    font-size:0.7rem;
+    margin-left: 0.5rem;
+}
+.skill-reminder div{
+    float: right;
+    margin-right: 0.5rem;
+}
+.skill-prompt .last-remind{
+    background: url("/Content/dxpImages/img_comm_hint.png") no-repeat 0.5rem 0.5rem;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    width: 100%;
+    font-size: 0.6rem;
+    color: #aa906b;
+    text-indent: 1.5rem;
+    background-color: #F8F7F3;
+    background-size:5%;
+}
+.goods-info{
+    margin-bottom:2rem;
+}
+.goods-info img{
+    display:block;
+    border:none;
+}
+
+/*即将开始提示*/
+.upcoming{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height:2rem;
+    font-size:0.7rem;
+    line-height: 2rem;
+    color: #ffffff;
+    background-color: #BE394B;
+    overflow: hidden;
+}
+.skill-prompt{
+    overflow: hidden;
+}

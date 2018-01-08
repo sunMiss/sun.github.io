@@ -1,0 +1,76 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/finance.css")>
+    }
+
+
+	<div class="finance">
+		<div class="withdred">
+			<h3>提现金额</h3>
+			<div class="content">
+				<i>￥</i>
+				<input type="number" placeholder="请输入提现金额" id="cash"  maxlength="6"/>
+			</div>
+			<p class="small">备注:账户最多转出 ￥500.00</p>
+		</div>
+		
+		<div class="ballanceBtn">
+			<button class="Btn-top" onclick="cashMoney()">确认提现</button>
+		</div>
+		
+		
+	</div>
+
+
+
+<script type="text/javascript">
+    Common.headerTitle('提现');
+
+
+//绑定账号
+function cashMoney(){
+	var Money =$('#cash').val();
+	if(Money == '' || Money == null){
+		$.toast("提现金额不能为空", "forbidden");
+		return false;
+	}
+	AccountData(Money);
+}
+
+
+//账号绑定数据请求
+function AccountData(Money) {
+    $('.Btn-top').attr('display', true);
+    $('.Btn-top').addClass('disabled');
+	var param = {
+		"Money": Money
+	}
+	$.ajax({
+        url: Common.API_BASE_URL + Common.API_URL_GET_SENDOUT_CASH,
+        dataType: "json",
+        contentType: "text/json",
+        type: "POST",
+        data:JSON.stringify(param),
+        headers: {
+            'Authorization': 'Bearer ' + tokenObj,
+        },
+        success: function (data) {
+            if (data.status == '1') {
+                $.toast("提交成功");
+                setTimeout(function () {
+                    window.location.href = "/Personal/Personal"
+                }, 1000)
+            } else {
+                $.toast(data.message, "forbidden");
+            }
+            
+        },
+        error: function(err){
+            $.toast(err.message, "forbidden");
+        }
+	})
+	$('.Btn-top').attr('display', false);
+	$('.Btn-top').removeClass('disabled');
+}
+	
+</script>

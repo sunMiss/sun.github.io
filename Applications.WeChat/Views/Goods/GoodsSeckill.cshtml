@@ -1,0 +1,195 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/swiper-3.4.2.min.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/goods-details.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/goods-seckill.css")>
+}
+<!--页头交互返回按钮-->
+<header>
+    <div class="head-btn-box">
+        <a href="/Home/Index" class="head-btn icon-pre"></a>
+        <a href="/Home/Index" class="head-btn icon-home"></a>
+        <a href="#" class="head-btn icon-share"></a>
+    </div>
+</header>
+
+<!--商品图轮播-->
+<div class="swiper-container slide-margin-top">
+    <div class="swiper-wrapper" id="index-banner-img">
+        <a class="swiper-slide">
+            <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+        </a>
+        <a class="swiper-slide">
+            <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+        </a>
+        <a class="swiper-slide">
+            <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+        </a>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination add-banner-bottom"></div>
+</div>
+
+<!--秒杀提示-->
+<section class="skill-prompt">
+    <div class="skill-reminder vertical-center">
+        <span class="skill-price">￥1.00</span>
+        <span class="skill-num">限量20件</span>
+        <div>
+            <span class="skill-start">距开始还剩</span>
+            <span class="skill-time">01:35:45</span>
+        </div>
+    </div>
+    <p class="last-remind">抢到后就在<em>5</em>分钟内下单支付，否则名额将被收回。
+    </p>
+</section>
+
+<!--商品信息-->
+<section class="goods-information">
+    <h2>金月宴 中秋月饼礼盒</h2>
+    <p>多味精装 尽享盛宴</p>
+    <div class="goods-new-box">
+        <span class="limit-skill">限量秒杀</span>
+        <span class="new-good">新品</span>
+        <span>中秋特卖</span>
+    </div>
+</section>
+
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--规格、数量 优惠券-->
+<ul class="size-num-box">
+    <li class="pop-show-size">
+        <span>规格、数量选择</span>
+        <span></span>
+    </li>
+</ul>
+
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--商品详情、规格-->
+<section class="goods-details-size">
+    <ul class="goods-details-title">
+        <li>商品详情</li>
+        <li>商品规格</li>
+    </ul>
+    <div class="goods-info">
+        <ul>
+            <li>
+                <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+            </li>
+            <li>
+                <img src="/Content/dxpImages/img_comm_pro.png" alt="" class="img-responsive">
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!--分割块-->
+<div class="space-line"></div>
+
+<!--规格数量弹窗 默认隐藏-->
+<div id="pop-up">
+    <!--商品信息-->
+    <ul class="pop-goods-info">
+        <li class="left-goods-img">
+            <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+        </li>
+        <li class="right-goods-des">
+            <h3>CK制造商 休闲抱枕蓝灰色...</h3>
+            <p>萌趣太鼓造型 萌趣太鼓造型</p>
+            <span>￥119.00</span>
+        </li>
+    </ul>
+    <!--颜色-->
+    <div class="color-size-wrap">
+    <div class="goods-color-choice">
+        <h2>颜色</h2>
+        <ul class="all-color-show">
+            <li>松叶绿</li>
+            <li>松叶绿</li>
+            <li>松叶绿</li>
+            <li>松叶绿</li>
+            <li>白色</li>
+        </ul>
+    </div>
+    <!--尺码-->
+    <div class="goods-color-choice">
+        <h2>尺码</h2>
+        <ul class="all-color-show">
+            <li>S</li>
+            <li>M</li>
+            <li>L</li>
+        </ul>
+    </div>
+    <!--数量-->
+    <div class="goods-color-choice">
+        <h2>数量</h2>
+        <div class="add-reduce-btn">
+            <span class="reduceBtn">－</span>
+            <span class="numValue">1</span>
+            <span class="addBtn">＋</span>
+        </div>
+    </div>
+    </div>
+    <!--加入购物车-->
+    <ul class="pop-up-shopcar">
+        <li class="enter-buy hava-buy hidden-lay">
+            <a href="#">
+                <p>加入购买</p>
+            </a>
+        </li>
+        <li class="enter-buy not-buy hidden-lay">
+            <a href="#">
+                <p>立即购买</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--即将开始提示-->
+<footer class="upcoming">
+    即将开始
+</footer>
+
+<!--规格数量弹窗 页面蒙版-->
+<div class="body-masking hidden-lay"></div>
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/jquery-3.1.1.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/swiper-3.4.2.jquery.min.js")></script>
+<script type="text/javascript">
+    /*商品图轮播*/
+    var swiperIndex = new Swiper('.swiper-container',
+        {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            observer: true, //修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true, //修改swiper的父元素时，自动初始化swiper
+        });
+    /*商品详情、规格点击*/
+    $(document).on("click",
+        ".goods-details-title li",
+        function() {
+            $(this).addClass("active-title-li").siblings().removeClass("active-title-li");
+        });
+
+
+    /*点击规格、优惠券弹出页面*/
+    $(".pop-show-size").click(function() {
+        $("#pop-up").css("display", "block");
+        $(".body-masking").css("display", "block");
+    });
+    $(".pop-show-coupon").click(function() {
+        $("#coupon-lay").css("display", "block");
+        $(".body-masking").css("display", "block");
+    });
+    $(".hidden-lay").click(function() {
+        $("#pop-up").css("display", "none");
+        $("#coupon-lay").css("display", "none");
+        $(".body-masking").css("display", "none");
+    });
+
+
+</script>

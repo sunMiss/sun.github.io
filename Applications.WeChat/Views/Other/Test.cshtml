@@ -1,0 +1,90 @@
+﻿@section head{
+        <style>
+            .goods-flex-li{
+                overflow:hidden;
+                margin: 0 auto;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid gainsboro;
+            }
+            .goods-flex-li .left-img-show{
+                width: 35%;
+                float: left;
+                background-color: #f5f5f5;
+                margin: 0 0.5rem;
+                height: 100%;
+            }
+            .goods-flex-li .right-goods-details{
+                float: left;
+                width: 58%;
+                height: 100%;
+            }
+            /* img{
+            width: 100%;
+        }*/
+            .right-goods-details .goods-title{
+                font-size: 0.65rem;
+                color: #333333;
+            }
+            .right-goods-details .goods-product{
+                font-size: 0.6rem;
+                color: #999999;
+                margin: 16px auto 32px auto;
+            }
+            .right-goods-details .red-prices{
+                font-size: 0.7rem;
+                color: #be394b;
+            }
+            .right-goods-details .line-through{
+                text-decoration: line-through;
+                color: #c5c4c0;
+                font-size: 0.6rem;
+                margin-left: 0.5rem;
+            }
+            .add-reduce-btns{
+                margin-top: 10%;
+            }
+            .add-reduce-btns span{
+                display: inline-block;
+                width: 3rem;
+                height: 1.2rem;
+                text-align: center;
+                line-height: 1.2rem;
+                border-radius: 4px;
+                color: #c5c4c0;
+                border: 1px solid #c5c4c0;
+            }
+            .enter-buy{
+                display: inline-block;
+                width: 3rem;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                text-align: center;
+                color: white;
+                background-color: #edddc4;
+                border-radius: 4px;
+                margin-left: 0.5rem;
+            }
+        </style>
+    }
+<!--秒秒购-->
+<div class="shop-goods-list">
+    <ul>
+        <li class="goods-flex-li">
+            <div class="left-img-show">
+                <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+            </div>
+            <div class="right-goods-details">
+                <p class="goods-title">商品名称</p>
+                <p class="goods-product">商品描述商品描述商品描述</p>
+                <span class="red-prices">￥1.00</span>
+                <span class="line-through">￥300.00</span>
+                <div class="add-reduce-btns">
+                    <span>已结束</span>
+                    <a href="javascript:void (0)" class="enter-buy">
+                        <span>进入抢购</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

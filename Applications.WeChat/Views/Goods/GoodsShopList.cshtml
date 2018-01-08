@@ -1,0 +1,61 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/category.css")>
+}
+<!--搜索-->
+<header class="search-head add-border-bottom" id="cateHeight" style="display: none;">
+    <div class="index-top">
+        <span class="search-box">
+            <i>
+                <img src="/Content/dxpImages/index/ico_nav_src.png" alt="">
+            </i>
+            <input type="text" placeholder="抱枕">
+        </span>
+    </div>
+</header>
+<!--页面主体-->
+<section class="wrap-goods" id="wrap-height" style="margin-top: 0;">
+	<div class="wrap-list-title" id="wrapTitle">
+		<span class="cur" data-on="0">默认</span>
+		<span data-on="1">新品</span>
+		<span data-on="2">人气</span>
+		<span data-on="3">价格
+			<div class="srort" data-s='1'>
+				<i class="up"></i>
+				<i class="down"></i>
+			</div>
+		</span>
+	</div>
+	<div class="wrap-list-item">
+		<ul id="wrapList">
+			<!--<li>
+				<a href="#">
+					<img src="../../Content/dxpImages/category/img_product_class.png" alt="" />
+					<em>植物填充</em>
+					<span><b>￥</b>48.00</span>
+				</a>
+			</li>-->
+		</ul>
+		<div class="weui-loadmore" id="loadings">
+		  <i class="weui-loading"></i>
+		  <span class="weui-loadmore__tips">正在加载</span>
+		</div>
+		<p class="weui-endmore" id="loadend" style="display: none;">已经没有更多商品了</p>
+	</div>
+</section>
+
+<script src="../../Scripts/plug/weui/fastclick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/GoodsShopList.js")></script>
+<script type="text/javascript">
+    /**
+    动态设置分类的高度
+    **/
+    $(function () {
+        var dHeight = $(window).height();
+        //var cateHeight = $('#cateHeight').height();
+        var bHeight = $('#bottom-navbar').height();
+        var heightAll = bHeight+5;
+        $('.wrap-list-item').css('height', dHeight - heightAll + 'px');
+    })
+
+</script>

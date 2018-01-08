@@ -1,0 +1,74 @@
+﻿@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/order-confirm.css")>
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/orderaddress.css")>
+}
+
+<div>
+    <!-- 地址为空 -->
+    <div class="addressNull" style="display:none;">
+        <p>
+            <img src="/Content/dxpImages/order/img_me_unsiteaddress.png">
+        </p>
+        <span>您的收货地址在哪里~</span>
+    </div>
+
+    <!-- 管理收货地址 -->
+    <div class="addAdmin">
+        <ul id="addAdminList">
+            @*<li>
+                <p class="addressName">
+                    <em>收货人:<strong>胡一菲</strong></em>
+                    <span>12545642131</span>
+                </p>
+                <p class="addressText">四川的给你看几点上班还能是大脑放空迪斯科解放</p>
+                <div class="addressItem">
+                    <input type="checkbox" class="check-box checked">默认收货地址
+                    <span>
+                        <a href="javascript:;" class="edit">编辑</a>
+                        <a href="javascript:;" class="dal">删除</a>
+                    </span>
+                </div>
+            </li>*@
+        </ul>
+    </div>
+
+
+</div>
+
+<!-- 添加收货地址and保存 -->
+<footer class="addressBtn">
+    <button type="button" onclick="addAddress()">添加收货地址</button>
+</footer>
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/AddAddress.js")></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

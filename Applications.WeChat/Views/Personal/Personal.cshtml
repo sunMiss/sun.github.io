@@ -1,0 +1,162 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/personal.css")>
+    }
+<section class="section-cintent">
+    <header class="my-head">
+        <section class="wrap-head">
+            <p class="head-img">
+                <img src="/Content/dxpImages/index/3.jpg" alt="" id="imgUser" class="img-responsive">
+            </p>
+            <div class="head-des">
+                <p id="nameUser">用户名</p>
+            </div>
+            <div class="member-code" style="display: none;">
+                <p class="member-code-icon"></p>
+                <span>会员码</span>
+            </div>
+        </section>
+    </header>
+    <!--我的订单-->
+    <section class="my-orders">
+        <h3>我的订单</h3>
+        <nav class="mine-navbar">
+            <ul>
+                <li>
+                    <a href="/Order/ObligationOrderForm?OrderState=0">
+                        <span class="icon-img">
+                            <img src="/Content/dxpImages/ico_order_pay.png" />
+                        </span>
+                        <p>待付款</p>
+                    </a>
+                    <!--定位消息提示-->
+                    @*<span class="message-reminder">2</span>*@
+                </li>
+                <li>
+                    <a href="/Order/ObligationOrderForm?OrderState=3">
+                        <span class="icon-img">
+                            <img src="/Content/dxpImages/ico_order_receiv.png" />
+                        </span>
+                        <p>待收货</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Order/ObligationOrderForm?OrderState=4">
+                        <span class="icon-img">
+                            <img src="/Content/dxpImages/ico_order_finish.png" />
+                        </span>
+                        <p>已完成</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Order/ObligationOrderForm?OrderState=100">
+                        <span class="icon-img">
+                            <img src="/Content/dxpImages/ico_order_all.png" />
+                        </span>
+                        <p>全部订单</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!--分销管理-->
+    <section class="my-orders my-management" style="display: none;">
+        <h3>分销管理</h3>
+        <nav class="mine-navbar">
+            <ul>
+                <li class="">
+                    <a href="javascript:void (0)">
+                        <span class="icons-jiangjin public-icon"></span>
+                        <p>我的奖金</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void (0)">
+                        <span class="icon-fenxi public-icon"></span>
+                        <p>数据分析</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void (0)">
+                        <span class="icon-mengyou public-icon"></span>
+                        <p>会员盟友</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void (0)">
+                        <span class="icon-code public-icon"></span>
+                        <p>推广二维码</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+
+    <!--余额、优惠券-->
+    <section class="my-discount">
+        <ul>
+            <li>
+                <a href="/Personal/Coupon">
+                    <i class="icon-youhuiquan"></i>
+                    <span>优惠卷</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Personal/Balance">
+                    <i class="icon-yue"></i>
+                    <span>余额</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Personal/StoreUserAdmin">
+                    <i class="icon-zhangha"></i>
+                    <span>账号绑定</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Order/AddAddress?orderList">
+                    <i class="icon-dizhi"></i>
+                    <span>地址管理</span>
+                </a>
+            </li>
+            <!--<li>
+                <a>
+                    <i class="icon-youhuiquan public-icon"></i>
+                    <span>优惠券</span>
+                </a>
+            </li>
+
+            <li class="add-margin-space">
+                <a>
+                    <i class="icon-shoucang public-icon"></i>
+                    <span>我的收藏</span>
+                </a>
+            </li>
+            
+            <li>
+                <a>
+                    <i class="icon-fuwu public-icon"></i>
+                    <span>客户服务</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="icon-shezhi public-icon"></i>
+                    <span>设置</span>
+                </a>
+            </li>-->
+        </ul>
+
+    </section>
+</section>
+<!--底部导航-->
+@Html.Partial("../Shared/navbar")
+
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/userInfo.js")></script>
+<script type="text/javascript">
+    Common.headerTitle('个人中心')
+</script>

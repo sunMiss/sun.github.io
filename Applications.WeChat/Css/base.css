@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    /* 在X5新内核Blink中，在排版页面的时候，会主动对字体进行放大，会检测页面中的主字体，当某一块字体在我们的判定规则中，认为字号较小，并且是页面中的主要字体，就会采取主动放大的操作。然而这不是我们想要的，可以采取给最大高度解决 */
+    max-height: 100000px;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+    max-height: 100000px;
+}
+
+*, *:before, *:after {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body{
+    font-size: 0.25rem;
+    font-family: "Hiragino Sans GB W3";
+    color: #333333;
+}
+html, body, section, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th,textarea, td {
+    border: 0 none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+em, strong {
+    font-style: normal;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input, button, select, textarea {
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-appearance:none;
+	outline:none
+}
+a:hover, a:active { outline:none; }
+input, select { vertical-align:middle; }
+hr{ display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+table { margin:0; padding:0; clear:left; width:100%; border-collapse:collapse; border-spacing:0; }
+table td { vertical-align:top; margin:0; }
+img{
+	border: none;
+}
+
+
+.img-responsive{
+    width: 100%;
+}
+.vertical-center{
+    text-align: center;
+}
+.space-line{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #f5f5f5;
+}
+
+.white-background{
+    background-color: #ffffff;
+}
+
+/**新增**/
+.hr10{
+    width:100%;
+    height:10px;
+    background:#f5f5f5;
+    overflow:hidden;
+}
+
+
+/**
+顶部导航    
+**/
+.shopping-title {
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #FFF;
+}
+.shop-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.shop-relative span{
+    font-size:0.7rem;
+}
+
+/*底部导航*/
+.bottom-navbar{
+    width: 100%;
+    border-top: 1px solid gainsboro;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    background-color: white;
+}
+.bottom-navbar ul{
+    height: 2.2rem;
+    overflow: hidden;
+    display: flex;
+}
+.bottom-navbar ul li{
+    flex: 1;
+    text-align: center;
+    font-size: 0.6rem;
+}
+.active-navbar-a{
+    color: #a78c66;
+}
+
+
+
+.bottom-navbar ul li a span{
+    display: inline-block;
+    margin-top: 0.1rem;
+    width: 1.3rem;
+    height: 1.05rem;
+    background-image: url("/Content/dxpImages/index/ico_homepag.png");
+    background-size:100%;
+}
+.bottom-navbar ul li a p{
+    margin-top:-0.1rem;
+}
+.bottom-navbar ul li.active a p{
+    color:#a78c66;
+}
+
+.bottom-navbar ul li a span.index-icon {
+    background-position: 1.45rem -2.2rem;
+}
+.bottom-navbar ul li a span.category-icon {
+   background-position: 1.45rem -4.1rem;
+}
+.bottom-navbar ul li a span.activity-icon {
+    background-position: 1.45rem -6.1rem;
+}
+.bottom-navbar ul li a span.shopping-icon {
+    background-position: 1.45rem -32rem;
+}
+.bottom-navbar ul li a span.personal-icon{
+     background-position: 1.45rem -9.95rem;
+}
+
+.bottom-navbar ul li.active a span.index-icon {
+    background-position: 1.45rem -3.2rem;
+}
+.bottom-navbar ul li.active a span.category-icon {
+   background-position: 1.45rem -5.1rem;
+}
+.bottom-navbar ul li.active a span.activity-icon {
+    background-position: 1.45rem -7.1rem;
+}
+.bottom-navbar ul li.active a span.shopping-icon {
+    background-position: 1.45rem -32.95rem;
+}
+.bottom-navbar ul li.active a span.personal-icon{
+     background-position: 1.45rem -10.95rem;
+}

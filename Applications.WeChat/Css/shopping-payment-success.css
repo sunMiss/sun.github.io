@@ -1,0 +1,104 @@
+.shopping-title{
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background:#FFF;
+}
+.shopping-title>span{
+    font-size: 0.3rem;
+}
+.shopping-title>a{
+    float: left;
+    margin-left: 4%;
+    font-size: 24px;
+}
+
+.pay-sucessc-box .pay-show-success{
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.pay-show-success p {
+    height: 4rem;
+    line-height: 4rem;
+    text-indent: 2rem;
+    width: 6rem;
+    font-size: 0.7rem;
+    color: #333333;
+    margin: 2rem auto 3rem;
+    background: url(/Content/dxpImages/ico_shop_pay.png) no-repeat left;
+    background-size: 30%;
+}
+.pay-success-prices{
+    font-size: 0.8rem;
+    text-align: center;
+    color: #333333;
+}
+.same-font{
+    font-size: 0.65rem;
+    color: #999999;
+    text-align: center;
+}
+.pay-success-order-number{
+    margin:4rem auto 0.5rem;
+
+}
+/*充值页面新增*/
+.recharge-success{
+    padding-bottom: 70px;
+    border-bottom: 1px solid gainsboro;
+}
+.recharge-tips{
+    margin: 1rem auto  0.5rem;
+    text-align: center;
+    font-size: 0.65rem;
+    color: #333333;
+}
+.discount-coupon-box{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 6rem
+}
+.discount-coupon-show{
+    width: 12rem;
+    background: url("/Content/dxpImages/img_comm_couponbg-1.png") no-repeat center;
+    background-size:100%;
+}
+.discount-coupon-get{
+    width:3.15rem;
+    background: url("/Content/dxpImages/img_comm_couponbg2.png") no-repeat center;
+    background-size:100%;
+}
+
+
+
+.pay-success-back-btn{
+    margin-top: 70px;
+    display: flex;
+    height: 1.5rem;
+    justify-content: center;
+}
+.pay-success-back-btn a{
+     width: 4rem;
+    text-align: center;
+    line-height:1.4rem;
+    font-size:0.7rem;
+    border-radius: 3px;
+}
+.pay-success-back-btn .check-order{
+    border: 1px solid #333333;
+    color: #333333;
+}
+.pay-success-back-btn .back-index{
+    border: 1px solid #be394b;
+    color:#be394b;
+    margin-left: 60px;
+}

@@ -1,0 +1,188 @@
+﻿@section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/newly-increased-address.css")>
+        <!--级联-->
+        <!--<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">-->
+        <!--[if IE]>
+            <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+        <![endif]-->
+    }
+<header class="shopping-title white-background">
+    <section class="shop-relative">
+        <a href="#" class="go-back-pre"></a>
+        <span>新增地址</span>
+    </section>
+</header>
+
+<section class="obligation">
+<section id="main-content">
+    <!--地址为空-添加收货地址-->
+    <div class="add-goods-address">
+        <div class="address-img"></div>
+        <p>你的收货地址在哪里~</p>
+
+        <a href="#" class="save-btn add-receiver-address">添加收货地址</a>
+    </div>
+    <!--添加收货人信息页面-->
+    <div class="write-information-box">
+        <ul class="write-information">
+            <li>
+                <input type="text" placeholder="收货人姓名" id="username">
+            </li>
+            <li>
+                <input type="text" placeholder="手机号码" class="user-phone">
+            </li>
+            <li class="select-area">
+                <input type="text" placeholder="选择区域">
+                <a href="#" class="go-back-pre-right"></a>
+            </li>
+            <li>
+                <input type="text" placeholder="邮政编码" class="user-code">
+            </li>
+            <li>
+                <input type="text" placeholder="请输入详细地址" class="user-address">
+            </li>
+
+            <li class="default-address">
+                <input type="radio" class="content-box">
+                <span>设为默认收货地址</span>
+            </li>
+        </ul>
+
+        <a href="javascript:void(0);" class="save-btn add-receiver-info" id="save-user-info" onclick="addAddress()">保存</a>
+
+
+        <!--页面蒙版-->
+        <div class="body-masking"></div>
+        <!--选择区域-->
+        <div class="container uplink-display">
+            <form class="form-inline">
+                <div data-toggle="distpicker">
+                    <div class="form-group">
+                        <label class="sr-only province1" for="province1">省</label>
+                        <select class="form-control" id="province1"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only city1" for="city1">市</label>
+                        <select class="form-control" id="city1">请选择市</select>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only district1" for="district1">区</label>
+                        <select class="form-control" id="district1">请选择区</select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--已添加收货人信息-->
+    <div class="new-receiver-info">
+        <ul>
+            <li>
+                <h2 class="info-name-phone">
+                    <span>收货人：<em>胡善良</em></span>
+                    <span>18781998965</span>
+                </h2>
+                <p class="info-address">四川省成都市青羊区苏坡街道222号苏坡街道222号222号</p>
+                <div class="default-address other-default-address">
+                    <input type="radio" class="content-box">
+                    <span>设为默认收货地址</span>
+                    <span class="default-delete">删除</span>
+                    <span class="default-edit">编辑</span>
+                </div>
+            </li>
+            <li>
+                <h2 class="info-name-phone">
+                    <span>收货人：<em>胡善良</em></span>
+                    <span>18781998965</span>
+                </h2>
+                <p class="info-address">四川省成都市青羊区苏坡街道222号苏坡街道222号222号</p>
+                <div class="default-address other-default-address">
+                    <input type="radio" class="content-box">
+                    <span>设为默认收货地址</span>
+                    <span class="default-delete">删除</span>
+                    <span class="default-edit">编辑</span>
+                </div>
+            </li>
+        </ul>
+        <a href="#" class="save-btn add-have-address">添加收货地址</a>
+    </div>
+</section>
+</section>
+<script src=@Url.Scrpit("/Scripts/plug/uplink/js/distpicker.data.js")></script>
+<script src=@Url.Scrpit("/Scripts/plug/uplink/js/distpicker.js")></script>
+<script src=@Url.Scrpit("/Scripts/plug/uplink/js/main.js")></script>
+<script src=@Url.Scrpit("/Scripts/page-used-js/increased-address.js")></script>
+<script>
+    /*点击选择框选择*/
+    $(".content-box").click(function() {
+        if ($(this).hasClass("has-not-select-icon")) {
+            $(this).removeClass("has-not-select-icon").addClass("has-select-icon");
+            $(this).attr("checked", "checked");
+            /*input的同级  input_siblings*/
+            var input_siblings = $(this).parent().siblings().children(".content-box");
+            input_siblings.removeClass("has-select-icon");
+            input_siblings.removeAttr("checked", "checked");
+
+        } else {
+            $(this).addClass("has-not-select-icon").removeClass("has-select-icon");
+            $(this).removeAttr("checked", "checked");
+        }
+    });
+
+    /*省市区选择*/
+    $(".select-area").click(function() {
+        $(".body-masking").css("display", "block");
+        $(".uplink-display").css("display", "block");
+    });
+
+    /*校验收获人信息*/
+    $("#save-user-info").click(function() {
+        var infoArr = [];
+        if ($("#username").val().match(/^[\u4E00-\u9FA5A-Za-z]+$/)) {
+            console.log("姓名yes!")
+        } else {
+            console.log("姓名no!")
+        }
+        if ($(".user-phone").val().match(/^[\0?(13|14|15|18)[0-9]{9}$/)) {
+            console.log("手机号ok");
+        } else {
+            console.log("手机号no");
+        }
+        if ($(".user-code").val().match(/^\d{6}$/)) {
+            console.log("邮政编码ok");
+        } else {
+            console.log("邮政编码no");
+        }
+        infoArr.push($("#username").val(), $(".user-phone").val(), $(".user-code"));
+        console.log("infoArr=" + infoArr);
+
+    });
+
+
+    //添加收件人信息按钮
+    $(".add-receiver-info").click(function() {
+        $(".body-masking").css("display", "none");
+        $(".uplink-display").css("display", "none");
+    });
+    /*遮罩关闭*/
+    $(".body-masking").click(function() {
+        $(".body-masking").css("display", "none");
+        $(".uplink-display").css("display", "none");
+    });
+    /*收货地址为空时添加按钮*/
+    $(".add-receiver-address").click(function() {
+        $(".write-information-box").css("display", "block");
+        $(".add-goods-address").css("display", "none");
+        $("body").css("background-color", "#f5f5f5");
+    });
+    /*添加收货地址后 显示地址罗列信息*/
+    $(".add-receiver-info").click(function() {
+        $(".new-receiver-info").css("display", "block");
+        $(".write-information-box").css("display", "none");
+    });
+
+    $(".add-have-address").click(function() {
+        $(".write-information-box").css("display", "block");
+        $(".new-receiver-info").css("display", "none");
+        $("body").css("background-color", "#f5f5f5");
+    });
+</script>

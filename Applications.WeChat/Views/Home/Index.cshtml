@@ -1,0 +1,102 @@
+﻿
+@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/dxpIndex.css")>
+    @*<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/weui/swiper.min.js")></script>*@    
+}
+
+
+<!--搜索-->
+<header class="search-head">
+    <div class="index-top">
+        @*<a class="head-img-box" href="/Home/Index"></a>*@
+        <a class="head-img-box" href="javascript:;"></a>
+        <span>
+            <i>
+                <img src="/Content/dxpImages/index/ico_nav_src.png" alt="">
+            </i>
+            <a href="/Goods/GoodsSearch">春季女装</a>
+        </span>
+    </div>
+</header>
+
+<!--  tabs  -->
+<div class="homeNav">
+    <div class="find_nav">
+        <div class="find_nav_left">
+            <div class="find_nav_list nav-left">
+                <ul id="pagenavi1">
+                    @*<li><a href="#" class="active">推荐1</a></li>
+    <li id="1"><a href="#">精品首推2</a></li>
+    <li id="2"><a href="#">时尚包包3</a></li>
+    <li id="3"><a href="#">精品首推4</a></li>
+    <li id="4"><a href="#">运动品牌5</a></li>
+    <li id="5"><a href="#">香水化妆6</a></li>
+    <li id="6"><a href="#">阿迪达斯7</a></li>
+    <li id="7"><a href="#">香水化妆8</a></li>
+    <li id="8"><a href="#">阿迪达斯9</a></li>
+    <li id="9"><a href="#">运动品牌0</a></li>
+    <li class="sideline"></li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <span class="find_btn" onclick="iconDown()">
+        <img src="/Content/dxpImages/home_icondown.png" />
+    </span>
+
+    <div class="homeAllNav">
+        <p class="homeAll-title">
+            <em>全部频道</em>
+            <span onclick="iconUp()"><img src="/Content/dxpImages/home_iconup.png" /></span>
+        </p>
+        <ul class="homeAll-content" id="homeAll"></ul>
+    </div>
+
+</div>
+
+<div id="slider1" class="swipe">
+    <ul class="box01_list">
+        <!-- 推荐1 -->
+        <li class="li_list">
+            <section class="home-content">
+                <!--第一层轮播-->
+                <article class="home-article" id="home-article"></article>
+
+                <!--今日秒杀-->
+                <ul class="homeSeckill" id="homeSeckill"></ul>
+                <h3 class="home-groom" style="display: none;"></h3>
+                <!--图片商品-->
+                <ul class="home-shop-img" id="homeShopImg"></ul>
+
+                <!--新品 - 人气单品--人气推荐-->
+                <section class="home-shop" id="homeShop"></section>
+                <p class="home-all-shop" style="display:none">
+                    <a href="/Goods/GoodsAllShopList">全部商品</a>
+                </p>
+
+                <!--热门分类-->
+                <article class="home-hot">
+                    <ul class="home-hot-list" id="homeHotList"></ul>
+                </article>
+
+                <!--底部自定义banner-->
+                <article class="home-footer-img" id="homeFooterImg"></article>
+
+            </section>
+        </li>
+
+    </ul>
+</div>
+
+
+
+<!-- 遮罩层 -->
+<div class="home-mask" onclick="iconUp()"></div>
+
+<!--底部导航-->
+@Html.Partial("../Shared/navbar")
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/touchslider.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/homeTabs.js")></script>
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/index.js")></script>

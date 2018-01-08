@@ -1,0 +1,82 @@
+﻿
+    @section head{
+    	<link rel="stylesheet" href=@Url.Scrpit("/Scripts/plug/weui/weui.min.css")>
+    	<link rel="stylesheet" href=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.css")>  
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/finance.css")>
+    }
+
+	<div class="finance">
+		<div class="detailed">
+			<ul class="detailedList" id="detailedList">
+				<!--<li>
+					<p class="title">
+						<em>充值</em>
+						<span>￥50.00</span>
+					</p>
+					<p class="txt">
+						<span>2017-09-16</span>
+						<span>余额  ￥50.00</span>
+					</p>
+					<p class="txt">
+						<span>流水号 3613151131</span>
+					</p>
+				</li>-->
+			</ul>
+			<div class="detailNotData" id="detailNotData">
+				<img src="../../Content/dxpImages/order/img_null_oder.png"/>
+				<p>暂无数据</p>				
+			</div>
+
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/plug/weui/jquery-weui.min.js")></script>
+
+
+<script type="text/javascript">
+    Common.headerTitle('明细');
+
+	
+	$.ajax({
+        url: Common.API_BASE_URL + Common.API_URL_GET_ACCOUNT_DETAILITEM,
+        dataType: "json",
+        contentType: "text/json",
+        type: "POST",
+        headers: {
+            'Authorization': 'Bearer ' + tokenObj,
+        },
+        success: function (res) {
+        	if(res.status == '1'){
+        		InitDetailed(res);
+        	} else {
+        	    $.toast(res.message, "forbidden");
+        	}
+        },
+        error: function(err){
+            $.toast(err.message, "forbidden");
+        }
+    })
+	
+	
+	//明细数据
+	function InitDetailed(res){
+		var $html ='';
+		if(res.data.length >0){
+			$.each(res.data, function(i,item) {
+				$html+='<li><p class="title"><em>'+item.TradeType+'</em><span>￥'+item.TradeMoney+'</span></p>';
+				$html+='<p class="txt"><span>'+item.TradeTime+'</span><span>余额  ￥'+item.BeforeBalance+'</span>';
+				$html+='</p><p class="txt"><span>流水号 '+item.BusinessId+'</span></p></li>';
+			});
+			$('#detailedList').html($html);
+		}else{
+			$('#detailNotData').show();
+		}
+		
+	}
+	
+	
+	
+	
+</script>

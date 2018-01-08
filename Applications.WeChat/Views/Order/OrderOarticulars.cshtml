@@ -1,0 +1,64 @@
+﻿@section head{
+    <link rel="stylesheet" href=@Url.Scrpit("/Css/obligation-order-form.css")>
+}
+
+<section class="detailItem">
+    <article class="detai-notice" style="display:none">
+        <i>
+            <img src="/Content/dxpImages/img_comm_note.png" />
+        </i>
+        <span>24小时未支付将关闭订单</span>
+    </article>
+    <div class="detai-address">
+        <p class="address-user">
+            <em>收货人<span id="detailName"></span></em>
+            <span id="detailPhone"></span>
+        </p>
+        <p class="address-text" id="detailAress"></p>
+    </div>
+
+    <div class="detai-content">
+        <h3 id="detaiShopName"></h3>
+        <ul class="detai-list" id="detaiList">
+            @*<li>
+                <img src="" />
+                <div class="detaiList-txt">
+                    <p class="name">商品名称</p>
+                    <span class="label">蓝色:  M</span>
+                    <p class="price">
+                        ￥<strong>119.00</strong>
+                        <b class="num">x3</b>
+                    </p>
+                </div>
+            </li>*@
+        </ul>
+        <div class="detai-method first">
+            <em>商品总额</em>
+            <span id="detaiShopTotal"></span>
+        </div>
+        <div class="detai-method">
+            <em>优惠价</em>
+            <span id="detaiShopDiscount"></span>
+        </div>
+        <p class="address-total">
+            实付款 <span>￥<strong id="detaiShopPay"></strong></span>
+        </p>
+    </div>
+    <ul class="detai-dl">
+        <li>订单编号: <span id="detaiOrderNum"></span></li>
+        <li>支付方式: <span id="detaiPayMent"></span></li>
+        <li>付款时间: <span id="detaiPayTime"></span></li>
+        <li>发货时间: <span id="detaiDeliverTime"></span></li>
+    </ul>
+    <p class="address-Btn" style="display:none">
+        <a href="#" class="cancel" onclick="OrderCancel(this)">取消订单</a>
+        <a href="#" class="payment" onclick="PaymentOrder(this)">立即付款</a>
+    </p>
+
+</section>	
+
+<script type="text/javascript" src=@Url.Scrpit("/Scripts/page-used-js/OrderOarticulars.js")></script>
+
+
+
+

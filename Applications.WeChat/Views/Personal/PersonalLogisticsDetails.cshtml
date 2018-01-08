@@ -1,0 +1,166 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/swiper-3.4.2.min.css")>
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/personal-logistics-details.css")>
+    }
+<header class="shopping-title white-background" style="display:none">
+    <section class="shop-relative">
+        <a href="#" class="go-back-pre"></a>
+        <span>物流详情</span>
+        <a href="/Home/Index" class="go-back-index"></a>
+    </section>
+</header>
+
+<!--package包裹切换选项卡-->
+<section class="obligation">
+<div class="swiper-container">
+    <ul class="swiper-pagination add-pagination"></ul>
+    <div class="swiper-wrapper tabs-contents">
+        <div class="swiper-slide swiper-package-one scroll-top">
+            <!--包裹1-->
+            <div class="package-item">
+                <ul class="package-one">
+                    <li>
+                        <span class="package-name">包裹1</span>
+                        <span>申通快递：1234668788888</span>
+                        <span class="package-state">已签收</span>
+                    </li>
+                    <li>
+                        <div class="goods-list-show-wrap">
+                            <a class="left-img-show">
+                                <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                            </a>
+                            <div class="right-goods-details">
+                                <p class="details-name">CK制造商 休闲抱枕 蓝灰色...</p>
+                                <p class="details-choice">蓝色 M</p>
+                                <span class="prices-show">￥250.00</span>
+                                <span class="details-num">X 3</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goods-list-show-wrap">
+                            <a class="left-img-show">
+                                <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                            </a>
+                            <div class="right-goods-details">
+                                <p class="details-name">CK制造商 休闲抱枕 蓝灰色...</p>
+                                <p class="details-choice">蓝色 M</p>
+                                <span class="prices-show">￥250.00</span>
+                                <span class="details-num">X 3</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+                <!--分割块-->
+                <div class="space-line"></div>
+                <!--物流详情路线-->
+                <ul class="logistics-info-show">
+
+                    <li class="logistics-info">
+                        <span class="circle-style"></span>
+                        <span class="show-address">快件已到达（成都黄田坝附近），到站扫描,扫描员胡洁18781998973</span>
+                        <p>2017-10-01 08：45：02</p>
+                    </li>
+                    <li class="logistics-info">
+                        <span class="circle-style"></span>
+                        <span class="show-address">快件已到达（成都黄田坝附近），到站扫描</span>
+                        <p>2017-10-01 08：45：02</p>
+                    </li>
+                    <li class="logistics-info">
+                        <span class="circle-style"></span>
+                        <span class="show-address">快件已到达（成都黄田坝附近），到站扫描</span>
+                        <p>2017-10-01 08：45：02</p>
+                    </li>
+                    <li class="logistics-info">
+                        <span class="circle-style"></span>
+                        <span class="show-address">快件已到达（成都黄田坝附近），到站扫描</span>
+                        <p>2017-10-01 08：45：02</p>
+                    </li>
+                    <li class="logistics-info">
+                        <span class="circle-style"></span>
+                        <span class="show-address">快件已到达（成都黄田坝附近），到站扫描</span>
+                        <p>2017-10-01 08：45：02</p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        <div class="swiper-slide swiper-package-one scroll-top">
+            <!--包裹2-->
+            <div class="package-item">
+            <ul class="package-one">
+                <li>
+                    <span class="package-name">包裹1</span>
+                    <span>申通快递：1234668788888</span>
+                    <span class="package-state">已签收</span>
+                </li>
+                <li>
+                    <div class="goods-list-show-wrap">
+                        <a class="left-img-show">
+                            <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                        </a>
+                        <div class="right-goods-details">
+                            <p class="details-name">CK制造商 休闲抱枕 蓝灰色...</p>
+                            <p class="details-choice">蓝色 M</p>
+                            <span class="prices-show">￥250.00</span>
+                            <span class="details-num">X 3</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods-list-show-wrap">
+                        <a class="left-img-show">
+                            <img src="/Content/dxpImages/index/product.png" alt="" class="img-responsive">
+                        </a>
+                        <div class="right-goods-details">
+                            <p class="details-name">CK制造商 休闲抱枕 蓝灰色...</p>
+                            <p class="details-choice">蓝色 M</p>
+                            <span class="prices-show">￥250.00</span>
+                            <span class="details-num">X 3</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+           </div> 
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<script src=@Url.Scrpit("/Scripts/plug/swiper-3.4.2.jquery.min.js")></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container',
+        {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            speed: 500,
+            paginationElement: 'li',
+            paginationBulletRender: function(swiper, index, className) {
+                switch (index) {
+                case 0:
+                    name = '包裹1';
+                    break;
+                case 1:
+                    name = '包裹2';
+                    break;
+                }
+                return '<span class="' + className + '">' + name + '</span>';
+            }
+        });
+
+    /**
+       动态设置分类的高度
+       **/
+    $(function () {
+        var dHeight = $(window).height();
+        var cateHeight = $('.shopping-title').height();
+        $('.swiper-slide').css('height', dHeight - cateHeight + 'px');
+    })
+
+    Common.headerTitle('物流详情');
+</script>

@@ -1,0 +1,50 @@
+﻿
+    @section head{
+        <link rel="stylesheet" href=@Url.Scrpit("/Css/finance.css")>
+    }
+
+<div class="finance">
+	<div class="ballance">
+		<p>
+			<a href="/Personal/Detailed">明细</a>
+		</p>
+		<div class="ballanceBox">
+			<em id="totalMoney"></em>
+			<span>总金额(元)</span>
+		</div>
+		
+		<div class="ballanceBtn">
+			<a href="/Personal/Recharge" class="Btn-top">充值</a>
+			<a href="/Personal/Withdrawals" class="Btn-bot">提现</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    Common.headerTitle('余额');
+	
+	$.ajax({
+        url: Common.API_BASE_URL + Common.API_URL_GET_USER_MONEY,
+        dataType: "json",
+        contentType: "text/json",
+        type: "GET",
+        headers: {
+            'Authorization': 'Bearer ' + tokenObj,
+        },
+        success: function (res) {
+            if (res.status == '1') {
+        		$('#totalMoney').html(res.data);
+            } else {
+                $.toast(res.message, "forbidden");
+            }
+        },
+        error: function(err){
+            $.toast(err.message, "forbidden");
+        }
+    })
+	
+	
+</script>

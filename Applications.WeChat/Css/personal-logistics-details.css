@@ -1,0 +1,250 @@
+html,body{
+    position: relative;
+    height: 100%;
+    overflow:hidden;
+}
+.shopping-title{
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.shop-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.shopping-title>span{
+    font-size: 0.3rem;
+}
+.go-back-pre {
+    background: url(/Content/dxpImages/ico_shop_all.png)no-repeat center;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0;
+    background-size: 500%;
+}
+.obligation {
+    height: 100%;
+    overflow: auto;
+}
+.shopping-title .go-back-pre {
+    left: 0rem;
+    margin-top: 0.28rem;
+    background-position: 0 -2.9rem;
+}
+.shopping-title .go-back-index{
+    right:24px;
+    margin-top: -20px;
+    background-position: 0 -150px;
+}
+/*物流详情路线*/
+.logistics-info{
+    text-align:left;
+}
+.logistics-info-show{
+    padding-top:0.5rem;
+    margin-bottom:3rem;
+}
+.logistics-info-show li{
+    margin: 0 0.5rem;
+    height:2.6rem;
+    font-size: 0.6rem;
+    color: #999999;
+    border-left: 1px solid #999999;
+    position: relative;
+}
+.logistics-info span{
+    display: inline-block;
+}
+.logistics-info .circle-style{
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #c5c4c0;
+    border-radius: 100%;
+    position: absolute;
+    top:0.02rem;
+    left: -0.3rem;
+
+}
+.logistics-info .show-address{
+    margin-left: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+}
+.logistics-info p{
+    text-indent: 1rem;
+    margin-bottom:0.5rem;
+    font-size:0.55rem;
+}
+.logistics-info-show li:last-child{
+    border: none;
+}
+.logistics-info-show li:first-child .circle-style{
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #83C44E;
+    left:-0.3rem;
+}
+.logistics-info-show li:first-child .show-address{
+    color: #83C44E;
+}
+
+
+/*package包裹切换选项卡*/
+
+.swiper-container {
+    width: 100%;
+}
+.swiper-container .tabs-contents{
+    margin-top: 1.8rem;
+}
+.swiper-container .tabs-contents .scroll-top{
+    overflow-y: scroll;
+}
+.swiper-topic ul li a{
+    display: block;
+    margin: 20px 24px auto;
+}
+.add-pagination{
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    height: 1.76rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    line-height:1.76rem;
+    border-bottom: 1px solid gainsboro;
+}
+.swiper-pagination-bullet {
+    border-radius: 0;
+    text-align: center;
+    font-size: 0.65rem;
+    color: #333333;
+    opacity: 1;
+    background-color: white;
+    margin: 0;
+    width: 25% !important;
+    height: 98% !important;
+    display: inline-block;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0;
+}
+.swiper-pagination-bullet-active {
+    color: #a78c66;
+    height:100% !important;
+    border-bottom: 2px solid #a78c66;
+}
+.package-item{
+    width:100%;
+    display: inline-table;
+    overflow:hidden;
+}
+.package-one{
+    width:100%;
+    overflow:hidden;
+}
+.package-one li{
+    padding:0.3rem 0;
+    border-bottom:1px solid #f5f5f5;
+}
+/*包裹信息*/
+.swiper-slide{
+    align-items:flex-start;
+    -webkit-align-items:flex-start;
+    display:block !important;
+}
+.package-one ellipse{
+    overflow:hidden;
+}
+.package-one li:first-child{
+    height: 1.76rem;
+    line-height: 1.76rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align:left;
+}
+.package-one li:first-child .package-name{
+    border-radius: 4px;
+    background-color: #83C44E;
+    padding: 0.2rem 0.5rem;
+    color: #ffffff;
+    font-size:0.6rem;
+    margin: auto 0.5rem;
+}
+.package-state{
+    float: right;
+    margin-right: 0.5rem;
+    color: #a78c66;
+}
+
+.goods-list-show{
+    height: 2rem;
+    border: 1px solid #f0f0f0;
+
+}
+
+.package-one .goods-list-show{
+    height: 2rem;
+    border: 1px solid #f0f0f0;
+
+}
+.package-one .goods-list-show-wrap{
+    margin-top: 0.5rem;
+    position: relative;
+    overflow:hidden;
+}
+
+.package-one li .left-img-show,.package-one li .right-goods-details{
+    float: left;
+}
+.package-one li .left-img-show{
+    height: 4rem;
+    width: 4rem;
+    background-color: #F5F5F5;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+}
+
+.package-one .right-goods-details{
+    margin-left: 0.5rem;
+    width:10.5rem;
+    text-align:left;
+}
+
+.package-one .right-goods-details .details-name{
+    font-size: 0.65rem;
+}
+.package-one .right-goods-details .details-choice{
+    font-size: 0.6rem;
+    color: #999999;
+    margin:0.2rem 0 0.2rem;
+}
+.package-one .right-goods-details .prices-show{
+    font-size: 0.7rem;
+    color: #be394b;
+}
+
+.package-one .right-goods-details .details-num{
+    float: right;
+    margin-right: 0.52rem;
+    font-size: 0.6rem;
+    color: #333333;
+}
+.space-line{
+    width:100%;
+    height:0.5rem;
+    background:#f5f5f5;
+    clear:both;
+}

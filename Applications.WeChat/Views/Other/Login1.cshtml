@@ -1,0 +1,167 @@
+﻿
+@section head{
+    <style type="text/css">
+        body {
+            background-color: #F2F0F0;
+        }
+
+        section {
+            background-color: white;
+            width: 60%;
+            height: 660px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .login-banner-img {
+            margin-top: 8%;
+        }
+
+        .login-form {
+            margin-top: 8%;
+            width: 370px;
+            height: 353px;
+            border: 1px solid gainsboro;
+        }
+
+            .login-form div:nth-child(1) {
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                line-height: 50px;
+            }
+
+                .login-form div:nth-child(1) > span {
+                    color: gray;
+                    font-family: "微软雅黑";
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+            .login-form form {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+                .login-form form input {
+                    width: 100%;
+                    height: 28px;
+                    margin-top: 4%;
+                }
+
+                .login-form form button {
+                    width: 102%;
+                    height: 35px;
+                    margin-top: 4%;
+                    border: none;
+                    background-color: #FF3366;
+                    color: white;
+                }
+
+        .remember {
+            width: 80%;
+            margin: 4% auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .remember a {
+                color: #FF3366;
+                font-size: 12px;
+            }
+
+        .register {
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+    <script src=@Url.Scrpit("/Scripts/plug/jquery-3.1.1.js")></script>
+    <script type="text/javascript" src=@Url.Scrpit("/Scripts/tools/common.js")></script>
+    <script type="text/javascript" src=@Url.Scrpit("/Scripts/tools/dictionary.js")></script>
+    }
+<section>
+    <div class="login-banner-img">
+        <img src="images/login.jpg" alt=""/>
+    </div>
+    <div class="login-form">
+        <div>
+            <span>登录美丽说</span>
+            <a href="" class="register">新用户注册</a>
+        </div>
+        <form>
+            <input type="text" id="username" onblur="check_input_val()" maxlength="10" placeholder="手机号/邮箱/用户名"/>
+            <input type="password" id="password"  onblur="check_input_val()" max="20" placeholder="密码"/>
+            <button onclick="Login()">立即登录</button>
+        </form>
+        <div class="remember">
+            <input type="checkbox" checked="checked"></input>
+            <a href="#">忘记密码</a>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    function Login() {
+        var user_name = $("#username").val();
+        var password = $("#password").val();
+
+        var obj = {
+            userName: user_name,
+            pwd: password
+        };
+
+        $.ajax({
+            url: "http://39.108.113.43:802/Apis/HomePage/Login",
+            dataType: "jsonp",//返回的格式为json
+            async: true,//请求是否异步，默认true异步，这是ajax的特性
+            type: "POST",//请求的方式
+            data: obj,
+            beforeSend: function () {
+
+            },//请求前的处理
+            complete: function () {
+
+            },//请求完成的处理
+            error: function () {
+
+            },//请求出错的处理
+            success: function (req) {
+                if (req.code == 200) {
+                    window.location.href = '/Home/Index';
+                    //用cookie讲用户的信息保存在本地，一般密码要加密
+                    Common.setCookie(Dictionary.COOKIE_KEY_USER_NAME, user_name);
+                    Common.setCookie(Dictionary.COOKIE_KEY_PWD, password);
+
+                /*记住密码功能*/
+                    var cookie_user_name = Common.getCookie(Dictionary.COOKIE_KEY_USER_NAME);
+                    if (cookie_user_name !== "" || cookie_user_name != null) {
+                        $("#username").val(cookie_user_name);
+                    }
+                } else {
+
+                }
+                console.log("000");
+            },//请求成功的处理
+        });
+    }
+
+    /*校验用户输入的数据*/
+    function check_input_val() {
+        var user_name = $("#username").val();
+        var password = $("#password").val();
+
+        if (user_name === "") {
+            console.log("用户名为空！");
+            return false;
+        } else if (password === "") {
+            console.log("密码为空！");
+            return false;
+        } else {
+            console.log("校验成功！");
+            //值的检验，比如邮箱校验、手机号校验等等
+            return true;
+        }
+    }
+
+</script>
