@@ -1,0 +1,22 @@
+<!--pages/goodsList/goodsList.wxml-->
+<import src="../../tpls/products/products-tpl.wxml"/>
+
+<view class='goodsList'>
+  <!-- 条件 -->
+  <view class='goodsList-head'>
+    <view class="goodsList-text {{active==1?'active':''}}" data-active="1" bindtap='tabType'>默认</view>
+    <view class="goodsList-text {{active==2?'active':''}}" data-active="2" bindtap='tabType'>新品</view>
+    <view class="goodsList-text {{active==3?'active':''}}" data-active="3" bindtap='tabType'>人气</view>
+    <view class="goodsList-text {{active==4?'active':''}}" data-active="4" bindtap='tabType'>价格</view>
+  </view>
+
+  <!-- 列表 -->
+  <view class='goodsList-List'>
+    <scroll-view scroll-y="true">
+      <view class='goodsList-Item'>
+        <template is="products"></template>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

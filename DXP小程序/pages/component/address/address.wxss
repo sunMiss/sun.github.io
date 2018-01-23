@@ -1,0 +1,120 @@
+/* pages/component/address/address.wxss */
+.address-list{
+  width: 100%;
+  overflow: hidden;
+  background: #F0F0F0;
+  margin-bottom: 80rpx;
+}
+.address-list-li{
+  padding: 20rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  background: #FFF;
+}
+.address-list-header{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.address-header-name,.address-header-tel{
+  display: block;
+  width: 40%;
+  color: #333;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.address-list-center{
+  width: 100%;
+  overflow: hidden;
+}
+.address-list-center text{
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #666;
+  font-size: 28rpx;
+  padding-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.address-list-footer{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #f5f5f5;
+}
+.address-list-default{
+    color: #333;
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    flex-direction: row;
+}
+.address-list-default icon{
+  display: block;
+  padding-right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  padding-top: 18rpx;
+}
+.address-list-edit{
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.address-list-edit text{
+  display: block;
+  width: 120rpx;
+  text-align: center;
+  color: #333;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+
+
+.address-notAdd{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.address-notAdd image{
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  margin:48%  auto 20rpx;
+}
+.address-notAdd text{
+  display: block;
+  color: #999;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.address-btn{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.address-btn text{
+  display: block;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #FFF;
+  background:#dcb87f;
+  font-size: 30rpx;
+}
+

@@ -1,0 +1,10 @@
+<!--pages/search.wxml-->
+<view class='search'>
+  <view class='searchItem'>
+      <icon class='search-icon' type='search'></icon>
+      <view class='search-box'>
+        <input placeholder="夏季女装" auto-focus />
+      </view>
+      <text class='search-text'>搜索</text>
+  </view>
+</view>

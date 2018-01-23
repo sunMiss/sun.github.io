@@ -1,0 +1,29 @@
+<template name="products">
+    <view class='cartGoodsList'>
+      <block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}">
+        <view class='cartGoods-li'>
+          <navigator url='/pages/component/goodsDetail/goodsDetail'>
+            <image class='cartGoods-img' mode='scaleToFill' src="http://yanxuan.nosdn.127.net/2b53cb18ae4773aaec4466d46746971f.png?imageView&quality=65&thumbnail=330x330"></image>
+            <view class='cartGoods-name'>黑凤梨 20寸全铝镁合金登机箱</view>
+            <view class='cartGoods-price'>￥699</view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+
+</template>      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

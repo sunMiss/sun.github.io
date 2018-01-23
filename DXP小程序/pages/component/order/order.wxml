@@ -1,0 +1,112 @@
+<!--pages/component/order/order.wxml-->
+<view class='order'>
+  <scroll-view scroll-y="true">
+      <view class='order-List'>
+        <!-- 店铺名称 -->
+        <view class='order-header'>
+          <text class='order-header-name'>当下品</text>
+          <text class='order-header-type'>待付款</text>
+        </view>
+
+        <!-- 商品 -->
+        <view class='order-center'>
+          <block wx:for="{{[1,2,3,4,5,6]}}">
+              <view class='order-center-li'>
+                <view class='order-center-left'><image mode='scaleToFill'  src='http://yanxuan.nosdn.127.net/f1be06943e05f2459fbe14d02b441104.png?imageView&thumbnail=160x0&quality=75'></image></view>
+                <view class='order-center-right'>
+                    <view class='order-center-box'>
+                      <view class='order-center-name'>商品民粹</view>
+                      <view class='order-center-small'>颜色</view>
+                      <view class='order-center-txt'>
+                        <text class='order-center-price'>￥119.00</text>
+                        <text class='order-center-num'>x3</text>
+                      </view>
+                    </view>
+                </view>
+              </view>
+          </block>
+          
+          <view class='order-footer'>
+              <text class='order-footer-num'>共计1件商品</text>
+              <text class='order-footer-price'>实付款: ￥119.00</text>
+            </view>
+            <view class='order-btnItem'>
+                <view class='order-btn'>取消订单</view>
+                <view class='order-btn btn-ok'>立即付款</view>
+            </view>
+        </view>
+      </view>
+      <view class='order-List'>
+        <!-- 店铺名称 -->
+        <view class='order-header'>
+          <text class='order-header-name'>当下品</text>
+          <text class='order-header-type'>待付款</text>
+        </view>
+
+        <!-- 商品 -->
+        <view class='order-center'>
+          <view class='order-center-li'>
+            <view class='order-center-left'><image mode='scaleToFill'  src='http://yanxuan.nosdn.127.net/f1be06943e05f2459fbe14d02b441104.png?imageView&thumbnail=160x0&quality=75'></image></view>
+            <view class='order-center-right'>
+                <view class='order-center-box'>
+                  <view class='order-center-name'>商品民粹</view>
+                  <view class='order-center-small'>颜色</view>
+                  <view class='order-center-txt'>
+                    <text class='order-center-price'>￥119.00</text>
+                    <text class='order-center-num'>x3</text>
+                  </view>
+                </view>
+            </view>
+          </view>
+          <view class='order-center-li'>
+            <view class='order-center-left'><image mode='scaleToFill'  src='http://yanxuan.nosdn.127.net/f1be06943e05f2459fbe14d02b441104.png?imageView&thumbnail=160x0&quality=75'></image></view>
+            <view class='order-center-right'>
+                <view class='order-center-box'>
+                  <view class='order-center-name'>商品民粹</view>
+                  <view class='order-center-small'>颜色</view>
+                  <view class='order-center-txt'>
+                    <text class='order-center-price'>￥119.00</text>
+                    <text class='order-center-num'>x3</text>
+                  </view>
+                </view>
+            </view>
+          </view>
+          <view class='order-center-li'>
+            <view class='order-center-left'><image mode='scaleToFill'  src='http://yanxuan.nosdn.127.net/f1be06943e05f2459fbe14d02b441104.png?imageView&thumbnail=160x0&quality=75'></image></view>
+            <view class='order-center-right'>
+                <view class='order-center-box'>
+                  <view class='order-center-name'>商品民粹</view>
+                  <view class='order-center-small'>颜色</view>
+                  <view class='order-center-txt'>
+                    <text class='order-center-price'>￥119.00</text>
+                    <text class='order-center-num'>x3</text>
+                  </view>
+                </view>
+            </view>
+          </view>
+          <view class='order-center-li'>
+            <view class='order-center-left'><image mode='scaleToFill'  src='http://yanxuan.nosdn.127.net/f1be06943e05f2459fbe14d02b441104.png?imageView&thumbnail=160x0&quality=75'></image></view>
+            <view class='order-center-right'>
+                <view class='order-center-box'>
+                  <view class='order-center-name'>商品民粹</view>
+                  <view class='order-center-small'>颜色</view>
+                  <view class='order-center-txt'>
+                    <text class='order-center-price'>￥119.00</text>
+                    <text class='order-center-num'>x3</text>
+                  </view>
+                </view>
+            </view>
+          </view>
+          <view class='order-footer'>
+              <text class='order-footer-num'>共计1件商品</text>
+              <text class='order-footer-price'>实付款: ￥119.00</text>
+            </view>
+            <view class='order-btnItem'>
+                <view class='order-btn'>取消订单</view>
+                <view class='order-btn btn-ok'>立即付款</view>
+            </view>
+        </view>
+      </view>
+  </scroll-view>
+
+</view>

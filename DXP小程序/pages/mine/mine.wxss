@@ -1,0 +1,146 @@
+/* pages/mine/mine.wxss */
+.mine{
+  height: 100%;
+  overflow: auto;
+  background: #f0f0f0;
+}
+.mine-head{
+  width: 100%;
+  height: 180rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  background: #a78c66;
+  border-bottom: 1px solid #a78c66;
+}
+.user-img{
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 40rpx;
+}
+.user-name{
+  width: 400rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #FFF;
+  font-size: 28rpx;
+  margin-top: 60rpx;
+}
+
+.mine-center{
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+}
+.mine-title{
+  padding: 0 40rpx;
+  overflow: hidden;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mineNav-list{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mineList-li{
+  overflow: hidden;
+  width: 25%;
+  text-align: center;
+  padding: 40rpx 0;
+}
+.mineList-img{
+  display: block;
+  margin: auto;
+  width: 70rpx;
+  height: 70rpx;
+}
+.mineList-name{
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+}
+.mineItem{
+  overflow: hidden;
+  margin-top: 20rpx;
+  background: #FFF;
+}
+.mineItem-li{
+  padding: 0 40rpx;
+  overflow: hidden;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333;
+  font-size: 30rpx;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mineItem-li image{
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 10rpx;
+  vertical-align:middle;
+  margin-top: -3rpx;
+}
+/*右箭头*/
+.right{
+    width:20px;
+    height:20px;
+    position:absolute;
+    right:0;
+    top:28rpx;
+}
+.right-arrow1,.right-arrow2{
+    width:0;
+    height:0;
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    border-top:20rpx transparent dashed;
+    border-right:20rpx transparent dashed;
+    border-bottom:20rpx transparent dashed;
+    border-left:20rpx white solid;
+    overflow:hidden;
+}
+.right-arrow1{
+    left:5rpx;/*重要*/
+    border-left:20rpx #ccc solid;
+}
+.right-arrow2{
+    border-left:20rpx white solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

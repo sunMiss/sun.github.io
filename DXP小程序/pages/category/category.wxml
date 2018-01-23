@@ -1,0 +1,75 @@
+<!--pages/category/category.wxml-->
+<view class="section">
+    <!-- 搜索 -->
+    <view class='cate-head'>
+        <view class='cate-text'>
+          <navigator url="../search/search">
+            <icon class='icon' type="search" size="25"/>夏季女装
+          </navigator>  
+        </view>
+    </view>
+    <!-- 左侧类型 -->
+    <scroll-view scroll-y="true" class="left">
+        <!-- <view wx:for="{{types}}" wx:key="typeId" data-type-id="{{item.id}}" bindtap="tapType" class="{{item.id == currType ? 'active' : ''}}" style="font-size:33rpx">
+            {{item.name}}
+        </view> -->
+        <view class="{{currType==1?'currType':''}}" data-current="1" bindtap='tabType'>生活用品</view>
+        <view class="{{currType==2?'currType':''}}" data-current="2" bindtap='tabType'>母婴用品</view>
+        <view class="{{currType==3?'currType':''}}" data-current="3" bindtap='tabType'>居家服饰</view>
+        <view class="{{currType==4?'currType':''}}" data-current="4" bindtap='tabType'>文化匠心</view>
+        <view class="{{currType==5?'currType':''}}" data-current="5" bindtap='tabType'>精美食品</view>
+        <view class="{{currType==6?'currType':''}}" data-current="6" bindtap='tabType'>外出服饰</view>
+        <view class="{{currType==7?'currType':''}}" data-current="7" bindtap='tabType'>数码电器</view>
+        <view class="{{currType==8?'currType':''}}" data-current="8" bindtap='tabType'>化妆品</view>
+        <view class="{{currType==9?'currType':''}}" data-current="9" bindtap='tabType'>一件包邮</view>
+        <view class="{{currType==10?'currType':''}}" data-current="10" bindtap='tabType'>女鞋</view>
+    </scroll-view>
+
+    <!-- 右侧数据 -->
+    <scroll-view scroll-y="true" class="right">
+        <view class="typeTree">
+            <!-- banner -->
+            <view class="cateBanner">
+              <image mode='scaleToFill' src="http://yanxuan.nosdn.127.net/3387b55730e9188536354fcb08fb40c5.jpg"></image>
+            </view>
+
+            <!-- 二级商品分类 -->
+            <view class='cartItem'>
+                <view class='cartText' data-goodsId="132456" bindtap='goGoodsList'>
+                  <image src="http://yanxuan.nosdn.127.net/d77f8cd37529d4fc10932aaf708663bc.png"></image>
+                  <text class='cartName'>床品件套</text>
+                </view>
+                <view class='cartText' data-goodsId="132456" bindtap='goGoodsList'>
+                  <image src="http://yanxuan.nosdn.127.net/16b936a40daf74eb36fdefdd361c88b3.png"></image>
+                  <text class='cartName'>电脑座椅</text>
+                </view>
+                <view class='cartText' data-goodsId="132456" bindtap='goGoodsList'>
+                  <image src="http://yanxuan.nosdn.127.net/d77f8cd37529d4fc10932aaf708663bc.png"></image>
+                  <text class='cartName'>床品件套</text>
+                </view>
+                <view class='cartText' data-goodsId="132456" bindtap='goGoodsList'>
+                  <image src="http://yanxuan.nosdn.127.net/d77f8cd37529d4fc10932aaf708663bc.png"></image>
+                  <text class='cartName'>床品件套</text>
+                </view>
+                <view class='cartText' data-goodsId="132456" bindtap='goGoodsList'>
+                  <image src="http://yanxuan.nosdn.127.net/16b936a40daf74eb36fdefdd361c88b3.png"></image>
+                  <text class='cartName'>电脑座椅</text>
+                </view>
+                <view class='cartText' data-goodsId="132456" bindtap='goGoodsList'>
+                  <image src="http://yanxuan.nosdn.127.net/d77f8cd37529d4fc10932aaf708663bc.png"></image>
+                  <text class='cartName'>床品件套</text>
+                </view>
+            </view>
+
+            
+            
+
+            <!-- <view  class="brand" wx:for="{{typeTree}}" wx:for-item="data">
+                <navigator url="../listdetail/listdetail?cat_id={{data.id}}&title={{data.name}}" wx:key="typeId" class="item">
+                    <image src="{{data.bz_1}}"></image>
+                    <text>{{data.name}}</text>
+                </navigator>
+            </view> -->
+        </view>
+    </scroll-view>
+</view>

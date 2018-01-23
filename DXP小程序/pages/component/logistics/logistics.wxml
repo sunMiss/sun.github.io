@@ -1,0 +1,65 @@
+<!--pages/component/logistics/logistics.wxml-->
+<view class='logistics'>
+  <view class='logistics-nav'>
+    <view class="logistics-tab {{selected ? 'active' : ''}}" bindtap='selected'>包裹1</view>
+    <view class="logistics-tab {{selected1 ? 'active' : ''}}" bindtap='selected1'>包裹2</view>
+  </view>
+
+  <view class='logistics-item'>
+    <view class="logistics-list {{selected ? 'show' : 'hide'}}">
+      <block>
+        <view class='comOrderCenter-li'>
+          <image mode='scaleToFill' src='http://mz.djmall.xmisp.cn/files/product/20161201/148058328876.jpg'></image>
+          <view class='comOrderCenter-text'>
+            <text class='comOrderCenter-names'>等你放假的你</text>
+            <text class='comOrderCenter-title'>士大夫</text>
+            <view class='comOrderCenter-txt'>
+              <text class='comOrderCenter-price'>￥119.00</text>
+              <text class='comOrderCenter-num'>x3</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class='logistics-text'>
+        <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}">
+          <view class='logistics-text-li'>
+            <text class='logistics-text-title'>的文档发顺丰的说法</text>
+            <text class='logistics-text-time'>2017-09-21 16:12:59</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view>
+    </view>
+    <view class="logistics-list {{selected1 ? 'show' : 'hide'}}">
+      <block>
+        <view class='comOrderCenter-li'>
+          <image mode='scaleToFill' src='http://mz.djmall.xmisp.cn/files/product/20161201/148058328876.jpg'></image>
+          <view class='comOrderCenter-text'>
+            <text class='comOrderCenter-names'>00000000</text>
+            <text class='comOrderCenter-title'>士大夫</text>
+            <view class='comOrderCenter-txt'>
+              <text class='comOrderCenter-price'>￥119.00</text>
+              <text class='comOrderCenter-num'>x3</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class='logistics-text'>
+        <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}">
+          <view class='logistics-text-li'>
+            <text class='logistics-text-title'>的文档发顺丰的说法</text>
+            <text class='logistics-text-time'>2017-09-21 16:12:59</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view>
+    </view>
+  
+  </view>
+
+
+
+
+</view>

@@ -1,0 +1,52 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine'>
+<!-- 用户信息 -->
+  <view class='mine-head'>
+    <image class='user-img' src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class='user-name'>{{userInfo.nickName}}</view>
+  </view>
+
+  <!-- 订单信息 -->
+  <view class='mine-center'>
+    <view class='mine-title'>我的订单</view>
+    <view class='mineNav-list'>
+      <view class='mineList-li' data-minType="pay" bindtap='mineType'>
+        <image class='mineList-img' src="../../images/ico_money.png"></image>
+        <text class='mineList-name'>待付款</text>
+      </view>
+      <view class='mineList-li' data-minType="goods" bindtap='mineType'>
+        <image class='mineList-img' src="../../images/ico_cart.png"></image>
+        <text class='mineList-name'>待收货</text>
+      </view>
+      <view class='mineList-li' data-minType="end" bindtap='mineType'>
+        <image class='mineList-img' src="../../images/ico_order.png"></image>
+        <text class='mineList-name'>已完成</text>
+      </view>
+      <view class='mineList-li' data-minType="order" bindtap='mineType'>
+        <image class='mineList-img' src="../../images/ico_allorder.png"></image>
+        <text class='mineList-name'>全部订单</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 其他信息 -->
+  <view class='mineItem'>
+    <view class='mineItem-li' bindtap='mineType' data-minType="coupon"><image src="../../images/ico_you.png" />优惠卷<text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text></view>
+    <view class='mineItem-li' bindtap='mineType' data-minType="balance"><image src="../../images/ico_yu.png" />余额<text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text></view>
+    <view class='mineItem-li' bindtap='mineType' data-minType="binding"><image src="../../images/ico-bd.png" />账号绑定<text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text></view>
+    <view class='mineItem-li' bindtap='mineType' data-minType="address"><image src="../../images/ico_di.png" />地址管理<text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text></view>
+  </view>
+
+
+
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+
+
+
+
+
+
+
+
+
+</view>

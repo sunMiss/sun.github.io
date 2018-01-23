@@ -1,0 +1,163 @@
+<!--pages/component/goodsDetail/goodsDetail.wxml-->
+<import src="../../tpls/products/products-tpl.wxml"/>
+<view class='goodsDetail'>
+  <!-- 轮播图 -->
+  <view class='goodsBanner'>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}  "indicator-active-color="#a78c66">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" mode='widthFix' data-src="{{item}}" bindtap="previewImage" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- sku -->
+  <view class='goodsSku'>
+    <view class='goodsSku-item'>
+      <view class='goodsSku-name'>
+        <text class='goodsSku-name-shop'>商品名称</text>
+        <text class='goodsSku-name-title'>说明</text>
+      </view>
+      <view class='goodsSku-number'>
+        <view class='goodsSku-price'>
+          <text class='goodsSku-new'>￥199.00</text>
+          <text class='goodsSku-old'>￥299.00</text>
+        </view>
+        <view class='goodsSku-num'>
+          <text>月销:200件</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='goodsSku-section'>
+      <view class='goodsSku-section-1' >
+        <text>规格·数量选择</text>
+      </view>
+      <view class='goodsSku-section-2'>
+        <text>优惠卷</text>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 商品详情 -->
+  <view class='goodsItem'>
+      <view class='goodsLists-name'>商品详情</view>
+      <view class='goodsItem-text'>
+      
+      </view>
+      <view class='goodsItem-image'>
+        <block wx:for="{{detailImg}}">
+          <image src="{{item}}" mode='widthFix'></image>
+        </block>
+      </view>
+  </view>
+
+  <!-- 推荐商品 -->
+  <view class='goodsLists'>
+    <view class='goodsLists-name'>大家都在看</view>
+    <template is="products"></template>
+  </view>
+
+
+  <!-- SKU弹框 -->
+  <view class="{{isHidden ? 'dialog__mask':''}}" bindtap='skuHideChange'></view>
+  <view class="goodsSku-param  {{skuShow ? 'dialog__show':''}}">
+      <!-- 商品 -->
+      <view class='goodsParam'>
+        <image src='http://yanxuan.nosdn.127.net/e072f60ec5a3baa1f2e1e1f5fe75e6ad.jpg?quality=90&thumbnail=200x200&imageView'></image>
+        <view class='goodsParam-item'>
+          <text class='goodsParam-name'>哪地方的就是你</text>
+          <text class='goodsParam-title'>付款的什么看法</text>
+          <text class='goodsParam-price'>￥199.00</text>
+        </view>
+      </view>
+      <!-- 规格 -->
+      <view class='goodsContainer'>
+        <scroll-view scroll-y="true">
+          <block>
+            <view class='goodsCon-item'>
+              <view class='goodsCon-title'>颜色</view>
+              <view class='goodsCon-box'>
+                <block>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">红色</view>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">黑色</view>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">蓝色</view>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">白色</view>
+                </block>
+              </view>
+            </view>
+            <view class='goodsCon-item'>
+              <view class='goodsCon-title'>尺寸</view>
+              <view class='goodsCon-box'>
+                <block>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">S</view>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">M</view>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">X</view>
+                  <view class='goodsCon-li' bindtap="clickSkuValue" data-name-id="红色" data-value-id="001">XL</view>
+                </block>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view> 
+
+    <!-- 数量 -->
+    <view class='goodsNum'>
+      <view class='goodsNum-text'>数量</view>
+      <view class='goodsNum-btn'>
+        <view class='goodsNum-btnItem'>
+          <button type="default" size="mini" class="{{goodNum==1 ? 'disabled=':''}}" bindtap="{{goodNum>1?'delCount':''}}">-</button>  
+          <input  value="{{goodNum}}"/>  
+          <button type="default" size="mini" bindtap="addCount">+</button> 
+        </view>
+      </view>
+    </view>
+
+    <!-- 添加/购买 -->
+    <view class='goodsBtn'>
+      <text class='goodsBtn-add'>加入购物车</text>
+      <text class='goodsBtn-buy'>立即购买</text>
+    </view>
+
+  </view>
+
+
+
+  <!-- 固定底部 -->
+  <view class='goodsButton'>
+      <view class='goodsTo-home' bindtap='toHome'>
+        <image src='../../../images/goodHome.png'></image>
+        <text>首页</text>
+      </view>
+      <view class='goodsTo-cart' bindtap='toCar'>
+        <image src='../../../images/goodCart.png'></image>
+        <text>购物车</text>
+      </view>
+      <view class='goodsTo-addcart' bindtap='skuShowChange'>加入购物车</view>
+      <view class='goodsTo-buy' bindtap='skuShowChange'>立即购买</view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

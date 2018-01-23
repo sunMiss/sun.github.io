@@ -1,0 +1,36 @@
+/* pages/goodsList/goodsList.wxss */
+@import '../../tpls/products/products-tpl.wxss';
+
+.goodsList{
+  width: 100%;
+  overflow: hidden;
+}
+.goodsList-head{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px solid #f0f0f0;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.goodsList-text{
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.goodsList-text.active{
+  color:#a78c66;
+}
+.goodsList-List{
+  padding-top: 80rpx;
+}
+.goodsList-Item{
+  width: 100%;
+  overflow:hidden; 
+}

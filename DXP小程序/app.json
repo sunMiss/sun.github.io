@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/component/balance/balance",
+    "pages/component/coupon/coupon",
+    "pages/component/order/order",
+    "pages/component/goodsDetail/goodsDetail",
+    "pages/indexsss/indexsss",
+    "pages/logs/logs",
+    "pages/component/search/search",
+    "pages/component/goodsList/goodsList",
+    "pages/component/recharge/recharge",
+    "pages/component/withdrawals/withdrawals",
+    "pages/component/detailed/detailed",
+    "pages/component/bindAccount/bindAccount",
+    "pages/component/address/address",
+    "pages/component/newAddress/newAddress",
+    "pages/component/confirmOrde/confirmOrde",
+    "pages/component/orderPay/orderPay",
+    "pages/component/logistics/logistics"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#a78c66",
+    "navigationBarTitleText": "当下品",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/ico_path_home.png",
+        "selectedIconPath": "./images/ico_path_homeCur.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "./images/ico_path_care.png",
+        "selectedIconPath": "./images/ico_path_careCur.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./images/ico_path_cart.png",
+        "selectedIconPath": "./images/ico_path_cartCur.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "./images/ico_path_mein.png",
+        "selectedIconPath": "./images/ico_path_meinCur.png"
+      }
+    ],
+    "color": "#333",
+    "selectedColor": "#a78c66",
+    "backgroundColor": "#FFF",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": true
+}

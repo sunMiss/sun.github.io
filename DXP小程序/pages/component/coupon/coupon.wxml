@@ -1,0 +1,79 @@
+<!--pages/component/coupon/coupon.wxml-->
+<view class='coupon'>
+  
+  <scroll-view scroll-y="true">
+    <view class='coupon-list'>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+      <view class='coupon-list-li'>
+          <view class='coupon-list-left'>
+            <text class='coupon-li-price'>￥30</text>
+            <text class='coupon-li-name'>店铺使用</text>
+            <text class='coupon-li-title'>满200使用</text>
+          </view>
+          <view class='coupon-list-right'>
+            立即使用
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+</view>

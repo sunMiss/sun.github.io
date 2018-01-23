@@ -1,0 +1,52 @@
+/* pages/component/recharge/recharge.wxss */
+.recharge{
+  width: 100%;
+  overflow: hidden;
+}
+.recharge-head-title{
+  padding: 0 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.recharge-item{
+  margin: 30rpx;
+  overflow: hidden;
+}
+.recharge-box{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #f0f0f0;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: 600;
+  font-size: 35rpx;
+  text-indent: 20rpx;
+  border-radius: 8rpx;
+}
+.recharge-box input{
+  border:none;
+  height: 100rpx; 
+  line-height: 100rpx;
+  font-weight: 100;
+  font-size: 33rpx;
+  padding-left: 20rpx;
+}
+.recharge-span{
+  color: #999;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.recharge-btn{
+  margin: 100rpx 30rpx;
+}
+.recharge-btn button{
+  background: #dcb87f;
+  border: 1px solid #dcb87f;
+  color: #fff;
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}

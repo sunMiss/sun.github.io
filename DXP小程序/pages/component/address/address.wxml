@@ -1,0 +1,66 @@
+<!--pages/component/address/address.wxml-->
+<view class='address'>
+  <!-- 有地址 -->
+  <scroll-view scroll-y="true">
+      <view class='address-list' wx:if="{{!addData}}">
+        <view class='address-list-li' wx:for="{{[1,2,3,4,5]}}">
+          <view class='address-list-header'>
+            <text class='address-header-name'>地方</text>
+            <text class='address-header-tel'>159151561</text>
+          </view>
+          <view class='address-list-center'>
+            <text>大师傅大师傅但是</text>
+          </view>
+          <view class='address-list-footer'>
+            <view class='address-list-default'><icon type="success" color='#f5f5f5' size="23"/> 默认地址</view>
+            <view class='address-list-edit'>
+                <text class='edit'>编辑</text>
+                <text class='del'>删除</text>
+            </view>
+          </view>
+        </view>
+        <view class='address-list-li'>
+          <view class='address-list-header'>
+            <text class='address-header-name'>地方</text>
+            <text class='address-header-tel'>159151561</text>
+          </view>
+          <view class='address-list-center'>
+            <text>大师傅大师傅但是</text>
+          </view>
+          <view class='address-list-footer'>
+            <view class='address-list-default'><icon type="success" color='red' size="23"/> 默认地址</view>
+            <view class='address-list-edit'>
+                <text class='edit'>编辑</text>
+                <text class='del'>删除</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 没有地址 -->
+    <view class='address-notAdd' wx:else>
+        <image src='../../../images/address.png'></image>
+        <text>您的收货地址在哪里~</text>
+    </view>
+  </scroll-view>
+
+  
+
+  <!-- 添加收货地址 -->
+  <view class='address-btn'>
+    <navigator url='../newAddress/newAddress'>
+      <text>添加收货地址</text>
+    </navigator> 
+  </view>
+
+
+
+
+
+
+
+
+
+</view>
+
+

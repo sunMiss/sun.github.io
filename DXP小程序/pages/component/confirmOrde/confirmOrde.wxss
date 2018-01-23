@@ -1,0 +1,331 @@
+/* pages/component/confirmOrde/confirmOrde.wxss */
+.comOrder{
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.comOrder-head{
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+}
+.comOrderHead-box{
+  padding:40rpx 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+.comOrderHead-box .right{
+  position: absolute;
+  top: 105rpx;
+}
+.comOrderBox{
+  display: flex;
+  flex-direction: row;
+  color: #333;
+  font-size: 33rpx;
+}
+.comOrderBox-name{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+
+}
+.comOrderBox-tel{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 100rpx;
+}
+.comOrderBox-address{
+  overflow: hidden;
+}
+.comOrderBox-address text{
+  color: #999;
+  height: 40rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.comOrder-Address{
+  padding:60rpx 30rpx;
+  overflow: hidden;
+}
+.comOrderAddress-li{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.comOrderAddress-li image{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+}
+.comOrderAddress-li text{
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+.comOrderBout{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.comOrderBout image{
+  display: block;
+  width: 100%;
+  height: 10rpx;
+}
+.comOrder-center{
+  width: 100%;
+  overflow: hidden;
+  background: #f5f5f5;
+  padding-bottom: 90rpx;
+}
+.comOrderCenter,.comOrderCenter-list{
+  width: 100%;
+  overflow: hidden;
+}
+.comOrderCenter{
+  background: #FFF;
+  margin-bottom: 20rpx;
+}
+.comOrderCenter-name{
+  padding: 0 20rpx;
+  overflow: hidden;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333;
+  font-size: 33rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.comOrderCenter-li{
+  padding: 20rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #f5f5f5;
+}
+.comOrderCenter-li image{
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  border-radius: 8rpx;
+}
+.comOrderCenter-text{
+  overflow: hidden;
+  padding-left: 10rpx;
+}
+.comOrderCenter-names{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comOrderCenter-title{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #999;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+.comOrderCenter-txt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comOrderCenter-price{
+  color: #b4282d;
+  font-size: 33rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.comOrderCenter-num{
+  color: #333;
+  font-size: 28rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.comOrderCenter-couper{
+  width: 100%;
+  overflow: hidden;
+}
+.comOrderCouper{
+  width: 100%;
+  color: #333;
+  font-size: 30rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5;
+}
+.comOrderCouper-l,.comOrderCouper-r{
+  display: block;
+  padding: 0 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.comOrderCouper-r{
+  padding-right: 50rpx;
+}
+.comOrderCouper-total{
+  width: 100%;
+  overflow: hidden;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.comOrderCouper-total .text{
+  display: block;
+  width: 75%;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.comOrderCouper-total .price{
+  display: block;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #b4282d;
+  font-size: 30rpx;
+  padding-right: 20rpx;
+}
+
+.comOrder-foot{
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  background: #FFF;
+}
+.comOrder-foot-text{
+  width: 60%;
+  height: 90rpx;
+  padding-right: 10%;
+  line-height: 90rpx;
+  text-align: right;
+  color: #333;
+  font-size: 30rpx;
+  border-top: 1px solid #f5f5f5;
+}
+.comOrder-foot-text text{
+  color: #b4282d;
+}
+.comOrder-foot-submit{
+  width: 30%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align:center;
+  color: #fff;
+  font-size: 30rpx;
+  background: #b4282d;
+  border-top: 1px solid #b4282d;
+}
+/*右箭头*/
+.right{
+    width:20px;
+    height:20px;
+    position:absolute;
+    right:0;
+    top:28rpx;
+}
+.right-arrow1,.right-arrow2{
+    width:0;
+    height:0;
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    border-top:20rpx transparent dashed;
+    border-right:20rpx transparent dashed;
+    border-bottom:20rpx transparent dashed;
+    border-left:20rpx white solid;
+    overflow:hidden;
+}
+.right-arrow1{
+    left:5rpx;/*重要*/
+    border-left:20rpx #ccc solid;
+}
+.right-arrow2{
+    border-left:20rpx white solid;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background:rgba(0,0,0,0.7); 
+}
+.Coupon{
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #FFF;
+  border-top: 1px solid #f5f5f5;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+}
+.couponShow{
+  transform: translateY(0);
+}
+.Coupon-name{
+  padding: 0 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #666;
+  font-size: 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.Coupon-list{
+  padding: 0 20rpx;
+  height: 400rpx;
+  overflow-y: auto;
+}
+.Coupon-li{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.Coupon-li-name{
+  display: block;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.Coupon-li icon{
+  margin-top: 25rpx;
+}
+.Coupon-Btn{
+  width: 100%;
+  overflow: hidden;
+  background: #b4282d;
+  color: #FFF;
+  font-size: 30rpx;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}

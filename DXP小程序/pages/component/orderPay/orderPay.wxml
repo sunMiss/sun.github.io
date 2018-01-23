@@ -1,0 +1,48 @@
+<!--pages/component/orderPay/orderPay.wxml-->
+<view class='orderPay'>
+  <!-- 订单信息 -->
+  <view class='orderPay-list'>
+    <view class='orderPay-list-li'>订单金额: ￥119.00</view>
+    <view class='orderPay-list-li'>订单编号:11651651</view>
+    <view class='orderPay-list-li'>收货地址:的海南房价还能收到你发的NSF是</view>
+  </view>
+
+  <!-- 支付方式 -->
+  <view class='orderPay-item'>
+    <view class='orderPay-item-li'>
+      <view class='orderPay-li-text'>
+        <image src='../../../images/icon_wxChat.png'></image>
+        <text>微信支付</text>
+      </view>
+      <icon type='success' size='23' color='#b4282d'></icon>
+    </view>
+    <view class='orderPay-item-li'>
+      <view class='orderPay-li-text'>
+        <image src='../../../images/ico-balance.png'></image>
+        <text>余额支付</text>
+      </view>
+      <icon type='success' size='23' color='#f0f0f0'></icon>
+    </view>
+  </view>
+
+  <!-- 支付 -->
+  <view class='orderPay-btn'>
+    <view class='orderPay-btn-text'>
+      合计:<text>￥119.00</text>
+    </view>
+    <view class='orderPay-btn-submit'>支付</view>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

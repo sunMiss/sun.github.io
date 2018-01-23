@@ -1,0 +1,36 @@
+<!--pages/component/balance/balance.wxml-->
+<view class='balance'>
+  <view class='balance-item'>
+    <image class='balance-bg' src='../../../images/balance-bg.png'></image>
+    <view class='balance-title' data-banType="detailed" bindtap='balanceType'>明细</view>  
+    <view class='balance-box'>
+      <text class='balance-box-price'>100.00</text>
+      <text class='balance-box-text'>总金额(元)</text>
+    </view>
+  </view>
+
+  <view class='balance-btn'>
+    <button type="button" class='balance-btn-ok' data-banType="recharge" bindtap='balanceType'>充值</button>
+    <button type="button" data-banType="withdrawals"  bindtap='balanceType'>提现</button>
+  </view>
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

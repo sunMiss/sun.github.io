@@ -1,0 +1,25 @@
+<!--pages/component/newAddress/newAddress.wxml-->
+<view class='newaddress'>
+<form bindsubmit="formSubmit">
+    <view class='newaddress-list'>
+        <view class='newaddress-li'><input type='text' placeholder='收货人姓名' name="user" confirm-type="next"></input></view>
+        <view class='newaddress-li'><input type='number' placeholder='手机号码' maxlength="11" name="mobile" confirm-type="next"></input></view>
+        <view class='newaddress-li'><input type='text' placeholder='配送区域' confirm-type="next" name="address"  ></input></view>
+        <view class='newaddress-li'><input type='number' placeholder='邮政编码' maxlength="6" name="code"  confirm-type="next"></input></view>
+        <view class='newaddress-li'><input type='text' placeholder='详细地址' name="detailed" confirm-type="done"></input></view>
+        <view class='newaddress-li' bindtap='defaultAddress'>
+          <icon type='success' size='23' color="{{setDefault?'red':'#f5f5f5'}}"></icon>
+          <text>设为默认地址</text>
+        </view>
+      
+    </view>
+
+    <view class='newaddress-btn' formType="submit">
+      <button class="btn_login"  formType="submit">保存</button>
+    </view> 
+</form>
+
+
+
+
+</view>

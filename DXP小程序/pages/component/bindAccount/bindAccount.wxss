@@ -1,0 +1,40 @@
+/* pages/component/bindAccount/bindAccount.wxss */
+.account{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.account-item{
+  padding: 30rpx;
+  overflow: hidden;
+}
+.account-li{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.account-li text{
+  display: block;
+  width: 160rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.account-li input{
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.account-btn{
+  margin: 100rpx 30rpx 0; 
+}
+.account-btn button{
+  color: #fff;
+  font-size: 30rpx;
+  background: #dcb87f;
+  height: 90rpx;
+  line-height: 90rpx;
+}

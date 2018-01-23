@@ -1,0 +1,24 @@
+<!--pages/component/bindAccount/bindAccount.wxml-->
+<view class='account'>
+  <view class='account-item'>
+    <view class='account-li'>
+      <text>账号</text>
+      <input type='text' placeholder='请输入账号'></input>
+    </view>
+    <view class='account-li'>
+      <text>密码</text>
+      <input password  type='text' placeholder='请输入密码'></input>
+    </view>
+    <view class='account-li'>
+      <text>确认密码</text>
+      <input password  type='text' placeholder='请再次输入密码'></input>
+    </view>
+  </view>
+
+  <view class='account-btn'>
+    <button>确认绑定</button>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,147 @@
+<!--pages/component/confirmOrde/confirmOrde.wxml-->
+<view class='comOrder'>
+  <!-- 地址选择 -->
+  <view class='comOrder-head'>
+    <view class='comOrderHead-box' wx:if="{{address !=0 }}">
+      <view class='comOrderBox'>
+        <text class='comOrderBox-name'>收货人:胡一菲</text>
+        <text class='comOrderBox-tel'>13446456465454</text>
+      </view>
+      <view class='comOrderBox-address'>
+        <navigator url='../address/address'>
+          <text>是大部分就开说不定速度飞快第三部分分内的事</text>
+        </navigator>
+      </view>
+      <text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text>
+    </view>
+
+    <!-- 添加地址 -->
+    <view class='comOrder-Address' wx:else>
+      <navigator url='../newAddress/newAddress'>
+        <view class='comOrderAddress-li'>
+          <image src='../../../images/ico_di.png'></image>
+          <text>暂无收获地址,请点击添加</text>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+  <!-- 地址条 -->
+  <view class='comOrderBout'>
+    <image src='../../../images/icon_address.png'></image>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class='comOrder-center'>
+    <block  wx:for="{{[1,2]}}" wx:key="{{index}}">
+      <view class='comOrderCenter'>
+        <view class='comOrderCenter-name'>店铺名称</view>
+        <view class='comOrderCenter-list'>
+          <block wx:for="{{[1,2]}}" wx:key="{{index}}">
+            <view class='comOrderCenter-li'>
+              <image mode='scaleToFill' src='http://mz.djmall.xmisp.cn/files/product/20161201/148058328876.jpg'></image>
+              <view class='comOrderCenter-text'>
+                <text class='comOrderCenter-names'>等你放假的你</text>
+                <text class='comOrderCenter-title'>士大夫</text>
+                <view class='comOrderCenter-txt'>
+                  <text class='comOrderCenter-price'>￥119.00</text>
+                  <text class='comOrderCenter-num'>x3</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <!-- 优惠卷/配送方式 -->
+          <view class='comOrderCenter-couper'>
+            <view class='comOrderCouper'>
+              <text class='comOrderCouper-l'>优惠卷</text>
+              <text class='comOrderCouper-r'>现金￥5.00</text>
+              <text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text>
+            </view>
+            <view class='comOrderCouper'>
+              <text class='comOrderCouper-l'>配送方式</text>
+              <text class='comOrderCouper-r'>快递运输</text>
+              <text class="right"><text class="right-arrow1"></text><text class="right-arrow2"></text></text>
+            </view>
+          </view>
+          <view class='comOrderCouper-total'>
+            <text class='text'>共计6件商品  小计: </text>
+            <text class='price'>￥119.00</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  
+  
+  
+    <!-- 提交订单 -->
+    <view class='comOrder-foot'>
+      <view class='comOrder-foot-text'>合计:<text>￥700.00</text></view>
+      <view class='comOrder-foot-submit'>
+        <navigator url='../orderPay/orderPay'>
+          <view>提交订单</view>
+        </navigator>
+      </view>
+    </view>
+  
+  
+    <!-- 优惠卷 -->
+    <view class="{{maskShow ? 'mask' : ''}}"></view>
+    <view class="Coupon {{maskShow ? 'couponShow' :''}}">
+      <view class='Coupon-name'>配送方式</view>
+      <view class='Coupon-list'>
+        <view class='Coupon-li'>
+          <text class='Coupon-li-name'>快递</text>
+          <icon type="success" size="23" color="#f0f0f0"></icon>
+        </view>
+        <view class='Coupon-li'>
+          <text class='Coupon-li-name'>快递</text>
+          <icon type="success" size="23" color="#f0f0f0"></icon>
+        </view>
+      </view>
+      <view class='Coupon-Btn'>完成</view>
+    </view>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

@@ -1,0 +1,139 @@
+<!--index.wxml-->
+<import src="../tpls/products/products-tpl.wxml"/>
+
+<view >
+    <view class='index-head'>
+      <view class='index-logo'><image mode='scaleToFill' src="../../images/logo.png"></image></view>
+      <view class='index-search'>
+        <navigator url="../search/search">
+          <image src="../../images/ico_search.png"></image>春季女装
+        </navigator>  
+      </view>  
+    </view>
+   
+    <scroll-view scroll-x="true" scroll-left="{{scrollLeft}}" style="white-space: nowrap; display: block" class="showmian">
+        <block wx:for="{{honeNavList}}" wx:key="*this">
+          <view class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="swichNav">{{item.name}}</view>
+        </block>
+        
+    </scroll-view>
+
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+        <!-- 推荐 -->
+        <swiper-item>
+          <scroll-view scroll-y="true" class="scoll-h" >
+            <!-- banner1 -->
+            <view class='index-banner'>
+              <image mode='widthFix' src='http://p0fgxhchd.bkt.clouddn.com/Home/Index01Scroll01.jpg'></image>
+            </view>
+            <!-- 优惠卷 -->
+            <view class='index-couper'>
+              <view class='index-couper-list'><image mode='widthFix' src='http://p0fgxhchd.bkt.clouddn.com/Home/Index02Puzzle02.jpg'></image></view>
+              <view class='index-couper-list'><image mode='widthFix' src='http://p0fgxhchd.bkt.clouddn.com/Home/Index02Puzzle02.jpg'></image></view>
+            </view>
+            <!-- banner2 -->
+            <view class='banner2'>
+              <image mode='widthFix' src="http://p0fgxhchd.bkt.clouddn.com/Home/Index03Banner01.jpg"></image>
+            </view>
+            <!-- banner3 -->
+            <view class='banner2'>
+              <image mode='widthFix' src='http://p0fgxhchd.bkt.clouddn.com/Home/Index03Banner02.jpg'></image>
+            </view>
+            <!-- 商品图片(拼) -->
+            <view class='index-pin'>
+                <view class='index-pin-list'>
+                    <image mode='widthFix' src="http://p0fgxhchd.bkt.clouddn.com/Home/Index05Puzzle01.jpg"></image>
+                </view>
+                <view class='index-pin-list'>
+                    <image mode='widthFix' src="http://p0fgxhchd.bkt.clouddn.com/Home/Index05Puzzle02.jpg"></image>
+                </view>
+            </view>
+
+
+            <!--新品 - 人气单品--人气推荐-->
+             <view class='index-shop-list'>
+                <view class='index-list-title'>热门专区</view>
+                <template is="products"></template>
+             </view> 
+            <!-- 全部商品 -->
+            <view class='index-allShop'>
+              <text>全部商品</text>
+            </view>
+
+            <!-- 分类 -->
+            <view class='index-cart'>
+              <view class='index-cart-list'>
+                <view class='index-cart-li'>居家服饰</view>
+                <view class='index-cart-li'>精美美食</view>
+                <view class='index-cart-li'>文化匠心</view>
+                <view class='index-cart-li'>数码电器</view>
+                <view class='index-cart-li'>母婴用品</view>
+                <view class='index-cart-li'>外出服饰</view>
+                <view class='index-cart-li'>原装进口</view>
+                <view class='index-cart-li'>生活用品</view>
+              </view>
+            </view>
+            <!-- 底部banner -->
+            <view class='index-footBanner'>
+              <image mode='widthFix' src="http://p0fgxhchd.bkt.clouddn.com/Home/Index03Banner01.jpg"></image>
+            </view>
+
+          </scroll-view>
+        </swiper-item>
+        <swiper-item wx:for="{{[1,2,3,4,5,6,7]}}">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{[1]}}" wx:key="*this">
+                    <view class='index-slide'>
+                    <!-- 分类banner -->
+                        <view class='index-slide-banner'>
+                            <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180105/7db861b38ebc4bd5ac1f81092a6759da.JPG'></image>
+                        </view>
+                        <!-- 商品分类 -->
+                        <view class='index-slide-list'>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                            <view class='index-slide-li'>
+                              <image mode='scaleToFill' src='http://p0fgxhchd.bkt.clouddn.com/Image/bike/20180106/962e5b38b27741ffb53e76059bbb1dcd.JPG'></image>
+                              <text>日用品</text>
+                            </view>
+                        </view>
+                        <!-- 分类商品列表 -->
+                        <view class='index-slide-goods'>
+                            <view class='index-list-title'>生活用品</view>
+                            <template is="products"></template>
+                        </view>
+                    </view>
+                </block>
+                <!-- 加载更多数据 -->
+                <view class="loading" hidden="{{!searchLoading}}"><image src='../../images/loading.gif'/> 正在载入更多...</view>  
+                <view class="loading complete" hidden="{{!searchLoadingComplete}}">没有更多数据</view>  
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
